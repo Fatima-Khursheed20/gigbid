@@ -21,9 +21,9 @@ from pydantic import BaseModel, Field
 
 from common.config import cfg
 from common.settings import ROOT
-from mcp_servers.common import header, http_app, trace_from
+from mcp_servers.common import header, http_app, trace_from, transport_security
 
-mcp = FastMCP("gigbid-workspace", instructions="Calendar availability, tentative interview holds and email drafts "
+mcp = FastMCP("gigbid-workspace", transport_security=transport_security(), instructions="Calendar availability, tentative interview holds and email drafts "
                                                 "for the freelancer. Holds and drafts are never sent automatically.")
 READ = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
 WRITE = ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=True, openWorldHint=False)

@@ -22,12 +22,12 @@ from pydantic import BaseModel, ConfigDict, Field
 from common.config import cfg
 from common.settings import get_settings
 from common.tracing import get_trace_id
-from mcp_servers.common import header, http_app, trace_from
+from mcp_servers.common import header, http_app, trace_from, transport_security
 
 from .adapters.gigsim import GigSimAdapter, MarketplaceError, PolicyViolation
 from .audit import AUDIT
 
-mcp = FastMCP("gigbid-marketplace", instructions=(
+mcp = FastMCP("gigbid-marketplace", transport_security=transport_security(), instructions=(
     "Marketplace access for GigBid (GigSim backend). Read tools are safe. Write tools create drafts, submit "
     "proposals (spends Connects) or send messages; call them with dry_run=true first and only for real after the "
     "human approved in GigBid. Always pass a stable idempotency_key."))

@@ -17,7 +17,7 @@ from mcp.server.fastmcp import Context, FastMCP
 from mcp.types import ToolAnnotations
 from pydantic import Field
 
-from mcp_servers.common import header, http_app, trace_from
+from mcp_servers.common import header, http_app, trace_from, transport_security
 
 from . import tools as T
 
@@ -25,7 +25,7 @@ INSTRUCTIONS = ("Read-only access to a freelancer's portfolio: CV, case studies,
                 "reviews and past proposals with outcomes. Use search_evidence to find proof for a job requirement; "
                 "every evidence item carries type, source, date and outcome so claims can cite it.")
 
-mcp = FastMCP("gigbid-portfolio", instructions=INSTRUCTIONS)
+mcp = FastMCP("gigbid-portfolio", transport_security=transport_security(), instructions=INSTRUCTIONS)
 RO = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
 
 

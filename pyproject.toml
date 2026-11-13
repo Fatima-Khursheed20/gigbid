@@ -36,6 +36,8 @@ dependencies = [
   "reportlab",
   "scipy",
   "tiktoken",
+  "email-validator>=2.3.0",
+  "python-multipart>=0.0.33",
 ]
 
 [project.optional-dependencies]
