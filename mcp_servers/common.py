@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import contextvars
 import os
 from typing import Any
 
@@ -10,9 +11,13 @@ from starlette.responses import JSONResponse
 
 from common.tracing import TRACE_HEADER, set_trace_id
 
+# In-process transports (tests, offline evals) have no HTTP headers; the in-process ToolBus sets the same
+# values here before it opens its sessions, and server tasks inherit them.
+REQUEST_DEFAULTS: contextvars.ContextVar[dict] = contextvars.ContextVar("mcp_request_defaults", default={})
+
 
 def header(ctx: Any, name: str, default: str | None = None) -> str | None:
-    """Read an HTTP header from the MCP request context (None under stdio / in-memory transports)."""
+    """Read an HTTP header from the MCP request context, else the in-process defaults, else `default`."""
     try:
         req = ctx.request_context.request
         if req is not None:
@@ -21,7 +26,7 @@ def header(ctx: Any, name: str, default: str | None = None) -> str | None:
                 return v
     except Exception:  # noqa: BLE001
         pass
-    return default
+    return REQUEST_DEFAULTS.get().get(name, default)
 
 
 def trace_from(ctx: Any) -> str:
