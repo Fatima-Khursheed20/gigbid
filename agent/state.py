@@ -28,6 +28,7 @@ class BidState(TypedDict, total=False):
     job_id: str
     trace_id: str
     autonomy: str
+    analysis_only: bool
     # inputs (job post is UNTRUSTED data)
     job: dict
     client: dict

@@ -49,6 +49,13 @@ def after_decide(state: dict) -> str:
     return "pricing" if state["decision"]["action"] == "bid" else END
 
 
+def after_pricing(state: dict) -> str:
+    """analysis_only threads (evaluation of decisions, or 'analyse only' scouting) stop before drafting."""
+    if state.get("status") in HALT or state.get("analysis_only"):
+        return END
+    return "writer"
+
+
 def after_critic(state: dict) -> str:
     if state.get("status") in HALT:
         return END
@@ -94,7 +101,7 @@ def build_bid_graph(checkpointer=None, store=None):
     g.add_conditional_edges("intake", fan_out, ["analyst", "risk", "matcher", END])
     g.add_edge(["analyst", "risk", "matcher"], "decide")
     g.add_conditional_edges("decide", after_decide, ["pricing", END])
-    g.add_conditional_edges("pricing", go("writer"), ["writer", END])
+    g.add_conditional_edges("pricing", after_pricing, ["writer", END])
     g.add_conditional_edges("writer", go("verifier"), ["verifier", END])
     g.add_conditional_edges("verifier", go("critic"), ["critic", END])
     g.add_conditional_edges("critic", after_critic, ["compliance", "revise", END])

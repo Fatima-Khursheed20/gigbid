@@ -15,53 +15,45 @@ marketplace:
 models:
   profile: open           # open (required) | paid (optional); overridden by MODEL_PROFILE env
   profiles:
-    open:
+    open:                  # chosen profile; routes by node and spreads load over three open models (each has its own quota)
       provider: groq
       base_url: https://api.groq.com/openai/v1
       api_key_env: GROQ_API_KEY
-      nodes:               # route by node: cheap/frequent nodes on the small model
-        scout: llama-3.1-8b-instant
+      nodes:               # cheap/frequent nodes on the small model, Writer/Critic/Liaison on the strongest
+        scout: openai/gpt-oss-20b
         analyst: openai/gpt-oss-20b
-        risk_assessor: llama-3.1-8b-instant
-        fit_matcher: llama-3.1-8b-instant
-        pricing: llama-3.1-8b-instant
+        risk_assessor: openai/gpt-oss-20b
+        fit_matcher: openai/gpt-oss-20b
+        pricing: openai/gpt-oss-20b
+        compliance: openai/gpt-oss-20b
+        intent: openai/gpt-oss-20b
+        rag_context: openai/gpt-oss-20b
+        hyde: openai/gpt-oss-20b
+        verifier: qwen/qwen3.8-27b
+        critic: qwen/qwen3.8-27b
         writer: openai/gpt-oss-120b
-        verifier: openai/gpt-oss-20b
-        critic: openai/gpt-oss-120b
-        compliance: llama-3.1-8b-instant
         liaison: openai/gpt-oss-120b
-        intent: llama-3.1-8b-instant
-        rag_context: llama-3.1-8b-instant
-        hyde: llama-3.1-8b-instant
         judge: openai/gpt-oss-120b
         baseline_agent: openai/gpt-oss-120b
-      fallback:            # cheap nodes fall back to a different small model on failure
-        llama-3.1-8b-instant: openai/gpt-oss-20b
-        openai/gpt-oss-20b: llama-3.1-8b-instant
-        openai/gpt-oss-120b: openai/gpt-oss-20b
+      fallback:            # a failing model falls back to a different open model
+        openai/gpt-oss-20b: qwen/qwen3.8-27b
+        qwen/qwen3.8-27b: openai/gpt-oss-20b
+        openai/gpt-oss-120b: qwen/qwen3.8-27b
     open_alt:              # second open configuration compared on the dev set (choose by measurement)
       provider: groq
       base_url: https://api.groq.com/openai/v1
       api_key_env: GROQ_API_KEY
       nodes:
-        scout: llama-3.1-8b-instant
-        analyst: llama-3.1-8b-instant
-        risk_assessor: llama-3.1-8b-instant
-        fit_matcher: llama-3.1-8b-instant
-        pricing: llama-3.1-8b-instant
-        writer: openai/gpt-oss-20b
-        verifier: llama-3.1-8b-instant
-        critic: openai/gpt-oss-20b
-        compliance: llama-3.1-8b-instant
-        liaison: openai/gpt-oss-20b
-        intent: llama-3.1-8b-instant
-        rag_context: llama-3.1-8b-instant
-        hyde: llama-3.1-8b-instant
+        default: openai/gpt-oss-20b
+        verifier: openai/gpt-oss-20b
+        critic: qwen/qwen3.8-27b
+        writer: qwen/qwen3.8-27b
+        liaison: qwen/qwen3.8-27b
         judge: openai/gpt-oss-120b
-        baseline_agent: openai/gpt-oss-20b
+        baseline_agent: qwen/qwen3.8-27b
       fallback:
-        llama-3.1-8b-instant: openai/gpt-oss-20b
-        openai/gpt-oss-20b: llama-3.1-8b-instant
+        openai/gpt-oss-20b: qwen/qwen3.8-27b
+        qwen/qwen3.8-27b: openai/gpt-oss-20b
     local:                 # fully local profile (Ollama service in docker compose)
       provider: ollama
       base_url_env: OLLAMA_BASE_URL
@@ -80,7 +72,7 @@ models:
       fallback: {}
   # USD per 1M tokens (input, output) — list prices used for cost reporting even on the free tier
   prices:
-    llama-3.1-8b-instant: [0.05, 0.08]
+    qwen/qwen3.8-27b: [0.29, 0.59]
     openai/gpt-oss-20b: [0.075, 0.30]
     openai/gpt-oss-120b: [0.15, 0.60]
     qwen3:4b: [0.0, 0.0]
@@ -118,6 +110,7 @@ thresholds:
   scam_risk: 0.7
   proposal_max_words: 220
   proposal_min_words: 80
+  critic_min_score: 0.7
 
 autonomy:
   default_level: suggest   # suggest | auto_skip_low_fit   (never auto-send — enforced in code paths too)

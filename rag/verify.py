@@ -27,6 +27,39 @@ def split_sentences(text: str) -> list[str]:
     return [p.strip() for p in parts if p.strip()]
 
 
+EXTRA_TECH = ["Kubernetes", "Terraform", "Kafka", "Spark", "Hadoop", "GCP", "Google Cloud", "Azure", "AWS", "Lambda",
+              "Vertex AI", "Databricks", "Elasticsearch", "OpenSearch", "Weaviate", "Qdrant", "Chroma", "Milvus",
+              "TensorFlow", "Keras", "JAX", "Ray", "Vue", "Angular", "Svelte", "Laravel", "Flask", "Rails", "Go",
+              "Rust", "Java", "Kotlin", "Swift", "Firebase", "Supabase", "Looker", "Qlik", "SAS", "SPSS", "Hive",
+              "Redshift", "Kinesis", "Grafana", "Prometheus", "Jenkins", "GitLab", "Ansible", "OpenAI", "GPT-4",
+              "Claude", "Llama", "Mistral", "Gemini", "vLLM", "Ollama", "Neo4j", "Cassandra", "DynamoDB", "Heroku"]
+
+
+def _named_tech(text: str) -> set[str]:
+    from .skills import ALIASES
+
+    found = set()
+    for name in list(ALIASES) + EXTRA_TECH:
+        if len(name) > 2 and re.search(rf"(?<![\w-]){re.escape(name)}(?![\w-])", text, flags=re.I):
+            found.add(name.lower())
+    return found
+
+
+def unsupported_tech(claim: str, evidence_texts: list[str]) -> list[str]:
+    """Deterministic grounding check: every technology NAMED in a claim must appear in the evidence it cites
+    (catches the classic "Docker and Kubernetes" overreach that LLM verifiers wave through)."""
+    ev = " ".join(evidence_texts).lower()
+    from .skills import ALIASES
+
+    missing = []
+    for t in _named_tech(claim):
+        canon = next((k for k in ALIASES if k.lower() == t), None)
+        aliases = [a.lower().strip() for a in ALIASES.get(canon, [])] if canon else []
+        if t not in ev and not any(len(a) > 3 and a in ev for a in aliases):
+            missing.append(t)
+    return missing
+
+
 def heuristic_verify(text: str, evidence: list[dict]) -> list[dict]:
     """Offline verifier: a claim is supported if it cites evidence and its numbers appear in that evidence."""
     out = []
@@ -43,6 +76,8 @@ def heuristic_verify(text: str, evidence: list[dict]) -> list[dict]:
             label = "partly_supported"
         else:
             label = "supported"
+        if label == "supported" and unsupported_tech(CITE.sub("", s), [e.get("text", "") for e in ev]):
+            label = "partly_supported"
         out.append({"claim": s, "label": label, "evidence_ids": [e["evidence_id"] for e in ev], "note": ""})
     return out
 
@@ -57,6 +92,8 @@ async def label_claims(text: str, evidence: list[dict]) -> list[dict]:
     except Exception:  # noqa: BLE001 - verifier failure must not let claims through unchecked
         return heuristic_verify(text, evidence)
     out = []
+    by_id = {e["evidence_id"]: e for e in evidence}
+    all_ev = [e.get("text", "") for e in evidence]
     for c in res.claims:
         lab = c.get("label", "unsupported")
         if lab not in ("supported", "partly_supported", "unsupported"):
@@ -68,8 +105,26 @@ async def label_claims(text: str, evidence: list[dict]) -> list[dict]:
                 ids.append(evidence[int(m.group(1)) - 1]["evidence_id"])
             elif any(e["evidence_id"] == x for e in evidence):
                 ids.append(x)
-        out.append({"claim": c.get("claim", ""), "label": lab, "evidence_ids": ids, "note": c.get("note", "") or ""})
+        claim, note = c.get("claim", ""), c.get("note", "") or ""
+        missing = unsupported_tech(claim, [by_id[i].get("text", "") for i in ids] or all_ev)
+        if missing and lab == "supported":
+            lab, note = "partly_supported", ""  # remove rather than trust an LLM rewrite of an overreach
+        out.append({"claim": claim, "label": lab, "evidence_ids": ids, "note": note,
+                    "tech_not_in_evidence": missing})
     return out
+
+
+def _closest_sentence(text: str, claim: str, min_overlap: float = 0.5) -> str | None:
+    words = set(re.findall(r"[a-z0-9]{3,}", claim.lower()))
+    best, score = None, 0.0
+    for s in split_sentences(text):
+        sw = set(re.findall(r"[a-z0-9]{3,}", s.lower()))
+        if not sw or not words:
+            continue
+        ov = len(words & sw) / len(words)
+        if ov > score:
+            best, score = s, ov
+    return best if score >= min_overlap else None
 
 
 def apply_labels(text: str, claims: list[dict]) -> tuple[str, list[dict]]:
@@ -77,6 +132,8 @@ def apply_labels(text: str, claims: list[dict]) -> tuple[str, list[dict]]:
     new = text
     for c in claims:
         claim = c["claim"].strip()
+        if claim and claim not in new and c["label"] != "supported":
+            claim = _closest_sentence(new, claim) or claim  # LLMs paraphrase claims; act on the real sentence
         if not claim or claim not in new:
             c["action"] = "kept"
             continue
@@ -87,6 +144,11 @@ def apply_labels(text: str, claims: list[dict]) -> tuple[str, list[dict]]:
                 new, c["action"] = new.replace(claim, ""), "removed"
         elif c["label"] == "partly_supported" and c.get("note"):
             new, c["action"] = new.replace(claim, c["note"]), "rewritten"
+        elif c["label"] == "partly_supported" and c.get("tech_not_in_evidence"):
+            fixed = claim
+            for t in c["tech_not_in_evidence"]:
+                fixed = re.sub(rf"(,\s*|\s+and\s+|\s+or\s+)?{re.escape(t)}", "", fixed, flags=re.I)
+            new, c["action"] = new.replace(claim, fixed), "rewritten"
         else:
             c["action"] = "kept"
     new = re.sub(r"[ \t]{2,}", " ", new)

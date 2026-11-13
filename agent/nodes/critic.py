@@ -41,6 +41,7 @@ async def critic(state: dict, config: RunnableConfig) -> dict:
     draft, job = state["draft"], state["job"]
     rnd = state.get("revisions", 0)
     issues = rule_issues(draft, job)
+    blocking = bool(issues)  # deterministic rule failures always send the draft back
     score = 0.7
     instructions = ""
     if llm.available():
@@ -49,11 +50,14 @@ async def critic(state: dict, config: RunnableConfig) -> dict:
                                      f"Job title: {job['title']}\nScreening questions: {job.get('screening_questions')}\n\n"
                                      f"DRAFT:\n{draft['cover_letter']}\n\nANSWERS: {draft.get('screening_answers')}", Critique,
                                      max_tokens=600)
-            issues += [i for i in c.issues if i.kind in ("personalisation", "tone", "grounding", "other")]
+            llm_issues = [i for i in c.issues if i.kind in ("personalisation", "tone", "grounding", "other")]
+            issues += llm_issues
             score, instructions = c.score, c.revision_instructions
+            # LLM-only issues block only when the critic itself scores the draft below the bar
+            blocking = blocking or (bool(llm_issues) and not c.approve and c.score < cfg("thresholds", "critic_min_score", default=0.7))
         except Exception:  # noqa: BLE001 - fall back to rule critique
             pass
-    approve = not issues
+    approve = not blocking
     if not instructions and issues:
         instructions = " ".join(i.detail for i in issues)
     crit = Critique(approve=approve, issues=issues, revision_instructions=instructions, round=rnd, score=score)

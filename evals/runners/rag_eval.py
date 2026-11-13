@@ -31,7 +31,11 @@ RESULTS = ROOT / "evals" / "results"
 
 def load_dev(persona: str, limit: int | None = None) -> list[dict]:
     rows = [json.loads(line) for line in (ROOT / "evals" / "datasets" / f"dev_{persona}.jsonl").open(encoding="utf-8")]
-    return rows[:limit] if limit else rows
+    if limit:
+        from evals.harness import stratified
+
+        return stratified(rows, limit, seed=11)  # deterministic, keeps the job-kind mix
+    return rows
 
 
 def job_text(j: dict) -> str:

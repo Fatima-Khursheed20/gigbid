@@ -12,6 +12,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import sqlite3
 import threading
 import time
@@ -153,7 +154,7 @@ def _client() -> httpx.AsyncClient:
 
 async def _post(model: str, payload: dict) -> dict:
     base, key = _provider()
-    sem = _SEMAPHORES.setdefault(model, asyncio.Semaphore(int(os.environ.get("LLM_CONCURRENCY", "4"))))
+    sem = _SEMAPHORES.setdefault(model, asyncio.Semaphore(int(os.environ.get("LLM_CONCURRENCY", "2"))))
     last_err: Exception | None = None
     for attempt in range(6):
         async with sem:
@@ -193,6 +194,7 @@ async def _complete(node: str, model: str, messages: list[dict], json_mode: bool
         return hit["text"], hit["usage"], True
     data = await _post(model, payload)
     text = data["choices"][0]["message"].get("content") or ""
+    text = re.sub(r"(?s)<think>.*?</think>", "", text).strip()
     usage = data.get("usage") or {}
     if cache and text:
         cache.put(key, {"text": text, "usage": usage, "node": node})
