@@ -1,0 +1,152 @@
+# GigBid runtime configuration. Rules, prompts, thresholds and every node's model live here, never in code.
+version: 3
+
+marketplace:
+  mode: gigsim            # gigsim | upwork   (R1: one port, two adapters, switched here)
+  # Live mode read schedule: never more often than this (see docs/RUNBOOK.md for the justification)
+  live_min_poll_minutes: 120
+  gigsim_poll_minutes: 30
+  # Our own client-side limiter stays below GigSim's 60/min per token
+  max_requests_per_minute: 40
+  request_timeout_s: 15
+  max_retries: 3
+  backoff_base_s: 0.8
+
+models:
+  profile: open           # open (required) | paid (optional); overridden by MODEL_PROFILE env
+  profiles:
+    open:
+      provider: groq
+      base_url: https://api.groq.com/openai/v1
+      api_key_env: GROQ_API_KEY
+      nodes:               # route by node: cheap/frequent nodes on the small model
+        scout: llama-3.1-8b-instant
+        analyst: openai/gpt-oss-20b
+        risk_assessor: llama-3.1-8b-instant
+        fit_matcher: llama-3.1-8b-instant
+        pricing: llama-3.1-8b-instant
+        writer: openai/gpt-oss-120b
+        verifier: openai/gpt-oss-20b
+        critic: openai/gpt-oss-120b
+        compliance: llama-3.1-8b-instant
+        liaison: openai/gpt-oss-120b
+        intent: llama-3.1-8b-instant
+        rag_context: llama-3.1-8b-instant
+        hyde: llama-3.1-8b-instant
+        judge: openai/gpt-oss-120b
+        baseline_agent: openai/gpt-oss-120b
+      fallback:            # cheap nodes fall back to a different small model on failure
+        llama-3.1-8b-instant: openai/gpt-oss-20b
+        openai/gpt-oss-20b: llama-3.1-8b-instant
+        openai/gpt-oss-120b: openai/gpt-oss-20b
+    open_alt:              # second open configuration compared on the dev set (choose by measurement)
+      provider: groq
+      base_url: https://api.groq.com/openai/v1
+      api_key_env: GROQ_API_KEY
+      nodes:
+        scout: llama-3.1-8b-instant
+        analyst: llama-3.1-8b-instant
+        risk_assessor: llama-3.1-8b-instant
+        fit_matcher: llama-3.1-8b-instant
+        pricing: llama-3.1-8b-instant
+        writer: openai/gpt-oss-20b
+        verifier: llama-3.1-8b-instant
+        critic: openai/gpt-oss-20b
+        compliance: llama-3.1-8b-instant
+        liaison: openai/gpt-oss-20b
+        intent: llama-3.1-8b-instant
+        rag_context: llama-3.1-8b-instant
+        hyde: llama-3.1-8b-instant
+        judge: openai/gpt-oss-120b
+        baseline_agent: openai/gpt-oss-20b
+      fallback:
+        llama-3.1-8b-instant: openai/gpt-oss-20b
+        openai/gpt-oss-20b: llama-3.1-8b-instant
+    local:                 # fully local profile (Ollama service in docker compose)
+      provider: ollama
+      base_url_env: OLLAMA_BASE_URL
+      api_key_env: ""
+      nodes:
+        default: qwen3:4b
+      fallback: {}
+    paid:                  # optional; only used where it beats `open` enough to justify the cost
+      provider: openrouter
+      base_url: https://openrouter.ai/api/v1
+      api_key_env: OPENROUTER_API_KEY
+      nodes:
+        default: openai/gpt-oss-120b
+        writer: anthropic/claude-sonnet-4.5
+        critic: anthropic/claude-sonnet-4.5
+      fallback: {}
+  # USD per 1M tokens (input, output) — list prices used for cost reporting even on the free tier
+  prices:
+    llama-3.1-8b-instant: [0.05, 0.08]
+    openai/gpt-oss-20b: [0.075, 0.30]
+    openai/gpt-oss-120b: [0.15, 0.60]
+    qwen3:4b: [0.0, 0.0]
+    anthropic/claude-sonnet-4.5: [3.0, 15.0]
+  temperature: 0.2
+  max_output_tokens: 1200
+  timeout_s: 60
+  cache: true              # disk cache of identical LLM calls (reproducible evals, cheaper reruns)
+  embeddings: BAAI/bge-small-en-v1.5      # open model, CPU via ONNX (fastembed)
+  reranker: Xenova/ms-marco-MiniLM-L-6-v2  # open cross-encoder, CPU via ONNX
+
+rag:
+  variant: v3_rerank       # set by evaluation (R6) — see evals/results/rag_results.json and docs/adr/0003
+  k: 5
+  candidates: 30
+  chunk_chars: 700
+  naive_chunk_chars: 400
+  outcome_boost: {won: 0.25, replied: 0.12, ignored: -0.05}
+  crag_min_score: 0.0      # cross-encoder logit below which evidence is "weak"
+
+budgets:                   # per thread (C4) and declared SLOs (R8 / E5)
+  max_graph_steps: 40
+  max_tokens_per_job: 30000
+  max_revisions: 2
+  declared:
+    p95_latency_s_per_job_analysed: 25
+    p95_latency_s_per_proposal: 90
+    usd_per_job_analysed: 0.002
+    usd_per_proposal: 0.01
+
+thresholds:
+  bid_min_fit: 0.55
+  watch_min_fit: 0.35
+  max_risk_to_bid: 0.6
+  scam_risk: 0.7
+  proposal_max_words: 220
+  proposal_min_words: 80
+
+autonomy:
+  default_level: suggest   # suggest | auto_skip_low_fit   (never auto-send — enforced in code paths too)
+
+memory:
+  style_promotion:
+    min_occurrences: 3      # a pattern must recur in >= 3 approved edits
+    min_distinct_jobs: 2    # ... across >= 2 different jobs
+    max_items: 20
+  outcome_promotion:
+    min_outcomes: 3         # a category stat is promoted only after >= 3 real outcomes
+    decay_days: 90
+
+compliance:
+  # Policy pack is data: data/policy_pack/*.md (rules) + these machine-checkable patterns.
+  policy_version: v1
+  banned_patterns:
+    off_platform_contact: ['whatsapp', 'telegram', 'skype', 'signal app', '\b[\w.+-]+@[\w-]+\.[a-z]{2,}\b', '\+?\d[\d\s().-]{8,}\d']
+    off_platform_payment: ['paypal', 'crypto', 'usdt', 'bitcoin', 'western union', 'bank transfer outside']
+    guarantee: ['\bguarantee', '\b100% (success|accuracy|satisfaction)', 'money[- ]back']
+    unpaid_work: ['for free as a test', 'free sample of the full', 'unpaid trial']
+  required_lines: []
+  forbid_urls: false
+  fabricated_experience: ['\b\d{2}\+? years', 'expert in every']
+
+pipeline:
+  stages: [drafted, submitted, viewed, replied, interview, hired, lost]
+
+workspace:
+  timezone: Asia/Karachi
+  working_hours: [10, 18]
+  slot_minutes: 30

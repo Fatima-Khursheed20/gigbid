@@ -14,6 +14,7 @@ from pathlib import Path
 from .personas import PERSONAS, all_projects
 from .taxonomy import SKILLS
 
+
 def _case_study(p: dict, rng: random.Random) -> str:
     implied_desc = [SKILLS[s]["desc"] for s in p["implied"]]
     lines = [

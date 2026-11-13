@@ -16,7 +16,7 @@ import json
 import random
 from pathlib import Path
 
-from .jobs import (make_clients, make_historical, make_past_proposals, make_set, make_stream, market_stats)
+from .jobs import make_clients, make_historical, make_past_proposals, make_set, make_stream, market_stats
 from .personas import PERSONAS
 from .render import render_persona
 

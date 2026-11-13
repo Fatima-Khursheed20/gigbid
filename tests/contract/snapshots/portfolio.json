@@ -1,0 +1,610 @@
+[
+ {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "description": "Return the full text and metadata of one case study.",
+  "inputSchema": {
+   "properties": {
+    "case_id": {
+     "description": "Project / case id",
+     "maxLength": 64,
+     "minLength": 1,
+     "title": "Case Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "case_id"
+   ],
+   "title": "get_case_studyArguments",
+   "type": "object"
+  },
+  "name": "get_case_study",
+  "outputSchema": {
+   "properties": {
+    "client": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Client"
+    },
+    "date": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Date"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "industry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Industry"
+    },
+    "skills": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Skills",
+     "type": "array"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "title": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Title"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "client",
+    "industry",
+    "date",
+    "skills",
+    "text"
+   ],
+   "title": "CaseStudy",
+   "type": "object"
+  }
+ },
+ {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "description": "List skills evidenced anywhere in the portfolio (including ones only visible in code), with project ids.",
+  "inputSchema": {
+   "properties": {},
+   "title": "list_skillsArguments",
+   "type": "object"
+  },
+  "name": "list_skills",
+  "outputSchema": {
+   "$defs": {
+    "SkillEntry": {
+     "properties": {
+      "evidence_count": {
+       "title": "Evidence Count",
+       "type": "integer"
+      },
+      "projects": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Projects",
+       "type": "array"
+      },
+      "skill": {
+       "title": "Skill",
+       "type": "string"
+      }
+     },
+     "required": [
+      "skill",
+      "evidence_count",
+      "projects"
+     ],
+     "title": "SkillEntry",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "skills": {
+     "items": {
+      "$ref": "#/$defs/SkillEntry"
+     },
+     "title": "Skills",
+     "type": "array"
+    },
+    "tenant": {
+     "title": "Tenant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tenant",
+    "skills"
+   ],
+   "title": "SkillList",
+   "type": "object"
+  }
+ },
+ {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "description": "For each requirement, return supporting evidence and a status (supported / weak / none) using a corrective\n    retrieve-grade-requery loop. 'none' means the portfolio cannot support a claim about that requirement.",
+  "inputSchema": {
+   "properties": {
+    "requirements": {
+     "description": "Extracted job requirements",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 12,
+     "minItems": 1,
+     "title": "Requirements",
+     "type": "array"
+    }
+   },
+   "required": [
+    "requirements"
+   ],
+   "title": "requirement_matrixArguments",
+   "type": "object"
+  },
+  "name": "requirement_matrix",
+  "outputSchema": {
+   "$defs": {
+    "EvidenceItem": {
+     "properties": {
+      "client_industry": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Client Industry"
+      },
+      "date": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Date"
+      },
+      "evidence_id": {
+       "title": "Evidence Id",
+       "type": "string"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Outcome"
+      },
+      "project": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Project"
+      },
+      "project_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Project Id"
+      },
+      "score": {
+       "title": "Score",
+       "type": "number"
+      },
+      "skills": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Skills",
+       "type": "array"
+      },
+      "source": {
+       "title": "Source",
+       "type": "string"
+      },
+      "text": {
+       "title": "Text",
+       "type": "string"
+      },
+      "type": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Type"
+      }
+     },
+     "required": [
+      "evidence_id",
+      "project_id",
+      "project",
+      "type",
+      "source",
+      "date",
+      "outcome",
+      "client_industry",
+      "skills",
+      "score",
+      "text"
+     ],
+     "title": "EvidenceItem",
+     "type": "object"
+    },
+    "RequirementRow": {
+     "properties": {
+      "best_score": {
+       "title": "Best Score",
+       "type": "number"
+      },
+      "evidence": {
+       "items": {
+        "$ref": "#/$defs/EvidenceItem"
+       },
+       "title": "Evidence",
+       "type": "array"
+      },
+      "requirement": {
+       "title": "Requirement",
+       "type": "string"
+      },
+      "status": {
+       "description": "supported | weak | none",
+       "title": "Status",
+       "type": "string"
+      }
+     },
+     "required": [
+      "requirement",
+      "status",
+      "best_score",
+      "evidence"
+     ],
+     "title": "RequirementRow",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "refuse": {
+     "description": "True when most requirements have no evidence (do not claim them)",
+     "title": "Refuse",
+     "type": "boolean"
+    },
+    "rows": {
+     "items": {
+      "$ref": "#/$defs/RequirementRow"
+     },
+     "title": "Rows",
+     "type": "array"
+    },
+    "tenant": {
+     "title": "Tenant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tenant",
+    "rows",
+    "refuse"
+   ],
+   "title": "RequirementMatrix",
+   "type": "object"
+  }
+ },
+ {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "description": "Find portfolio evidence (case studies, README/code, reviews, past proposals, CV) that proves a requirement.\n    Returns items ranked by relevance with type, source, date and (for proposals) outcome.",
+  "inputSchema": {
+   "$defs": {
+    "EvidenceFilters": {
+     "properties": {
+      "min_date": {
+       "anyOf": [
+        {
+         "pattern": "^\\d{4}-\\d{2}$",
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Only evidence dated >= YYYY-MM",
+       "title": "Min Date"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "pattern": "^(won|replied|ignored)$",
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Only past proposals with this outcome",
+       "title": "Outcome"
+      },
+      "project_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Only evidence about this project",
+       "title": "Project Id"
+      },
+      "types": {
+       "anyOf": [
+        {
+         "items": {
+          "type": "string"
+         },
+         "type": "array"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Restrict to evidence types: cv, case_study, readme, code, review, proposal",
+       "title": "Types"
+      }
+     },
+     "title": "EvidenceFilters",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "filters": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/EvidenceFilters"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "k": {
+     "default": 5,
+     "description": "How many evidence items to return",
+     "maximum": 20,
+     "minimum": 1,
+     "title": "K",
+     "type": "integer"
+    },
+    "requirement": {
+     "description": "One job requirement or question, e.g. 'background workers with retries'",
+     "maxLength": 2000,
+     "minLength": 3,
+     "title": "Requirement",
+     "type": "string"
+    }
+   },
+   "required": [
+    "requirement"
+   ],
+   "title": "search_evidenceArguments",
+   "type": "object"
+  },
+  "name": "search_evidence",
+  "outputSchema": {
+   "$defs": {
+    "EvidenceItem": {
+     "properties": {
+      "client_industry": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Client Industry"
+      },
+      "date": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Date"
+      },
+      "evidence_id": {
+       "title": "Evidence Id",
+       "type": "string"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Outcome"
+      },
+      "project": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Project"
+      },
+      "project_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Project Id"
+      },
+      "score": {
+       "title": "Score",
+       "type": "number"
+      },
+      "skills": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Skills",
+       "type": "array"
+      },
+      "source": {
+       "title": "Source",
+       "type": "string"
+      },
+      "text": {
+       "title": "Text",
+       "type": "string"
+      },
+      "type": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Type"
+      }
+     },
+     "required": [
+      "evidence_id",
+      "project_id",
+      "project",
+      "type",
+      "source",
+      "date",
+      "outcome",
+      "client_industry",
+      "skills",
+      "score",
+      "text"
+     ],
+     "title": "EvidenceItem",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "#/$defs/EvidenceItem"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "tenant": {
+     "title": "Tenant",
+     "type": "string"
+    },
+    "variant": {
+     "title": "Variant",
+     "type": "string"
+    }
+   },
+   "required": [
+    "tenant",
+    "variant",
+    "items"
+   ],
+   "title": "SearchResult",
+   "type": "object"
+  }
+ }
+]

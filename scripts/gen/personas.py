@@ -7,6 +7,7 @@ described without being named — this is deliberate, to defeat naive keyword/de
 
 from __future__ import annotations
 
+
 # fields: id, title, repo, industry, client, date, explicit, implied, problem, approach, result, readme_style
 def P(*fields):  # noqa: N802 - compact constructor for catalog rows
     return tuple(fields)
