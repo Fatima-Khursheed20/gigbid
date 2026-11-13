@@ -43,7 +43,9 @@ def template_draft(job: dict, ev: list[dict], none: list[str], price: dict) -> _
     lines = [f"You need {title.lower()}, and I have delivered closely related work."]
     for i, e in enumerate(ev[:2]):
         res = re.search(r"(?s)## Results\s*(.+?)(\n#|$)", e["text"])
-        detail = (res.group(1) if res else e["text"]).strip().split("\n")[0][:220]
+        lines = [ln.strip() for ln in (res.group(1) if res else e["text"]).splitlines()
+                 if len(ln.split()) >= 6 and not ln.lstrip().startswith(("#", "*Client", "_Context", "```"))]
+        detail = (lines[0] if lines else e["project"] or "related work")[:220]
         lines.append(f"On '{e['project']}' — {detail} [E{i + 1}]")
     if none:
         lines.append(f"I have not done {none[0][:60].lower()} before, so I would scope that part with you first.")
