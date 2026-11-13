@@ -1,0 +1,427 @@
+[
+  {
+    "id": "fs-01",
+    "title": "Subscription billing for a fitness SaaS",
+    "repo": "fitpass-billing",
+    "industry": "fitness",
+    "client": "PulseGym",
+    "date": "2024-08",
+    "explicit": [
+      "Stripe",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "implied": [
+      "Prisma",
+      "TypeScript"
+    ],
+    "problem": "Gym owners collected memberships manually by bank transfer.",
+    "approach": "Built plans, trials, proration and dunning emails with webhooks and an admin dashboard.",
+    "result": "1,400 paying members migrated in two weeks; failed-payment recovery 38%.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "Stripe",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-02",
+    "title": "Real-time logistics tracking dashboard",
+    "repo": "fleet-live",
+    "industry": "logistics",
+    "client": "Rapid Couriers",
+    "date": "2025-02",
+    "explicit": [
+      "React",
+      "Node.js"
+    ],
+    "implied": [
+      "WebSockets",
+      "Redis",
+      "TypeScript"
+    ],
+    "problem": "Dispatchers phoned drivers to ask where they were.",
+    "approach": "Live map with driver positions pushed from a Node service, plus ETA alerts.",
+    "result": "Dispatcher calls dropped 60%; 300 concurrent drivers on a $40/month server.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "Node.js",
+      "React",
+      "Redis",
+      "TypeScript",
+      "WebSockets"
+    ]
+  },
+  {
+    "id": "fs-03",
+    "title": "Marketplace MVP for handmade goods",
+    "repo": "craftly",
+    "industry": "ecommerce",
+    "client": "Craftly (startup)",
+    "date": "2023-09",
+    "explicit": [
+      "Next.js",
+      "TypeScript",
+      "Stripe"
+    ],
+    "implied": [
+      "Tailwind CSS",
+      "PostgreSQL",
+      "OAuth"
+    ],
+    "problem": "Founders needed a working two-sided marketplace for a pilot in six weeks.",
+    "approach": "Seller onboarding, listings, cart, split payouts and Google sign-in.",
+    "result": "Launched in 5.5 weeks; 120 sellers and $18k GMV in the first month.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Next.js",
+      "OAuth",
+      "PostgreSQL",
+      "Stripe",
+      "Tailwind CSS",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-04",
+    "title": "GraphQL API for a news app",
+    "repo": "newsgraph",
+    "industry": "media",
+    "client": "Daily Ledger",
+    "date": "2024-01",
+    "explicit": [
+      "GraphQL",
+      "Node.js",
+      "MongoDB"
+    ],
+    "implied": [
+      "Redis",
+      "Docker"
+    ],
+    "problem": "Mobile and web clients made 14 REST calls to render one screen.",
+    "approach": "Single GraphQL schema with dataloaders and per-field caching.",
+    "result": "Home-screen load time from 3.2 s to 0.9 s; backend costs down 30%.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Docker",
+      "GraphQL",
+      "MongoDB",
+      "Node.js",
+      "Redis"
+    ]
+  },
+  {
+    "id": "fs-05",
+    "title": "Shopify inventory sync app",
+    "repo": "stock-sync",
+    "industry": "ecommerce",
+    "client": "Kitchenly",
+    "date": "2024-06",
+    "explicit": [
+      "Shopify",
+      "Node.js"
+    ],
+    "implied": [
+      "BullMQ",
+      "PostgreSQL"
+    ],
+    "problem": "Overselling happened because a warehouse system and Shopify disagreed.",
+    "approach": "Custom app that reconciles stock every minute with a queue and conflict rules.",
+    "result": "Overselling incidents went from ~40/month to 2/month.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "BullMQ",
+      "Node.js",
+      "PostgreSQL",
+      "Shopify"
+    ]
+  },
+  {
+    "id": "fs-06",
+    "title": "Clinic appointment booking platform",
+    "repo": "bookwell",
+    "industry": "healthcare",
+    "client": "CarePath Clinics",
+    "date": "2025-04",
+    "explicit": [
+      "React",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "implied": [
+      "TypeScript",
+      "Jest",
+      "Docker"
+    ],
+    "problem": "Receptionists double-booked doctors using a shared spreadsheet.",
+    "approach": "Booking flows with availability rules, SMS reminders and an audit log.",
+    "result": "No double bookings since launch; no-shows down 27% with reminders.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Docker",
+      "Jest",
+      "NestJS",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-07",
+    "title": "E2E test suite for a checkout",
+    "repo": "checkout-guard",
+    "industry": "ecommerce",
+    "client": "Bazaar Mart",
+    "date": "2025-01",
+    "explicit": [
+      "Playwright",
+      "TypeScript"
+    ],
+    "implied": [
+      "CI/CD"
+    ],
+    "problem": "Every release broke something in checkout.",
+    "approach": "120 end-to-end scenarios running in parallel on every pull request with visual diffs.",
+    "result": "Checkout incidents after release fell from 6 per quarter to 0 over two quarters.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "CI/CD",
+      "Playwright",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-08",
+    "title": "Serverless image pipeline",
+    "repo": "thumbify",
+    "industry": "media",
+    "client": "Snapfolio",
+    "date": "2023-12",
+    "explicit": [
+      "AWS Lambda",
+      "Node.js"
+    ],
+    "implied": [
+      "Docker",
+      "CI/CD"
+    ],
+    "problem": "Photographers waited minutes for previews to appear.",
+    "approach": "Event-driven resizing and watermarking on upload with CDN invalidation.",
+    "result": "Preview latency under 2 s at p95; infra bill $11/month for 200k images.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "AWS Lambda",
+      "CI/CD",
+      "Docker",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "fs-09",
+    "title": "Internal CRM on Django",
+    "repo": "deal-desk",
+    "industry": "real-estate",
+    "client": "Skyline Realtors",
+    "date": "2023-05",
+    "explicit": [
+      "Django",
+      "PostgreSQL"
+    ],
+    "implied": [
+      "Docker",
+      "Redis"
+    ],
+    "problem": "Agents tracked leads in personal notebooks.",
+    "approach": "Lead pipeline, role-based admin, CSV import and weekly reports.",
+    "result": "Lead response time halved; adopted by all 35 agents.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "Django",
+      "Docker",
+      "PostgreSQL",
+      "Redis"
+    ]
+  },
+  {
+    "id": "fs-10",
+    "title": "Cross-platform fitness companion app",
+    "repo": "pulse-mobile",
+    "industry": "fitness",
+    "client": "PulseGym",
+    "date": "2025-06",
+    "explicit": [
+      "React Native",
+      "TypeScript"
+    ],
+    "implied": [
+      "Node.js",
+      "OAuth"
+    ],
+    "problem": "Members wanted to book classes from their phones.",
+    "approach": "iOS/Android app sharing 90% code, with social login and push notifications.",
+    "result": "4.7-star rating; 60% of bookings moved to mobile in two months.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Node.js",
+      "OAuth",
+      "React Native",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-11",
+    "title": "Multi-tenant SaaS starter",
+    "repo": "tenantkit",
+    "industry": "saas",
+    "client": "personal open-source",
+    "date": "2025-08",
+    "explicit": [
+      "Next.js",
+      "Prisma",
+      "OAuth"
+    ],
+    "implied": [
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Stripe"
+    ],
+    "problem": "I kept rebuilding the same auth/billing/tenancy boilerplate for clients.",
+    "approach": "Open-source starter with row-level tenancy, invites, billing and audit logs.",
+    "result": "210 GitHub stars; reused in 4 client projects to save ~3 weeks each.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Next.js",
+      "OAuth",
+      "PostgreSQL",
+      "Prisma",
+      "Stripe",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "fs-12",
+    "title": "Legacy jQuery to React migration",
+    "repo": "modernize-ui",
+    "industry": "insurance",
+    "client": "SecureLife Insurance",
+    "date": "2024-10",
+    "explicit": [
+      "React",
+      "TypeScript",
+      "Jest"
+    ],
+    "implied": [
+      "CI/CD"
+    ],
+    "problem": "A 9-year-old quoting UI was impossible to change safely.",
+    "approach": "Incremental strangler migration screen by screen behind feature flags.",
+    "result": "Migrated 42 screens with zero downtime; bug reports down 55%.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "CI/CD",
+      "Jest",
+      "React",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-13",
+    "title": "Event ticketing with QR check-in",
+    "repo": "gate-pass",
+    "industry": "events",
+    "client": "FestHub",
+    "date": "2024-03",
+    "explicit": [
+      "Express",
+      "MongoDB",
+      "Stripe"
+    ],
+    "implied": [
+      "React",
+      "WebSockets"
+    ],
+    "problem": "Paper tickets caused long queues and fraud at festivals.",
+    "approach": "Ticket sales, signed QR codes and an offline-tolerant scanner app.",
+    "result": "Scanned 9,000 attendees in 90 minutes; zero duplicate entries.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "Express",
+      "MongoDB",
+      "React",
+      "Stripe",
+      "WebSockets"
+    ]
+  },
+  {
+    "id": "fs-14",
+    "title": "Headless CMS website with i18n",
+    "repo": "multi-lingo",
+    "industry": "education",
+    "client": "LearnBridge",
+    "date": "2025-09",
+    "explicit": [
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "implied": [
+      "TypeScript",
+      "CI/CD"
+    ],
+    "problem": "A school network needed one site in English, Urdu and Arabic.",
+    "approach": "Static-first site with RTL support, CMS previews and image optimisation.",
+    "result": "Lighthouse 98; organic traffic up 70% in three months.",
+    "readme_style": "clear",
+    "persona": "fullstack",
+    "skills": [
+      "CI/CD",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript"
+    ]
+  },
+  {
+    "id": "fs-15",
+    "title": "Background export service for a B2B portal",
+    "repo": "export-hub",
+    "industry": "logistics",
+    "client": "Rapid Couriers",
+    "date": "2025-10",
+    "explicit": [
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "implied": [
+      "BullMQ",
+      "Redis",
+      "AWS Lambda"
+    ],
+    "problem": "Customers' monthly CSV exports timed out and support had to email files manually.",
+    "approach": "Moved exports to queued background jobs with progress notifications and signed download links.",
+    "result": "Export failures went from 15% to under 0.5%; support tickets about exports stopped.",
+    "readme_style": "vague",
+    "persona": "fullstack",
+    "skills": [
+      "AWS Lambda",
+      "BullMQ",
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ]
+  }
+]

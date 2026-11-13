@@ -1,0 +1,36 @@
+{
+  "name": "Bilal Ahmed (synthetic)",
+  "headline": "Full-stack Web Developer \u2014 React/Next.js, Node, Postgres",
+  "location": "Karachi, Pakistan (remote)",
+  "hourly_rate": 35,
+  "floor_rate": 22,
+  "min_project": 250,
+  "years": 6,
+  "categories": [
+    "web"
+  ],
+  "voice": "friendly, outcome-focused, short sentences",
+  "persona": "fullstack",
+  "skills": [
+    "AWS Lambda",
+    "Django",
+    "Express",
+    "GraphQL",
+    "Jest",
+    "MongoDB",
+    "NestJS",
+    "Next.js",
+    "Node.js",
+    "OAuth",
+    "Playwright",
+    "PostgreSQL",
+    "Prisma",
+    "React",
+    "React Native",
+    "Shopify",
+    "Stripe",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "synthetic": true
+}

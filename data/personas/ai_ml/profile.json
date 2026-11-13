@@ -1,0 +1,40 @@
+{
+  "name": "Ayesha Raza (synthetic)",
+  "headline": "Applied AI/ML Engineer \u2014 RAG, LLM agents, computer vision",
+  "location": "Lahore, Pakistan (remote)",
+  "hourly_rate": 45,
+  "floor_rate": 30,
+  "min_project": 300,
+  "years": 5,
+  "categories": [
+    "ai_ml"
+  ],
+  "voice": "direct, technical, numbers-first",
+  "persona": "ai_ml",
+  "skills": [
+    "AWS SageMaker",
+    "Docker",
+    "FAISS",
+    "FastAPI",
+    "Hugging Face Transformers",
+    "LLM evaluation",
+    "LangChain",
+    "LangGraph",
+    "LoRA fine-tuning",
+    "MLflow",
+    "OpenCV",
+    "Pinecone",
+    "Prompt engineering",
+    "Prophet",
+    "PyTorch",
+    "Python",
+    "RAG",
+    "Tesseract OCR",
+    "XGBoost",
+    "YOLO",
+    "pgvector",
+    "scikit-learn",
+    "spaCy"
+  ],
+  "synthetic": true
+}

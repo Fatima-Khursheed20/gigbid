@@ -1,0 +1,35 @@
+{
+  "v1": {
+    "version": "v1",
+    "effective": "2026-10-27",
+    "weekly_connects": 120,
+    "connects_cost": {"fixed_under_500": 4, "fixed_500_to_1000": 8, "fixed_over_1000": 12, "hourly": 8},
+    "rules": [
+      "No off-platform contact details or requests to communicate outside the platform.",
+      "No requests for or offers of payment outside the platform.",
+      "No fabricated experience, credentials, clients or results.",
+      "No guarantees of outcomes (rankings, revenue, accuracy) that cannot be guaranteed.",
+      "No unpaid production work disguised as a test.",
+      "Automation must be human-supervised: every proposal and message is approved by the freelancer."
+    ],
+    "submission_checks": ["off_platform_contact"]
+  },
+  "v2": {
+    "version": "v2",
+    "effective": "2026-11-02",
+    "summary": "Platform policy update: AI-disclosure line required, external links banned in proposals, and featured jobs cost +2 Connects.",
+    "weekly_connects": 120,
+    "connects_cost": {"fixed_under_500": 4, "fixed_500_to_1000": 8, "fixed_over_1000": 12, "hourly": 8, "featured_surcharge": 2},
+    "rules": [
+      "No off-platform contact details or requests to communicate outside the platform.",
+      "No requests for or offers of payment outside the platform.",
+      "No fabricated experience, credentials, clients or results.",
+      "No guarantees of outcomes (rankings, revenue, accuracy) that cannot be guaranteed.",
+      "No unpaid production work disguised as a test.",
+      "Automation must be human-supervised: every proposal and message is approved by the freelancer.",
+      "NEW: Proposals drafted with AI assistance must contain the exact disclosure line: 'Drafted with AI assistance and reviewed by me.'",
+      "NEW: Proposals must not contain external URLs (http/https links)."
+    ],
+    "submission_checks": ["off_platform_contact", "ai_disclosure", "no_external_urls"]
+  }
+}

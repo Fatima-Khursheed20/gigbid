@@ -1,0 +1,454 @@
+[
+  {
+    "id": "ai-01",
+    "title": "Contract Q&A assistant for a legal-tech startup",
+    "repo": "lexi-rag",
+    "industry": "legal",
+    "client": "Clausewise Ltd",
+    "date": "2025-03",
+    "explicit": [
+      "Python",
+      "RAG",
+      "LangChain",
+      "FastAPI"
+    ],
+    "implied": [
+      "pgvector",
+      "Prompt engineering"
+    ],
+    "problem": "Paralegals spent hours searching 40k contracts for indemnity and termination clauses.",
+    "approach": "Built a retrieval pipeline with clause-aware chunking, hybrid search and citations, served behind an API.",
+    "result": "Cut clause lookup from ~25 minutes to under 1 minute; 92% of answers cited the correct clause in a 200-question audit.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FastAPI",
+      "LangChain",
+      "Prompt engineering",
+      "Python",
+      "RAG",
+      "pgvector"
+    ]
+  },
+  {
+    "id": "ai-02",
+    "title": "Multi-step support agent with tool calls",
+    "repo": "helpdesk-agent",
+    "industry": "saas",
+    "client": "Tickety",
+    "date": "2025-07",
+    "explicit": [
+      "LangGraph",
+      "Python",
+      "LLM evaluation"
+    ],
+    "implied": [
+      "FastAPI",
+      "Celery",
+      "Prompt engineering"
+    ],
+    "problem": "Tier-1 support tickets piled up overnight.",
+    "approach": "Designed a stateful agent that classifies tickets, looks up orders and drafts replies for human approval.",
+    "result": "Auto-drafted 61% of tickets; agents accepted 78% of drafts with minor edits.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "Celery",
+      "FastAPI",
+      "LLM evaluation",
+      "LangGraph",
+      "Prompt engineering",
+      "Python"
+    ]
+  },
+  {
+    "id": "ai-03",
+    "title": "Retail demand forecasting",
+    "repo": "demand-cast",
+    "industry": "retail",
+    "client": "Bazaar Mart",
+    "date": "2024-02",
+    "explicit": [
+      "Prophet",
+      "Python",
+      "XGBoost"
+    ],
+    "implied": [
+      "pandas",
+      "Airflow"
+    ],
+    "problem": "Store managers over-ordered perishables before holidays.",
+    "approach": "Combined a seasonal forecaster with a gradient-boosted residual model, refreshed nightly.",
+    "result": "MAPE dropped from 31% to 14% across 120 SKUs; waste fell ~18% in the pilot stores.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "Airflow",
+      "Prophet",
+      "Python",
+      "XGBoost",
+      "pandas"
+    ]
+  },
+  {
+    "id": "ai-04",
+    "title": "Invoice data extraction pipeline",
+    "repo": "invoice-lens",
+    "industry": "fintech",
+    "client": "PayLedger",
+    "date": "2024-09",
+    "explicit": [
+      "Tesseract OCR",
+      "spaCy",
+      "Python"
+    ],
+    "implied": [
+      "OpenCV",
+      "FastAPI"
+    ],
+    "problem": "An accounts team keyed in 3,000 scanned invoices a month by hand.",
+    "approach": "OCR with image deskewing, then entity extraction for vendor, totals, dates and tax IDs.",
+    "result": "Field-level accuracy 96% on a held-out set of 500 invoices; manual entry time down 70%.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FastAPI",
+      "OpenCV",
+      "Python",
+      "Tesseract OCR",
+      "spaCy"
+    ]
+  },
+  {
+    "id": "ai-05",
+    "title": "Defect detection on a packaging line",
+    "repo": "line-vision",
+    "industry": "manufacturing",
+    "client": "PackRight Industries",
+    "date": "2023-11",
+    "explicit": [
+      "YOLO",
+      "PyTorch",
+      "OpenCV"
+    ],
+    "implied": [
+      "Docker"
+    ],
+    "problem": "Mislabelled boxes reached customers despite manual checks.",
+    "approach": "Trained a real-time detector on 6k annotated frames and deployed it on an edge box next to the conveyor.",
+    "result": "Recall 0.94 / precision 0.91 on defects at 28 FPS; customer complaints about labels fell by half.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "Docker",
+      "OpenCV",
+      "PyTorch",
+      "YOLO"
+    ]
+  },
+  {
+    "id": "ai-06",
+    "title": "Brand-voice copy model",
+    "repo": "voicecraft",
+    "industry": "marketing",
+    "client": "Loom & Line Agency",
+    "date": "2025-05",
+    "explicit": [
+      "Hugging Face Transformers",
+      "LoRA fine-tuning"
+    ],
+    "implied": [
+      "PyTorch",
+      "LLM evaluation"
+    ],
+    "problem": "Copywriters rewrote generic LLM drafts to match each client's tone.",
+    "approach": "Fine-tuned a 7B open model with adapters per brand and built a blind tone-match evaluation.",
+    "result": "Editors preferred the tuned model's drafts 71% of the time in a blind test of 300 pairs.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "Hugging Face Transformers",
+      "LLM evaluation",
+      "LoRA fine-tuning",
+      "PyTorch"
+    ]
+  },
+  {
+    "id": "ai-07",
+    "title": "Semantic product search",
+    "repo": "shop-semsearch",
+    "industry": "ecommerce",
+    "client": "Kitchenly",
+    "date": "2024-05",
+    "explicit": [
+      "Pinecone",
+      "Python"
+    ],
+    "implied": [
+      "Hugging Face Transformers",
+      "FastAPI"
+    ],
+    "problem": "Customers searching 'something to keep coffee hot' found nothing.",
+    "approach": "Embedded 80k products with a sentence-transformer and served vector search with keyword fallback.",
+    "result": "Search-to-cart conversion up 11% in an A/B test; zero-result searches down 64%.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FastAPI",
+      "Hugging Face Transformers",
+      "Pinecone",
+      "Python"
+    ]
+  },
+  {
+    "id": "ai-08",
+    "title": "Churn prediction for a telecom",
+    "repo": "churn-guard",
+    "industry": "telecom",
+    "client": "Connectly",
+    "date": "2023-06",
+    "explicit": [
+      "scikit-learn",
+      "XGBoost",
+      "Python"
+    ],
+    "implied": [
+      "MLflow",
+      "pandas"
+    ],
+    "problem": "Retention offers were sent to everyone, wasting budget.",
+    "approach": "Built a calibrated churn classifier with SHAP explanations and tracked experiments.",
+    "result": "AUC 0.87; targeting the top decile saved ~$40k per quarter in offer costs.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "MLflow",
+      "Python",
+      "XGBoost",
+      "pandas",
+      "scikit-learn"
+    ]
+  },
+  {
+    "id": "ai-09",
+    "title": "Medical-notes de-identification",
+    "repo": "deid-notes",
+    "industry": "healthcare",
+    "client": "CarePath Clinics",
+    "date": "2024-12",
+    "explicit": [
+      "spaCy",
+      "Hugging Face Transformers"
+    ],
+    "implied": [
+      "Python",
+      "LLM evaluation"
+    ],
+    "problem": "Researchers could not use clinical notes until PHI was removed.",
+    "approach": "Combined rule patterns with a fine-tuned NER model to redact names, dates and IDs.",
+    "result": "PHI recall 0.98 on 1,000 annotated notes, audited by the clinic's privacy officer.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "Hugging Face Transformers",
+      "LLM evaluation",
+      "Python",
+      "spaCy"
+    ]
+  },
+  {
+    "id": "ai-10",
+    "title": "Model monitoring and retraining service",
+    "repo": "ml-ops-kit",
+    "industry": "fintech",
+    "client": "LendFast",
+    "date": "2025-01",
+    "explicit": [
+      "MLflow",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "implied": [
+      "Airflow",
+      "Python"
+    ],
+    "problem": "A credit model silently degraded for months.",
+    "approach": "Set up drift detection, scheduled retraining and a model registry with approval gates.",
+    "result": "Drift is caught within 24h; retraining went from a 2-week manual task to a 40-minute pipeline.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "AWS SageMaker",
+      "Airflow",
+      "Docker",
+      "MLflow",
+      "Python"
+    ]
+  },
+  {
+    "id": "ai-11",
+    "title": "Research-paper RAG over arXiv",
+    "repo": "paper-pal",
+    "industry": "education",
+    "client": "personal open-source",
+    "date": "2025-09",
+    "explicit": [
+      "RAG",
+      "FAISS",
+      "LLM evaluation"
+    ],
+    "implied": [
+      "LangChain",
+      "Python"
+    ],
+    "problem": "Students struggled to find relevant prior work quickly.",
+    "approach": "Open-source tool with section-aware chunking, reranking and answer-faithfulness checks.",
+    "result": "340 GitHub stars; faithfulness 0.89 on a 150-question benchmark I released.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FAISS",
+      "LLM evaluation",
+      "LangChain",
+      "Python",
+      "RAG"
+    ]
+  },
+  {
+    "id": "ai-12",
+    "title": "Real-time call-centre sentiment",
+    "repo": "call-pulse",
+    "industry": "telecom",
+    "client": "VoiceHub",
+    "date": "2024-03",
+    "explicit": [
+      "Hugging Face Transformers",
+      "FastAPI"
+    ],
+    "implied": [
+      "Redis",
+      "Docker"
+    ],
+    "problem": "Supervisors only learned about angry callers after the call ended.",
+    "approach": "Streaming transcription chunks scored for sentiment and pushed to a live supervisor view.",
+    "result": "Median alert latency 1.8 s; escalations resolved 22% faster.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "Docker",
+      "FastAPI",
+      "Hugging Face Transformers",
+      "Redis"
+    ]
+  },
+  {
+    "id": "ai-13",
+    "title": "Resume-to-job matching engine",
+    "repo": "match-maker",
+    "industry": "hr",
+    "client": "TalentBridge",
+    "date": "2025-04",
+    "explicit": [
+      "pgvector",
+      "Python",
+      "Prompt engineering"
+    ],
+    "implied": [
+      "FastAPI",
+      "LangChain"
+    ],
+    "problem": "Recruiters manually screened hundreds of CVs per role.",
+    "approach": "Structured extraction of CVs into skills and experience, then hybrid ranking with explanations.",
+    "result": "Recruiter shortlist agreement 0.81 (Cohen's kappa 0.62) on 50 roles.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FastAPI",
+      "LangChain",
+      "Prompt engineering",
+      "Python",
+      "pgvector"
+    ]
+  },
+  {
+    "id": "ai-14",
+    "title": "Image classification for crop disease",
+    "repo": "leaf-doctor",
+    "industry": "agriculture",
+    "client": "AgriAssist NGO",
+    "date": "2023-04",
+    "explicit": [
+      "PyTorch",
+      "OpenCV"
+    ],
+    "implied": [
+      "FastAPI"
+    ],
+    "problem": "Farmers had no quick way to identify leaf diseases.",
+    "approach": "Transfer-learned a small CNN and shipped it as an offline-capable API for a mobile app.",
+    "result": "Top-1 accuracy 93% across 12 diseases; used by ~2,000 farmers in the pilot.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "FastAPI",
+      "OpenCV",
+      "PyTorch"
+    ]
+  },
+  {
+    "id": "ai-15",
+    "title": "Async document processing backend",
+    "repo": "doc-workers",
+    "industry": "legal",
+    "client": "Clausewise Ltd",
+    "date": "2025-06",
+    "explicit": [
+      "Python",
+      "FastAPI"
+    ],
+    "implied": [
+      "Celery",
+      "Redis",
+      "Docker"
+    ],
+    "problem": "Uploading a 300-page contract timed out the web app.",
+    "approach": "Moved parsing and embedding into a queue of background workers with retries and progress events.",
+    "result": "Upload timeouts went to zero; throughput 1,200 pages/minute on two workers.",
+    "readme_style": "vague",
+    "persona": "ai_ml",
+    "skills": [
+      "Celery",
+      "Docker",
+      "FastAPI",
+      "Python",
+      "Redis"
+    ]
+  },
+  {
+    "id": "ai-16",
+    "title": "LLM guardrails and red-teaming",
+    "repo": "safe-prompt",
+    "industry": "saas",
+    "client": "Tickety",
+    "date": "2025-10",
+    "explicit": [
+      "Prompt engineering",
+      "LLM evaluation"
+    ],
+    "implied": [
+      "LangGraph",
+      "Python"
+    ],
+    "problem": "A customer-facing bot could be tricked into revealing internal notes.",
+    "approach": "Built an injection test suite (180 attacks), delimiting and output filters, and a regression gate in CI.",
+    "result": "Attack success fell from 34% to 3% on the suite; no regressions in answer quality.",
+    "readme_style": "clear",
+    "persona": "ai_ml",
+    "skills": [
+      "LLM evaluation",
+      "LangGraph",
+      "Prompt engineering",
+      "Python"
+    ]
+  }
+]

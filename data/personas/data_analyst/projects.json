@@ -1,0 +1,409 @@
+[
+  {
+    "id": "da-01",
+    "title": "Executive sales dashboard",
+    "repo": "sales-pulse",
+    "industry": "retail",
+    "client": "Bazaar Mart",
+    "date": "2024-04",
+    "explicit": [
+      "Power BI",
+      "SQL"
+    ],
+    "implied": [
+      "Excel",
+      "ETL"
+    ],
+    "problem": "Leadership got sales numbers two weeks late in emailed spreadsheets.",
+    "approach": "Star-schema model, DAX measures for YoY and margin, and row-level security per region.",
+    "result": "Daily refresh; the weekly reporting meeting was cut from 2 hours to 30 minutes.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "ETL",
+      "Excel",
+      "Power BI",
+      "SQL"
+    ]
+  },
+  {
+    "id": "da-02",
+    "title": "Subscription retention analysis",
+    "repo": "retain-lens",
+    "industry": "saas",
+    "client": "Tickety",
+    "date": "2024-11",
+    "explicit": [
+      "Cohort analysis",
+      "SQL",
+      "Python"
+    ],
+    "implied": [
+      "pandas",
+      "Data visualization"
+    ],
+    "problem": "A SaaS company did not know why customers cancelled after month three.",
+    "approach": "Cohort retention curves, feature-usage correlation and a churn-driver memo.",
+    "result": "Identified onboarding gap; a fix lifted month-3 retention from 61% to 69%.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "Cohort analysis",
+      "Data visualization",
+      "Python",
+      "SQL",
+      "pandas"
+    ]
+  },
+  {
+    "id": "da-03",
+    "title": "Modern data stack migration",
+    "repo": "warehouse-move",
+    "industry": "fintech",
+    "client": "PayLedger",
+    "date": "2025-02",
+    "explicit": [
+      "dbt",
+      "Snowflake"
+    ],
+    "implied": [
+      "Airflow",
+      "SQL"
+    ],
+    "problem": "Metrics differed between teams because each had its own spreadsheets.",
+    "approach": "Moved reporting to a warehouse with tested, documented models and scheduled runs.",
+    "result": "48 dbt models with 160 tests; 'which number is right' tickets dropped to near zero.",
+    "readme_style": "vague",
+    "persona": "data_analyst",
+    "skills": [
+      "Airflow",
+      "SQL",
+      "Snowflake",
+      "dbt"
+    ]
+  },
+  {
+    "id": "da-04",
+    "title": "Website funnel and GA4 audit",
+    "repo": "funnel-fix",
+    "industry": "ecommerce",
+    "client": "Kitchenly",
+    "date": "2024-07",
+    "explicit": [
+      "Google Analytics 4",
+      "Looker Studio"
+    ],
+    "implied": [
+      "BigQuery",
+      "SQL"
+    ],
+    "problem": "An online shop saw traffic grow but sales stay flat.",
+    "approach": "Fixed event tracking, built a funnel report and found a broken mobile checkout step.",
+    "result": "Mobile conversion rose from 1.1% to 1.9% after the fix.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "BigQuery",
+      "Google Analytics 4",
+      "Looker Studio",
+      "SQL"
+    ]
+  },
+  {
+    "id": "da-05",
+    "title": "Pricing A/B test analysis",
+    "repo": "price-test",
+    "industry": "saas",
+    "client": "TenantKit Cloud",
+    "date": "2025-05",
+    "explicit": [
+      "A/B testing",
+      "Statistics"
+    ],
+    "implied": [
+      "Python",
+      "SQL"
+    ],
+    "problem": "A startup wanted to raise prices without losing sign-ups.",
+    "approach": "Designed a 3-arm experiment with power analysis and sequential monitoring.",
+    "result": "Shipped the +15% arm: revenue per visitor +9% with no significant drop in conversion (p=0.41).",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "A/B testing",
+      "Python",
+      "SQL",
+      "Statistics"
+    ]
+  },
+  {
+    "id": "da-06",
+    "title": "Inventory demand forecast in Excel",
+    "repo": "stock-forecast",
+    "industry": "retail",
+    "client": "Corner Pharmacy Chain",
+    "date": "2023-10",
+    "explicit": [
+      "Excel",
+      "Forecasting"
+    ],
+    "implied": [
+      "Statistics"
+    ],
+    "problem": "Pharmacies ran out of seasonal medicines every winter.",
+    "approach": "Seasonal forecasting model in Excel with Power Query refresh, usable by non-technical staff.",
+    "result": "Stock-outs during peak season down 35%.",
+    "readme_style": "vague",
+    "persona": "data_analyst",
+    "skills": [
+      "Excel",
+      "Forecasting",
+      "Statistics"
+    ]
+  },
+  {
+    "id": "da-07",
+    "title": "Marketing attribution in BigQuery",
+    "repo": "attrib-q",
+    "industry": "marketing",
+    "client": "Loom & Line Agency",
+    "date": "2024-09",
+    "explicit": [
+      "BigQuery",
+      "SQL"
+    ],
+    "implied": [
+      "Google Analytics 4",
+      "Data visualization"
+    ],
+    "problem": "An agency could not tell clients which channels drove sales.",
+    "approach": "Built position-based attribution from raw GA4 export and ad-platform costs.",
+    "result": "Reallocated 20% of spend; client ROAS improved from 2.1 to 2.8.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "BigQuery",
+      "Data visualization",
+      "Google Analytics 4",
+      "SQL"
+    ]
+  },
+  {
+    "id": "da-08",
+    "title": "Customer segmentation for loyalty",
+    "repo": "segment-it",
+    "industry": "retail",
+    "client": "Bazaar Mart",
+    "date": "2025-03",
+    "explicit": [
+      "Customer segmentation",
+      "Python"
+    ],
+    "implied": [
+      "pandas",
+      "scikit-learn",
+      "Tableau"
+    ],
+    "problem": "One-size-fits-all loyalty emails got poor engagement.",
+    "approach": "RFM features and clustering into 6 segments with personas and playbooks.",
+    "result": "Email click-through up 43% after segment-specific campaigns.",
+    "readme_style": "vague",
+    "persona": "data_analyst",
+    "skills": [
+      "Customer segmentation",
+      "Python",
+      "Tableau",
+      "pandas",
+      "scikit-learn"
+    ]
+  },
+  {
+    "id": "da-09",
+    "title": "Hospital operations dashboard",
+    "repo": "ward-watch",
+    "industry": "healthcare",
+    "client": "CarePath Clinics",
+    "date": "2024-02",
+    "explicit": [
+      "Tableau",
+      "SQL"
+    ],
+    "implied": [
+      "ETL"
+    ],
+    "problem": "Bed occupancy was tracked on a whiteboard.",
+    "approach": "Live occupancy, length-of-stay and discharge forecasts for 6 wards.",
+    "result": "Average ER boarding time down 18%.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "ETL",
+      "SQL",
+      "Tableau"
+    ]
+  },
+  {
+    "id": "da-10",
+    "title": "Automated reporting pipeline",
+    "repo": "report-bot",
+    "industry": "logistics",
+    "client": "Rapid Couriers",
+    "date": "2025-07",
+    "explicit": [
+      "Airflow",
+      "Python"
+    ],
+    "implied": [
+      "SQL",
+      "pandas",
+      "Metabase"
+    ],
+    "problem": "An analyst spent every Monday morning copying numbers into slides.",
+    "approach": "Scheduled pipeline loads data, runs checks and refreshes self-serve dashboards.",
+    "result": "Saved ~6 hours per week; zero missed reports in 6 months.",
+    "readme_style": "vague",
+    "persona": "data_analyst",
+    "skills": [
+      "Airflow",
+      "Metabase",
+      "Python",
+      "SQL",
+      "pandas"
+    ]
+  },
+  {
+    "id": "da-11",
+    "title": "Survey statistics report in R",
+    "repo": "survey-stats",
+    "industry": "education",
+    "client": "LearnBridge",
+    "date": "2023-08",
+    "explicit": [
+      "R",
+      "Statistics"
+    ],
+    "implied": [
+      "Data visualization"
+    ],
+    "problem": "A school network needed a rigorous analysis of a 4,000-respondent parent survey.",
+    "approach": "Weighted estimates, regression on satisfaction drivers and a plain-language report.",
+    "result": "Board adopted 3 of 4 recommendations; report cited in the annual plan.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "Data visualization",
+      "R",
+      "Statistics"
+    ]
+  },
+  {
+    "id": "da-12",
+    "title": "Self-serve analytics with Metabase",
+    "repo": "team-bi",
+    "industry": "saas",
+    "client": "TenantKit Cloud",
+    "date": "2025-08",
+    "explicit": [
+      "Metabase",
+      "SQL"
+    ],
+    "implied": [
+      "PostgreSQL",
+      "Docker"
+    ],
+    "problem": "Product managers waited days for analysts to answer simple questions.",
+    "approach": "Curated models, a metrics glossary and training for 20 PMs.",
+    "result": "Ad-hoc analyst requests down 50% in two months.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "Docker",
+      "Metabase",
+      "PostgreSQL",
+      "SQL"
+    ]
+  },
+  {
+    "id": "da-13",
+    "title": "Interactive Streamlit KPI explorer",
+    "repo": "kpi-explorer",
+    "industry": "fintech",
+    "client": "LendFast",
+    "date": "2025-10",
+    "explicit": [
+      "Streamlit",
+      "pandas"
+    ],
+    "implied": [
+      "SQL",
+      "Data visualization"
+    ],
+    "problem": "Credit risk team wanted to slice approval rates without writing SQL.",
+    "approach": "Internal web app with filters, cohort charts and CSV export on top of the warehouse.",
+    "result": "Used daily by 14 analysts; replaced 9 static reports.",
+    "readme_style": "vague",
+    "persona": "data_analyst",
+    "skills": [
+      "Data visualization",
+      "SQL",
+      "Streamlit",
+      "pandas"
+    ]
+  },
+  {
+    "id": "da-14",
+    "title": "Revenue forecasting for a marketplace",
+    "repo": "gmv-forecast",
+    "industry": "ecommerce",
+    "client": "Craftly (startup)",
+    "date": "2024-12",
+    "explicit": [
+      "Forecasting",
+      "Python"
+    ],
+    "implied": [
+      "Statistics",
+      "pandas"
+    ],
+    "problem": "A marketplace needed GMV projections for a fundraising deck.",
+    "approach": "Built a hierarchical forecast by category with scenario bands.",
+    "result": "Actuals landed within the 80% band for 5 of 6 months.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "Forecasting",
+      "Python",
+      "Statistics",
+      "pandas"
+    ]
+  },
+  {
+    "id": "da-15",
+    "title": "Data cleaning and ETL for a CRM merge",
+    "repo": "crm-merge",
+    "industry": "real-estate",
+    "client": "Skyline Realtors",
+    "date": "2024-05",
+    "explicit": [
+      "ETL",
+      "pandas",
+      "Excel"
+    ],
+    "implied": [
+      "Python",
+      "SQL"
+    ],
+    "problem": "Two merged agencies had 60k duplicated, inconsistent contact records.",
+    "approach": "Fuzzy de-duplication, standardisation rules and a reviewed merge file.",
+    "result": "60k records reduced to 38k clean contacts with a 99% match-review accuracy.",
+    "readme_style": "clear",
+    "persona": "data_analyst",
+    "skills": [
+      "ETL",
+      "Excel",
+      "Python",
+      "SQL",
+      "pandas"
+    ]
+  }
+]

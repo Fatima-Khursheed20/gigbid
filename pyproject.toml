@@ -1,0 +1,70 @@
+[project]
+name = "gigbid"
+version = "0.1.0"
+description = "GigBid: a multi-agent freelancer copilot (LangGraph + MCP + advanced RAG) for AI-4016"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "pydantic-settings",
+  "pyyaml",
+  "httpx",
+  "python-dotenv",
+  "langgraph",
+  "langgraph-checkpoint-postgres",
+  "langgraph-supervisor",
+  "langchain-core",
+  "langchain-openai",
+  "langchain-mcp-adapters",
+  "langsmith",
+  "mcp",
+  "psycopg[binary,pool]",
+  "pgvector",
+  "numpy",
+  "fastembed",
+  "rank-bm25",
+  "networkx",
+  "arq",
+  "redis",
+  "cryptography",
+  "pyjwt",
+  "bcrypt",
+  "sse-starlette",
+  "pypdf",
+  "reportlab",
+  "scipy",
+  "tiktoken",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "ruff",
+]
+
+[project.scripts]
+gigbid-portfolio-mcp = "mcp_servers.portfolio.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agent", "rag", "mcp_servers", "apps", "worker", "gigsim", "evals", "common"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["apps/web", "data", "evals/results"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests", "mcp_servers"]
+asyncio_default_fixture_loop_scope = "function"

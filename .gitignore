@@ -1,0 +1,40 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+secrets/
+
+# python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# node / web
+node_modules/
+apps/web/dist/
+apps/web/test-results/
+apps/web/playwright-report/
+apps/web/blob-report/
+
+# generated data
+data/processed/
+data/raw/
+data/heldout/
+.cache/
+*.db
+*.sqlite
+
+# models downloaded at runtime
+.fastembed_cache/
+models_cache/
+
+# os / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

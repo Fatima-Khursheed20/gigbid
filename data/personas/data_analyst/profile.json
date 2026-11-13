@@ -1,0 +1,38 @@
+{
+  "name": "Sara Malik (synthetic)",
+  "headline": "Data Analyst \u2014 SQL, dbt, Power BI, experimentation",
+  "location": "Islamabad, Pakistan (remote)",
+  "hourly_rate": 30,
+  "floor_rate": 18,
+  "min_project": 150,
+  "years": 4,
+  "categories": [
+    "data"
+  ],
+  "voice": "clear, business-oriented, explains impact",
+  "persona": "data_analyst",
+  "skills": [
+    "A/B testing",
+    "Airflow",
+    "BigQuery",
+    "Cohort analysis",
+    "Customer segmentation",
+    "ETL",
+    "Excel",
+    "Forecasting",
+    "Google Analytics 4",
+    "Looker Studio",
+    "Metabase",
+    "Power BI",
+    "Python",
+    "R",
+    "SQL",
+    "Snowflake",
+    "Statistics",
+    "Streamlit",
+    "Tableau",
+    "dbt",
+    "pandas"
+  ],
+  "synthetic": true
+}

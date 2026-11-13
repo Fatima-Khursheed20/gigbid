@@ -1,0 +1,1 @@
+-- DAX: Revenue YoY = DIVIDE([Revenue]-[Revenue LY],[Revenue LY])
