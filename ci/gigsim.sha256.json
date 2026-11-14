@@ -1,0 +1,11 @@
+{
+ "gigsim/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "gigsim/app.py": "265675664413a8e3027533be783dd4fe35736fd163155d7c00a2edae6157ad2b",
+ "gigsim/client_model.py": "fef285f6cf282a8b2f2634cf64296521c0cf73ac9a984f34ba8bd12c52b99ca5",
+ "gigsim/seed/clients.json": "a2be47ed66f9623fa91c375372419df84933c7c04e736be6d3b7b2eed1de461b",
+ "gigsim/seed/dev_jobs.json": "5815b0b1c900ae2b75a5bad4c1b846ce3f21c468c5bd13840877522f3f00e397",
+ "gigsim/seed/historical_jobs.json": "d1ff81bb7a54a2fdb70ba7ce775fdca9fc500964ebf72612c1705d845b80e09d",
+ "gigsim/seed/market_stats.json": "76ecab55502cbc31948bd6c7b930abb86811916a87a75d1e87119259f7ff3d3f",
+ "gigsim/seed/policy.json": "47a39f30e115a79b35d7df6c23d29b679ea2f354f9f449427168815aa52c8012",
+ "gigsim/seed/stream_jobs.json": "8d0cf873389f78011ed6e18a358fff3fffab3baac39a2a5dbf25ce4d61a7da10"
+}

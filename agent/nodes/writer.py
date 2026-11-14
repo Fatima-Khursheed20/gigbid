@@ -57,7 +57,7 @@ def template_draft(job: dict, ev: list[dict], none: list[str], price: dict) -> _
 
 
 async def write(job: dict, spec: dict, fit: dict, price: dict, rules: list[str], hints: list[str],
-                critique: dict | None, previous: str | None) -> tuple[_WriterOut, list[dict]]:
+                critique: dict | None, previous: str | None, voice: str = "") -> tuple[_WriterOut, list[dict]]:
     ev, none = evidence_pack(fit)
     if not llm.available():
         return template_draft(job, ev, none, price), ev
@@ -71,6 +71,7 @@ async def write(job: dict, spec: dict, fit: dict, price: dict, rules: list[str],
         f"Price to mention (optional): {price.get('amount')} ({price.get('bid_type')})",
         "Screening questions to answer: " + str(job.get("screening_questions") or []),
         "Learned style rules (from the user's past edits): " + ("; ".join(rules) or "(none yet)"),
+        "Write in this freelancer's voice: " + (voice or "plain, specific, first person"),
         "Outcome memory: " + ("; ".join(hints) or "(none yet)"),
         delimit(f"{job['title']}\n\n{clean}"),
     ]
@@ -89,7 +90,7 @@ async def writer(state: dict, config: RunnableConfig) -> dict:
     crit = state["critiques"][-1] if state.get("critiques") else None
     prev = (state.get("draft") or {}).get("cover_letter") if crit else None
     out, ev = await write(job, state.get("job_spec", {}), state.get("fit", {}), state.get("price", {}), rules, hints,
-                          crit, prev)
+                          crit, prev, d.profile.voice)
     answers = [ScreeningAnswer(question=a.get("question", ""), answer=a.get("answer", "")) for a in out.screening_answers]
     draft = ProposalDraft(job_id=job["job_id"], cover_letter=out.cover_letter.strip(), screening_answers=answers,
                           evidence_ids=[e["evidence_id"] for e in ev], version=(state.get("draft") or {}).get("version", 0) + 1,

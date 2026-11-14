@@ -1,0 +1,10 @@
+# CI eval gates (eval.yml). A PR fails if quality drops past these.
+# Offline (no API key in CI) gates use the deterministic rules/heuristics path; online gates use the open profile.
+offline:
+  bid_skip_f1_min: 0.70
+  scam_recall_min: 0.90
+  unsupported_claims_per_proposal_max: 0.5
+online:
+  bid_skip_f1_min: 0.70
+  scam_recall_min: 0.90
+  unsupported_claims_per_proposal_max: 0.5

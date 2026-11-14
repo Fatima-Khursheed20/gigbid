@@ -1,0 +1,1401 @@
+{
+ "meta": {
+  "generated_at": "2026-11-15 01:30:18",
+  "n_tasks": 40,
+  "provider": "groq"
+ },
+ "results": [
+  {
+   "set": "fine",
+   "n_tools": 16,
+   "n": 40,
+   "tool_selection_accuracy": 0.0,
+   "argument_accuracy": 0.0,
+   "tokens_per_task": 0.0,
+   "model": "openai/gpt-oss-20b",
+   "rows": [
+    {
+     "task": "Open job job-dev-ai-003 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-fu-010 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-da-021 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-ai-044 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-fu-077 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0012 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0145 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0301 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of background workers that retry failed jobs?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Celery?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of dbt models with tests?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Pinecone vector search?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of a churn model for a telecom?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Stripe subscriptions?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Power BI dashboards for executives?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do ai_ml jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do web jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do data jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What are the current platform rules for proposals?",
+     "expected": "get_policy",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Show my client conversations.",
+     "expected": "list_threads",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Read the messages in thread th-1a2b3c4d5e.",
+     "expected": "list_messages",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Any new pipeline events since event 12?",
+     "expected": "list_events",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Which skills does my portfolio prove?",
+     "expected": "list_skills",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Show me the full case study ai-07.",
+     "expected": "get_case_study",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Find new AI/ML jobs about RAG chatbots.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Search jobs mentioning Shopify.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "List my proposals and their status.",
+     "expected": "list_proposals",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "For job job-dev-ai-003, map each requirement to my evidence: Python, RAG, FastAPI.",
+     "expected": "requirement_matrix",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Preview (do not send) a proposal draft for job job-dev-ai-003 at $900 fixed.",
+     "expected": "create_proposal_draft",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Which free slots do I have for a 30-minute interview this week?",
+     "expected": "free_slots",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What's the status of everything I've submitted?",
+     "expected": "list_proposals",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Check whether I have evidence for 'OCR of scanned invoices'.",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Does client cl-0099 have verified payment?",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "How much is a medium data project worth?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Get job job-dev-da-005.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Have I ever built anything with LangGraph?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Look up the hiring history of client cl-0222 before I bid.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Find data analytics jobs.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Am I allowed to put a link to my website in proposals now?",
+     "expected": "get_policy",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    }
+   ]
+  },
+  {
+   "set": "coarse",
+   "n_tools": 3,
+   "n": 40,
+   "tool_selection_accuracy": 0.9,
+   "argument_accuracy": 0.45,
+   "tokens_per_task": 323.9,
+   "model": "openai/gpt-oss-20b",
+   "rows": [
+    {
+     "task": "Open job job-dev-ai-003 and show me the full post.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-ai-003"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 327,
+     "http": 200
+    },
+    {
+     "task": "Open job job-dev-fu-010 and show me the full post.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-fu-010"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 321,
+     "http": 200
+    },
+    {
+     "task": "Open job job-dev-da-021 and show me the full post.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-da-021"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 330,
+     "http": 200
+    },
+    {
+     "task": "Open job job-dev-ai-044 and show me the full post.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-ai-044"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 327,
+     "http": 200
+    },
+    {
+     "task": "Open job job-dev-fu-077 and show me the full post.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-fu-077"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 328,
+     "http": 200
+    },
+    {
+     "task": "Is client cl-0012 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_client_history",
+       "params": {
+        "client_id": "cl-0012"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 327,
+     "http": 200
+    },
+    {
+     "task": "Is client cl-0145 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_client_history",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 317,
+     "http": 200
+    },
+    {
+     "task": "Is client cl-0301 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_client_history",
+       "params": {
+        "client_id": "cl-0301"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 327,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of background workers that retry failed jobs?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "search_evidence",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 313,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of Celery?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "search_evidence",
+       "params": {
+        "keyword": "Celery"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 316,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of dbt models with tests?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "search_evidence",
+       "params": {
+        "query": "dbt models with tests"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 316,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of Pinecone vector search?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_evidence",
+       "params": {
+        "query": "Pinecone vector search"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 324,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of a churn model for a telecom?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_evidence",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 320,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of Stripe subscriptions?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "search_evidence",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 331,
+     "http": 200
+    },
+    {
+     "task": "Do I have portfolio proof of Power BI dashboards for executives?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_evidence",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 318,
+     "http": 200
+    },
+    {
+     "task": "What do ai_ml jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_market_stats",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 321,
+     "http": 200
+    },
+    {
+     "task": "What do web jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_market_stats",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 320,
+     "http": 200
+    },
+    {
+     "task": "What do data jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_market_stats",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 317,
+     "http": 200
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_connects_balance"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 313,
+     "http": 200
+    },
+    {
+     "task": "What are the current platform rules for proposals?",
+     "expected": "get_policy",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_policy",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 312,
+     "http": 200
+    },
+    {
+     "task": "Show my client conversations.",
+     "expected": "list_threads",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_threads",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 301,
+     "http": 200
+    },
+    {
+     "task": "Read the messages in thread th-1a2b3c4d5e.",
+     "expected": "list_messages",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_messages",
+       "params": {
+        "thread_id": "th-1a2b3c4d5e"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 348,
+     "http": 200
+    },
+    {
+     "task": "Any new pipeline events since event 12?",
+     "expected": "list_events",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_events",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 318,
+     "http": 200
+    },
+    {
+     "task": "Which skills does my portfolio prove?",
+     "expected": "list_skills",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "list_skills",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 321,
+     "http": 200
+    },
+    {
+     "task": "Show me the full case study ai-07.",
+     "expected": "get_case_study",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_case_study",
+       "params": {
+        "caseId": "ai-07"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 329,
+     "http": 200
+    },
+    {
+     "task": "Find new AI/ML jobs about RAG chatbots.",
+     "expected": "search_jobs",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_jobs",
+       "params": {
+        "query": "AI/ML RAG chatbot"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 328,
+     "http": 200
+    },
+    {
+     "task": "Search jobs mentioning Shopify.",
+     "expected": "search_jobs",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_jobs",
+       "params": {
+        "keywords": "Shopify"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 311,
+     "http": 200
+    },
+    {
+     "task": "List my proposals and their status.",
+     "expected": "list_proposals",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_proposals",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 311,
+     "http": 200
+    },
+    {
+     "task": "For job job-dev-ai-003, map each requirement to my evidence: Python, RAG, FastAPI.",
+     "expected": "requirement_matrix",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-ai-003"
+       }
+      }
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 355,
+     "http": 200
+    },
+    {
+     "task": "Preview (do not send) a proposal draft for job job-dev-ai-003 at $900 fixed.",
+     "expected": "create_proposal_draft",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-ai-003"
+       }
+      }
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 339,
+     "http": 200
+    },
+    {
+     "task": "Which free slots do I have for a 30-minute interview this week?",
+     "expected": "free_slots",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "free_slots",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 313,
+     "http": 200
+    },
+    {
+     "task": "What's the status of everything I've submitted?",
+     "expected": "list_proposals",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_proposals",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 313,
+     "http": 200
+    },
+    {
+     "task": "Check whether I have evidence for 'OCR of scanned invoices'.",
+     "expected": "search_evidence",
+     "call": {
+      "name": "portfolio",
+      "args": {
+       "action": "search_evidence",
+       "params": {
+        "evidence_type": "OCR of scanned invoices"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 320,
+     "http": 200
+    },
+    {
+     "task": "Does client cl-0099 have verified payment?",
+     "expected": "get_client_history",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_client_history",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 316,
+     "http": 200
+    },
+    {
+     "task": "How much is a medium data project worth?",
+     "expected": "get_market_stats",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_jobs",
+       "params": {}
+      }
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 328,
+     "http": 200
+    },
+    {
+     "task": "Get job job-dev-da-005.",
+     "expected": "get_job",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_job",
+       "params": {
+        "job_id": "job-dev-da-005"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 330,
+     "http": 200
+    },
+    {
+     "task": "Have I ever built anything with LangGraph?",
+     "expected": "search_evidence",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "list_proposals",
+       "params": {}
+      }
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 388,
+     "http": 200
+    },
+    {
+     "task": "Look up the hiring history of client cl-0222 before I bid.",
+     "expected": "get_client_history",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_client_history",
+       "params": {
+        "client_id": "cl-0222"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 329,
+     "http": 200
+    },
+    {
+     "task": "Find data analytics jobs.",
+     "expected": "search_jobs",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "search_jobs",
+       "params": {
+        "query": "data analytics"
+       }
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "tokens": 310,
+     "http": 200
+    },
+    {
+     "task": "Am I allowed to put a link to my website in proposals now?",
+     "expected": "get_policy",
+     "call": {
+      "name": "marketplace_read",
+      "args": {
+       "action": "get_policy",
+       "params": {}
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "tokens": 322,
+     "http": 200
+    }
+   ]
+  },
+  {
+   "set": "best",
+   "n_tools": 16,
+   "n": 40,
+   "tool_selection_accuracy": 0.0,
+   "argument_accuracy": 0.0,
+   "tokens_per_task": 0.0,
+   "model": "openai/gpt-oss-20b",
+   "rows": [
+    {
+     "task": "Open job job-dev-ai-003 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-fu-010 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-da-021 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-ai-044 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Open job job-dev-fu-077 and show me the full post.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0012 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0145 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Is client cl-0301 trustworthy? Check their marketplace history.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of background workers that retry failed jobs?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Celery?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of dbt models with tests?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Pinecone vector search?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of a churn model for a telecom?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Stripe subscriptions?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Do I have portfolio proof of Power BI dashboards for executives?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do ai_ml jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do web jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What do data jobs usually pay per hour on the marketplace?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "How many Connects do I have left this week?",
+     "expected": "get_connects_balance",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What are the current platform rules for proposals?",
+     "expected": "get_policy",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Show my client conversations.",
+     "expected": "list_threads",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Read the messages in thread th-1a2b3c4d5e.",
+     "expected": "list_messages",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Any new pipeline events since event 12?",
+     "expected": "list_events",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Which skills does my portfolio prove?",
+     "expected": "list_skills",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Show me the full case study ai-07.",
+     "expected": "get_case_study",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Find new AI/ML jobs about RAG chatbots.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Search jobs mentioning Shopify.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "List my proposals and their status.",
+     "expected": "list_proposals",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "For job job-dev-ai-003, map each requirement to my evidence: Python, RAG, FastAPI.",
+     "expected": "requirement_matrix",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Preview (do not send) a proposal draft for job job-dev-ai-003 at $900 fixed.",
+     "expected": "create_proposal_draft",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Which free slots do I have for a 30-minute interview this week?",
+     "expected": "free_slots",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "What's the status of everything I've submitted?",
+     "expected": "list_proposals",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Check whether I have evidence for 'OCR of scanned invoices'.",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Does client cl-0099 have verified payment?",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "How much is a medium data project worth?",
+     "expected": "get_market_stats",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Get job job-dev-da-005.",
+     "expected": "get_job",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Have I ever built anything with LangGraph?",
+     "expected": "search_evidence",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Look up the hiring history of client cl-0222 before I bid.",
+     "expected": "get_client_history",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Find data analytics jobs.",
+     "expected": "search_jobs",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    },
+    {
+     "task": "Am I allowed to put a link to my website in proposals now?",
+     "expected": "get_policy",
+     "call": null,
+     "tool_ok": false,
+     "args_ok": false,
+     "tokens": 0,
+     "http": 400
+    }
+   ]
+  }
+ ]
+}

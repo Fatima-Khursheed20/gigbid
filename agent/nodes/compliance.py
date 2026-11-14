@@ -81,9 +81,19 @@ async def compliance(state: dict, config: RunnableConfig) -> dict:
     draft = dict(state["draft"])
     verdict = check_text(draft["cover_letter"], policy)
     extra = await llm_check(verdict.cleaned_text or "", policy)
-    if extra:  # the LLM found something the rules missed: block for a human decision, never silently send
+    if extra:  # the LLM found something the rules missed: remove the offending sentence, block only if unfixable
+        text = verdict.cleaned_text or ""
+        for v in extra:
+            sent = _sentence_of(text, text.find(v.excerpt)) if v.excerpt in text else ""
+            if sent:
+                text = text.replace(sent, "")
+                v.fix = "removed sentence"
         verdict.violations += extra
-        verdict.blocked, verdict.reason = True, "Compliance model flagged: " + "; ".join(v.rule for v in extra)[:200]
+        verdict.cleaned_text = re.sub(r"\n{3,}", "\n\n", re.sub(r"[ \t]{2,}", " ", text)).strip()
+        if len(re.sub(r"\[E\d+\]", "", verdict.cleaned_text).split()) < 30:
+            verdict.blocked = True
+            verdict.reason = "Compliance model flagged: " + "; ".join(v.rule for v in extra)[:200]
+        verdict.ok = False
     answers = []
     for a in draft.get("screening_answers", []):
         v = check_text(a["answer"], {**policy, "submission_checks": [c for c in policy.get("submission_checks", [])

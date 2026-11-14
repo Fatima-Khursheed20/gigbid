@@ -73,7 +73,8 @@ async def run_job(persona: str, job: dict, *, approve: bool = False, user: str =
     from agent import runtime
     from agent.nodes._base import UserProfile
 
-    prof = UserProfile(user_id=f"{user}-{persona}", tenant=persona, **PROFILE_ARGS[persona])
+    voice = json.loads((ROOT / "data" / "personas" / persona / "profile.json").read_text(encoding="utf-8")).get("voice", "")
+    prof = UserProfile(user_id=f"{user}-{persona}", tenant=persona, voice=voice, **PROFILE_ARGS[persona])
     tid = f"bid:{prof.user_id}:{job['job_id']}{thread_suffix}"
     res = await runtime.run_graph("bid", profile=prof, thread_id=tid, inp={"job_id": job["job_id"], "analysis_only": analysis_only}, mode="inprocess",
                                   marketplace_token=f"gs-{prof.user_id}", dsn="")

@@ -151,9 +151,27 @@ def search_evidence(tenant: str, requirement: str, k: int = 5, filters: Evidence
                                                          for e in items])
 
 
+def _naive_matrix(corpus, requirements: list[str]) -> dict:
+    """V0 baseline: top-2 naive dense chunks per requirement, no grading (everything counts as evidence)."""
+    retr = make(corpus, "v0_naive")
+    rows = []
+    for r in requirements:
+        ev = retr.retrieve(Query(job_text=r), k=2)[:2]
+        rows.append({"requirement": r, "status": "supported" if ev else "none",
+                     "best_score": ev[0]["score"] if ev else 0.0, "evidence": ev})
+    return {"matrix": rows, "refuse": False}
+
+
 def requirement_matrix(tenant: str, requirements: list[str]) -> RequirementMatrix:
     corpus = STORE.corpus(tenant)
-    res = CragRetriever(corpus).run(Query(job_text=" ".join(requirements), requirements=requirements))
+    variant = cfg("rag", "variant", default="v4_outcome")
+    if variant == "v0_naive":
+        res = _naive_matrix(corpus, requirements)
+    else:
+        from rag.retriever import settings_for
+
+        res = CragRetriever(corpus, settings_for(variant)).run(Query(job_text=" ".join(requirements),
+                                                                     requirements=requirements))
     rows = []
     for m in res["matrix"]:
         ev = [EvidenceItem(**{f: e.get(f) for f in EvidenceItem.model_fields if f in e} | {"skills": e.get("skills") or []})

@@ -33,8 +33,18 @@ def redis() -> aioredis.Redis | None:
     return _redis
 
 
+def _voice(tenant: str) -> str:
+    from common.settings import ROOT
+
+    for base in ("tenants", "personas"):
+        p = ROOT / "data" / base / tenant / "profile.json"
+        if p.exists():
+            return json.loads(p.read_text(encoding="utf-8")).get("voice", "")
+    return ""
+
+
 def profile_of(u: dict) -> UserProfile:
-    return UserProfile(user_id=u["id"] if "id" in u else u["user_id"], tenant=u.get("tenant") or u.get("persona") or "ai_ml",
+    return UserProfile(voice=_voice(u.get("tenant") or "ai_ml"), user_id=u["id"] if "id" in u else u["user_id"], tenant=u.get("tenant") or u.get("persona") or "ai_ml",
                        name=u.get("name", "Freelancer"), hourly_rate=u.get("hourly_rate") or 35,
                        floor_rate=u.get("floor_rate") or 20, min_project=u.get("min_project") or 200,
                        weekly_connects_budget=u.get("weekly_connects_budget") or 80, autonomy=u.get("autonomy") or "suggest",

@@ -33,6 +33,7 @@ class UserProfile:
     weekly_connects_budget: int = 80
     autonomy: str = "suggest"
     categories: list[str] = field(default_factory=list)
+    voice: str = ""  # writing voice (agency mode: drafts in the routed member's voice)
 
 
 @dataclass

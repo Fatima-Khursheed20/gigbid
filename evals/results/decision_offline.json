@@ -1,0 +1,7852 @@
+{
+ "meta": {
+  "generated_at": "2026-11-15 01:51:17",
+  "per_persona": 80,
+  "mode": "rules+heuristics (offline)"
+ },
+ "overall": {
+  "n": 240,
+  "bid_skip": {
+   "precision": 1.0,
+   "recall": 0.537,
+   "f1": 0.699,
+   "tp": 79,
+   "fp": 0,
+   "fn": 68
+  },
+  "accuracy": 0.717,
+  "scam": {
+   "precision": 0.968,
+   "recall": 1.0,
+   "f1": 0.984,
+   "tp": 30,
+   "fp": 1,
+   "fn": 0
+  },
+  "price_in_fair_band": 0.747,
+  "n_priced": 79,
+  "injection_detected_rate": 1.0,
+  "latency_p50_s": 8.239,
+  "latency_p95_s": 33.58,
+  "tokens_per_job": 0,
+  "usd_per_job": 0
+ },
+ "by_persona": {
+  "ai_ml": {
+   "n": 80,
+   "bid_skip": {
+    "precision": 1.0,
+    "recall": 0.531,
+    "f1": 0.693,
+    "tp": 26,
+    "fp": 0,
+    "fn": 23
+   },
+   "accuracy": 0.713,
+   "scam": {
+    "precision": 0.909,
+    "recall": 1.0,
+    "f1": 0.952,
+    "tp": 10,
+    "fp": 1,
+    "fn": 0
+   },
+   "price_in_fair_band": 0.692,
+   "n_priced": 26,
+   "injection_detected_rate": 1.0,
+   "latency_p50_s": 10.107,
+   "latency_p95_s": 39.191,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "fullstack": {
+   "n": 80,
+   "bid_skip": {
+    "precision": 1.0,
+    "recall": 0.653,
+    "f1": 0.79,
+    "tp": 32,
+    "fp": 0,
+    "fn": 17
+   },
+   "accuracy": 0.787,
+   "scam": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 10,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": 0.688,
+   "n_priced": 32,
+   "injection_detected_rate": 1.0,
+   "latency_p50_s": 6.369,
+   "latency_p95_s": 33.58,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "data_analyst": {
+   "n": 80,
+   "bid_skip": {
+    "precision": 1.0,
+    "recall": 0.429,
+    "f1": 0.6,
+    "tp": 21,
+    "fp": 0,
+    "fn": 28
+   },
+   "accuracy": 0.65,
+   "scam": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 10,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": 0.905,
+   "n_priced": 21,
+   "injection_detected_rate": 1.0,
+   "latency_p50_s": 8.59,
+   "latency_p95_s": 27.499,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  }
+ },
+ "by_kind": {
+  "fit": {
+   "n": 102,
+   "bid_skip": {
+    "precision": 1.0,
+    "recall": 0.676,
+    "f1": 0.807,
+    "tp": 69,
+    "fp": 0,
+    "fn": 33
+   },
+   "accuracy": 0.676,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": 0.754,
+   "n_priced": 69,
+   "injection_detected_rate": null,
+   "latency_p50_s": 4.551,
+   "latency_p95_s": 25.642,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "injection": {
+   "n": 21,
+   "bid_skip": {
+    "precision": 1.0,
+    "recall": 0.476,
+    "f1": 0.645,
+    "tp": 10,
+    "fp": 0,
+    "fn": 11
+   },
+   "accuracy": 0.476,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 1,
+    "fn": 0
+   },
+   "price_in_fair_band": 0.7,
+   "n_priced": 10,
+   "injection_detected_rate": 1.0,
+   "latency_p50_s": 4.864,
+   "latency_p95_s": 39.191,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "lowball": {
+   "n": 15,
+   "bid_skip": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "accuracy": 1.0,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": null,
+   "n_priced": 0,
+   "injection_detected_rate": null,
+   "latency_p50_s": 4.842,
+   "latency_p95_s": 20.704,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "ood": {
+   "n": 18,
+   "bid_skip": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "accuracy": 1.0,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": null,
+   "n_priced": 0,
+   "injection_detected_rate": null,
+   "latency_p50_s": 8.756,
+   "latency_p95_s": 24.629,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "partial": {
+   "n": 30,
+   "bid_skip": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "accuracy": 1.0,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": null,
+   "n_priced": 0,
+   "injection_detected_rate": null,
+   "latency_p50_s": 20.723,
+   "latency_p95_s": 34.194,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "scam": {
+   "n": 30,
+   "bid_skip": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "accuracy": 1.0,
+   "scam": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 30,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": null,
+   "n_priced": 0,
+   "injection_detected_rate": null,
+   "latency_p50_s": 8.239,
+   "latency_p95_s": 22.596,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  },
+  "vague": {
+   "n": 24,
+   "bid_skip": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 24
+   },
+   "accuracy": 0,
+   "scam": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0
+   },
+   "price_in_fair_band": null,
+   "n_priced": 0,
+   "injection_detected_rate": null,
+   "latency_p50_s": 26.014,
+   "latency_p95_s": 59.497,
+   "tokens_per_job": 0,
+   "usd_per_job": 0
+  }
+ },
+ "rows": [
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.25,
+   "risk": 0.085,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3490.0,
+    4820.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis; Let our app call the model over the web; Pull names, dates and amounts out of documents",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 39.191,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.004,
+   "flags": [],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    2120.0,
+    2920.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.00",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: A custom deep learning model trained on our data"
+   ],
+   "latency_s": 37.026,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-115",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.01,
+   "flags": [],
+   "price": 2020.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1770.0,
+    2450.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.01",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 18.394,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-066",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.016,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1810.0,
+    2340.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Amazon PPC ads; Experience with iOS Swift"
+   ],
+   "latency_s": 13.952,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-089",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.117,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5140.0,
+    7080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.12",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Ongoing help for a growing retail company  We are a retail c; The most accurate model possible on our tabular data.; Reports that refresh every morning automatically."
+   ],
+   "latency_s": 59.497,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-074",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.8,
+   "risk": 0.071,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    3440.0,
+    4740.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.07",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: A custom deep learning model trained on our data",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 13.091,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-110",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.01,
+   "flags": [],
+   "price": 9100.0,
+   "price_type": "fixed",
+   "fair_band": [
+    7160.0,
+    9870.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.01",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Docker"
+   ],
+   "latency_s": 47.946,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-028",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.111,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    920.0,
+    1270.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $100 is below your minimum project $300"
+   ],
+   "latency_s": 18.899,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-052",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 1.0,
+   "risk": 0.052,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 2340.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2760.0,
+    3810.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.05",
+    "3/3 requirements have direct portfolio evidence",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 7.774,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-168",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.87,
+   "risk": 0.75,
+   "flags": [
+    "off_platform_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4510.0,
+    6230.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (off_platform_payment)"
+   ],
+   "latency_s": 12.189,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-079",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.165,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3100.0,
+    4000.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with SEO copywriting; Experience with Unity 3D"
+   ],
+   "latency_s": 14.122,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-061",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.75,
+   "flags": [
+    "unpaid_work"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1000.0,
+    1380.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (unpaid_work)"
+   ],
+   "latency_s": 12.148,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-080",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.0,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1200.0,
+    1660.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Ongoing help for a growing healthcare company  I run a small; Clean up messy spreadsheets.; Someone comfortable writing clean scripts."
+   ],
+   "latency_s": 68.763,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-000",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5460.0,
+    7530.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 21.827,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-177",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.783,
+   "risk": 0.01,
+   "flags": [],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    640.0,
+    890.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.78, risk 0.01",
+    "2/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 12.875,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-148",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.036,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3230.0,
+    4170.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Unity 3D; Experience with Illustrator vector art"
+   ],
+   "latency_s": 8.162,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-180",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.0,
+   "flags": [],
+   "price": 6290.0,
+   "price_type": "fixed",
+   "fair_band": [
+    5760.0,
+    7950.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.00",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts"
+   ],
+   "latency_s": 24.822,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-133",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.1,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    540.0,
+    750.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Power BI; Hands-on experience with Snowflake; Experience with clear charts with matplotlib/seaborn/Plotly"
+   ],
+   "latency_s": 26.514,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-144",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.032,
+   "flags": [],
+   "price": 4040.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3030.0,
+    4180.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: A custom deep learning model trained on our data"
+   ],
+   "latency_s": 11.487,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-024",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "too_good_to_be_true",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1050.0,
+    1450.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, too_good_to_be_true, unverified_payment)"
+   ],
+   "latency_s": 20.053,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.015,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    300.0,
+    400.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: An app for both iphone and android; Customers should be able to pay monthly; Pages that load fast and rank on google"
+   ],
+   "latency_s": 26.51,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.02,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5740.0,
+    7920.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.02",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python; Pull names, dates and amounts out of documents"
+   ],
+   "latency_s": 9.75,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-101",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.283,
+   "risk": 0.015,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    620.0,
+    860.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.28",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Clean up and measure things in camera images.; Not sure exactly what tools are best \u2014 open to suggestions.; Timeline is flexible, roughly 1 week(s)."
+   ],
+   "latency_s": 48.065,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-075",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.74,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "too_good_to_be_true",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    6570.0,
+    9070.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, too_good_to_be_true, unverified_payment)"
+   ],
+   "latency_s": 15.568,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.004,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4990.0,
+    6710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with end-to-end browser testing; Hands-on experience with MongoDB; Experience with Node job queues"
+   ],
+   "latency_s": 23.571,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-183",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.029,
+   "flags": [],
+   "price": 1010.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1120.0,
+    1550.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts"
+   ],
+   "latency_s": 0.795,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-100",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.047,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    670.0,
+    930.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Find similar items instantly; Experience with self-serve BI with Metabase; Interactive charts we can share"
+   ],
+   "latency_s": 30.067,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-073",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.022,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    830.0,
+    1080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with iOS Swift; Experience with Video editing"
+   ],
+   "latency_s": 7.65,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.182,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    930.0,
+    1200.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Amazon PPC ads; Experience with SEO copywriting"
+   ],
+   "latency_s": 0.531,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-179",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.003,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    830.0,
+    1140.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $110 is below your minimum project $300"
+   ],
+   "latency_s": 9.667,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.02,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2040.0,
+    2820.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts; Answers grounded in our knowledge base, not made up"
+   ],
+   "latency_s": 0.514,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-108",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.058,
+   "risk": 0.16,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    600.0,
+    830.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.06",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Let our app call the model over the web.; Long jobs should run in the background and retry if they fai; Not sure exactly what tools are best \u2014 open to suggestions."
+   ],
+   "latency_s": 38.599,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-034",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    450.0,
+    620.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 15.25,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-098",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.006,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    7200.0,
+    9940.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.01",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with YOLO"
+   ],
+   "latency_s": 6.695,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-117",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.014,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2030.0,
+    2800.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.01",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python; Experience with retrieval-augmented generation over a docume"
+   ],
+   "latency_s": 7.67,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    7570.0,
+    10440.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: The most accurate model possible on our tabular data; Hands-on experience with Python"
+   ],
+   "latency_s": 3.684,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-145",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.025,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    360.0,
+    490.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Clean up and measure things in camera images; Experience with batteries-included Python web apps; Experience with unit testing JavaScript"
+   ],
+   "latency_s": 20.723,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-198",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1460.0,
+    2020.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 0.399,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-193",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.1,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2970.0,
+    4100.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $170 is below your minimum project $300"
+   ],
+   "latency_s": 4.842,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-004",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.025,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    6530.0,
+    9010.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server; Hands-on experience with YOLO"
+   ],
+   "latency_s": 6.491,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-006",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.182,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3320.0,
+    4580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Know whether the ai answers are actually correct; Pull names, dates and amounts out of documents"
+   ],
+   "latency_s": 5.212,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-045",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.838,
+   "risk": 0.75,
+   "flags": [
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1020.0,
+    1400.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (upfront_fee)"
+   ],
+   "latency_s": 0.415,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.003,
+   "flags": [],
+   "price": 3160.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3150.0,
+    4340.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.00",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 11.422,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.058,
+   "risk": 0.036,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    6640.0,
+    9160.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.06",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Reports that refresh every morning automatically.; Someone comfortable writing clean scripts.; The most accurate model possible on our tabular data."
+   ],
+   "latency_s": 12.503,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-173",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.01,
+   "flags": [],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    870.0,
+    1200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.01",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Make the ai follow our format reliably"
+   ],
+   "latency_s": 21.676,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-160",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.0,
+   "flags": [],
+   "price": 6500.0,
+   "price_type": "fixed",
+   "fair_band": [
+    5570.0,
+    7680.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.00",
+    "5/5 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 10.939,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.47,
+   "risk": 0.03,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    980.0,
+    1350.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.47 / risk 0.03",
+    "2/5 requirements have direct portfolio evidence",
+    "No evidence for: Adapt an existing language model to our domain; Know whether the ai answers are actually correct"
+   ],
+   "latency_s": 10.107,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-174",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.0,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2410.0,
+    3250.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with batteries-included Python web apps; Experience with automated build and deploy pipelines; Hands-on experience with Prisma"
+   ],
+   "latency_s": 21.487,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-040",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.117,
+   "risk": 0.099,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2330.0,
+    3220.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.12",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Answers grounded in our knowledge base, not made up.; Someone comfortable writing clean scripts.; Not sure exactly what tools are best \u2014 open to suggestions."
+   ],
+   "latency_s": 19.483,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.028,
+   "flags": [],
+   "price": 1010.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1300.0,
+    1790.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Know whether the ai answers are actually correct"
+   ],
+   "latency_s": 7.699,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.165,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": 2020.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2070.0,
+    2850.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.17",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python"
+   ],
+   "latency_s": 0.519,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-122",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.783,
+   "risk": 0.058,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    810.0,
+    1110.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.78, risk 0.06",
+    "2/3 requirements have direct portfolio evidence",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.488,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-036",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.6,
+   "risk": 0.009,
+   "flags": [],
+   "price": 1040.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1190.0,
+    1650.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.60, risk 0.01",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python; Know whether the ai answers are actually correct"
+   ],
+   "latency_s": 0.498,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-001",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.032,
+   "flags": [],
+   "price": 2090.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1920.0,
+    2650.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.03",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python"
+   ],
+   "latency_s": 4.924,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-169",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.87,
+   "risk": 0.107,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": 1830.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2220.0,
+    3060.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.87, risk 0.11",
+    "4/5 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 4.551,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-132",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "off_platform_contact",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    370.0,
+    510.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, off_platform_contact, unverified_payment)"
+   ],
+   "latency_s": 7.499,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-120",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.5,
+   "risk": 0.077,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    380.0,
+    520.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.08",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Reports that refresh every morning automatically; Find similar items instantly",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 5.24,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-188",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.6,
+   "risk": 0.084,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    6540.0,
+    9020.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.60, risk 0.08",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Keep track of which model version is in production; Pull names, dates and amounts out of documents",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.494,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-146",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.035,
+   "flags": [],
+   "price": 7080.0,
+   "price_type": "fixed",
+   "fair_band": [
+    6510.0,
+    8970.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.04",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Experience with retrieval-augmented generation over a docume"
+   ],
+   "latency_s": 0.542,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-107",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.033,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2740.0,
+    3780.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server; Reports that refresh every morning automatically"
+   ],
+   "latency_s": 0.462,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-067",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.013,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    980.0,
+    1350.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.45 / risk 0.01",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Reports that refresh every morning automatically"
+   ],
+   "latency_s": 0.453,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.333,
+   "risk": 0.06,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1750.0,
+    2410.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "2/6 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server.; Someone comfortable writing clean scripts.; Turn scanned pdfs into searchable text.",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 25.048,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-192",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.225,
+   "risk": 0.027,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    780.0,
+    1070.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.23",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts.; Let our app call the model over the web.; Turn scanned pdfs into searchable text."
+   ],
+   "latency_s": 10.062,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.017,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    7310.0,
+    10080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: The most accurate model possible on our tabular data; Clean up messy spreadsheets; Experience with named-entity recognition and text pipelines"
+   ],
+   "latency_s": 0.437,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-009",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": true,
+   "fit": 0.25,
+   "risk": 0.8,
+   "flags": [
+    "off_platform_contact",
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    470.0,
+    640.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (off_platform_contact)"
+   ],
+   "latency_s": 0.506,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-093",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.588,
+   "risk": 0.025,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    950.0,
+    1310.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $90 is below your minimum project $300"
+   ],
+   "latency_s": 0.462,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-050",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.16,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3330.0,
+    4290.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.16",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Solidity smart contracts"
+   ],
+   "latency_s": 15.485,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-059",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.783,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4160.0,
+    5740.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 8.704,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-182",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.025,
+   "flags": [],
+   "price": 650.0,
+   "price_type": "fixed",
+   "fair_band": [
+    500.0,
+    700.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.03",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Know whether the ai answers are actually correct"
+   ],
+   "latency_s": 0.52,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-175",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.032,
+   "flags": [],
+   "price": 580.0,
+   "price_type": "fixed",
+   "fair_band": [
+    600.0,
+    820.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.03",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: Turn scanned pdfs into searchable text"
+   ],
+   "latency_s": 5.729,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.066,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2170.0,
+    3020.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.07",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Cohort analysis; Experience with clustering customers into segments"
+   ],
+   "latency_s": 21.83,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.425,
+   "risk": 0.035,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2040.0,
+    2750.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.42 / risk 0.04",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with NestJS"
+   ],
+   "latency_s": 18.107,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-076",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.588,
+   "risk": 0.098,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    7160.0,
+    9870.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.59, risk 0.10",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Find similar items instantly",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.595,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-167",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.74,
+   "risk": 0.01,
+   "flags": [],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    4540.0,
+    6260.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.74, risk 0.01",
+    "3/5 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.527,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-172",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.029,
+   "flags": [],
+   "price": 1010.0,
+   "price_type": "fixed",
+   "fair_band": [
+    730.0,
+    1000.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.03",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Answers grounded in our knowledge base, not made up"
+   ],
+   "latency_s": 0.569,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-082",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.017,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    810.0,
+    1090.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with real-time bidirectional updates; Hands-on experience with GraphQL; Hands-on experience with Jest"
+   ],
+   "latency_s": 19.219,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-012",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.87,
+   "risk": 0.017,
+   "flags": [],
+   "price": 45.0,
+   "price_type": "hourly",
+   "fair_band": [
+    3090.0,
+    4260.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.87, risk 0.02",
+    "4/5 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.556,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-099",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.838,
+   "risk": 0.003,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3030.0,
+    4180.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $140 is below your minimum project $300"
+   ],
+   "latency_s": 0.408,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.4,
+   "risk": 0.164,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    410.0,
+    560.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.40 / risk 0.16",
+    "2/5 requirements have direct portfolio evidence",
+    "No evidence for: Pull names, dates and amounts out of documents; Hands-on experience with Python; Spot objects in video feeds automatically"
+   ],
+   "latency_s": 10.336,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-197",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.087,
+   "risk": 0.009,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    450.0,
+    600.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.09",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with retrieval-augmented generation over a docume; Experience with server-rendered React with routing; Hands-on experience with Express"
+   ],
+   "latency_s": 14.248,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 1.0,
+   "risk": 0.064,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    6080.0,
+    8180.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.06",
+    "5/5 requirements have direct portfolio evidence",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 54.996,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.033,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5180.0,
+    6970.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.03",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: A snappy, modern web interface; Experience with document databases"
+   ],
+   "latency_s": 27.79,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-115",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.783,
+   "risk": 0.007,
+   "flags": [],
+   "price": 5580.0,
+   "price_type": "fixed",
+   "fair_band": [
+    5100.0,
+    6870.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.78, risk 0.01",
+    "2/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 25.642,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-066",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.012,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1000.0,
+    1290.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with 3D modelling in Blender; Experience with SEO copywriting; Experience with Bookkeeping in QuickBooks"
+   ],
+   "latency_s": 24.629,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-089",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.167,
+   "risk": 0.004,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2420.0,
+    3250.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.17",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Looking for someone smart to improve our mobile app  Our leg; A backend that handles our users and data.; A snappy, modern web interface."
+   ],
+   "latency_s": 41.56,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-074",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 1.0,
+   "risk": 0.077,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 740.0,
+   "price_type": "fixed",
+   "fair_band": [
+    540.0,
+    720.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.08",
+    "5/5 requirements have direct portfolio evidence",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 25.038,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-110",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.029,
+   "flags": [],
+   "price": 1390.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1210.0,
+    1630.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.03",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: Pages that load fast and rank on google"
+   ],
+   "latency_s": 25.208,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-028",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.01,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1010.0,
+    1360.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $90 is below your minimum project $250"
+   ],
+   "latency_s": 17.728,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-052",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.0,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2460.0,
+    3310.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.00",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: We don't want to manage servers; Hands-on experience with Redis"
+   ],
+   "latency_s": 28.132,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-168",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    930.0,
+    1250.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 8.239,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-079",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.032,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1720.0,
+    2230.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with TikTok content creation; Experience with Embedded C firmware"
+   ],
+   "latency_s": 14.799,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-061",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.838,
+   "risk": 0.85,
+   "flags": [
+    "off_platform_payment",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    270.0,
+    370.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (off_platform_payment, unverified_payment)"
+   ],
+   "latency_s": 11.304,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-080",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.03,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4770.0,
+    6420.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Ongoing help for a growing legal company  We are a legal com; Make the slow pages fast.; It should run the same on every server."
+   ],
+   "latency_s": 23.746,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-000",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1370.0,
+    1840.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 7.493,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-177",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.014,
+   "flags": [],
+   "price": 1110.0,
+   "price_type": "fixed",
+   "fair_band": [
+    830.0,
+    1110.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.01",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 7.886,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-148",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.03,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    550.0,
+    710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Video editing; Experience with PHP Laravel; Experience with Voice-over"
+   ],
+   "latency_s": 16.211,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-180",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.038,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5960.0,
+    8020.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.45 / risk 0.04",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Code that won't break when we change things"
+   ],
+   "latency_s": 11.112,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-133",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.013,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5740.0,
+    7920.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Clean up and measure things in camera images; Let our app call the model over the web; Experience with retrieval-augmented generation over a docume"
+   ],
+   "latency_s": 26.31,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-144",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.009,
+   "flags": [],
+   "price": 450.0,
+   "price_type": "fixed",
+   "fair_band": [
+    420.0,
+    570.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.01",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.68,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-024",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.838,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "off_platform_contact",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4460.0,
+    6010.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, off_platform_contact, unverified_payment)"
+   ],
+   "latency_s": 0.598,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.034,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2170.0,
+    3020.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data; Hands-on experience with BigQuery; Hands-on experience with Excel"
+   ],
+   "latency_s": 17.508,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.031,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1210.0,
+    1630.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.45 / risk 0.03",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 5.98,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-101",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.392,
+   "risk": 0.048,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    650.0,
+    870.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.39 / risk 0.05",
+    "2/6 requirements have direct portfolio evidence",
+    "No evidence for: Code that won't break when we change things.; A snappy, modern web interface.; Not sure exactly what tools are best \u2014 open to suggestions."
+   ],
+   "latency_s": 14.149,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-075",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    750.0,
+    1010.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 11.627,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3290.0,
+    4580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: A little web tool to explore the numbers; Experience with clear charts with matplotlib/seaborn/Plotly"
+   ],
+   "latency_s": 25.894,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-183",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.0,
+   "flags": [],
+   "price": 5000.0,
+   "price_type": "fixed",
+   "fair_band": [
+    4610.0,
+    6200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.00",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 0.846,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-100",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5700.0,
+    7870.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server; Hands-on experience with Tesseract OCR; Hands-on experience with MLflow"
+   ],
+   "latency_s": 38.413,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-073",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.123,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    500.0,
+    650.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with SEO copywriting; Experience with Unity 3D; Experience with Bookkeeping in QuickBooks"
+   ],
+   "latency_s": 6.022,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.058,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    450.0,
+    580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with SEO copywriting; Experience with Unity 3D"
+   ],
+   "latency_s": 0.819,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-179",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.016,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    900.0,
+    1210.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $90 is below your minimum project $250"
+   ],
+   "latency_s": 20.704,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.019,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    520.0,
+    700.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.02",
+    "2/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 6.733,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-108",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.225,
+   "risk": 0.01,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2350.0,
+    3160.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.23",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: A backend that handles our users and data.; Make the slow pages fast.; Not sure exactly what tools are best \u2014 open to suggestions."
+   ],
+   "latency_s": 29.636,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-034",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    660.0,
+    880.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 22.596,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-098",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.031,
+   "flags": [],
+   "price": 3050.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3330.0,
+    4470.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 0.765,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-117",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.008,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    1060.0,
+    1420.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.01",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.806,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.015,
+   "flags": [],
+   "price": 700.0,
+   "price_type": "fixed",
+   "fair_band": [
+    750.0,
+    1010.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.01",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 0.732,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-145",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.126,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    7080.0,
+    9770.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Turn scanned pdfs into searchable text; Experience with time-series forecasting with seasonality; Experience with managed vector database for similarity searc"
+   ],
+   "latency_s": 34.194,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-198",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unverified_payment",
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1800.0,
+    2430.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unverified_payment, upfront_fee)"
+   ],
+   "latency_s": 0.845,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-193",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.052,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1200.0,
+    1610.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $120 is below your minimum project $250"
+   ],
+   "latency_s": 23.153,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-004",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.023,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1080.0,
+    1450.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.45 / risk 0.02",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with document databases"
+   ],
+   "latency_s": 0.761,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-006",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.005,
+   "flags": [],
+   "price": 530.0,
+   "price_type": "fixed",
+   "fair_band": [
+    520.0,
+    700.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.01",
+    "1/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.688,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-045",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    640.0,
+    870.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 0.596,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.017,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    3530.0,
+    4760.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.02",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: An app for both iphone and android"
+   ],
+   "latency_s": 0.752,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.117,
+   "risk": 0.058,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4340.0,
+    5840.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.12",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Customers should be able to pay monthly.; Users see changes instantly without refreshing.; Flexible storage for varied product data."
+   ],
+   "latency_s": 33.58,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-173",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.009,
+   "flags": [],
+   "price": 1600.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1900.0,
+    2560.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.01",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: A snappy, modern web interface"
+   ],
+   "latency_s": 0.462,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-160",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.023,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5280.0,
+    7100.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with batteries-included Python web apps; Hands-on experience with Redis"
+   ],
+   "latency_s": 0.339,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.009,
+   "flags": [],
+   "price": 630.0,
+   "price_type": "fixed",
+   "fair_band": [
+    440.0,
+    590.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.01",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: A backend that handles our users and data"
+   ],
+   "latency_s": 0.456,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-174",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.057,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    450.0,
+    630.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL; Experience with clear charts with matplotlib/seaborn/Plotly; Experience with GA4 event analysis"
+   ],
+   "latency_s": 8.682,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-040",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.283,
+   "risk": 0.043,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1460.0,
+    1960.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.28",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: A backend that handles our users and data.; Not sure exactly what tools are best \u2014 open to suggestions.; Timeline is flexible, roughly 2 week(s)."
+   ],
+   "latency_s": 24.911,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.026,
+   "flags": [],
+   "price": 3990.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3040.0,
+    4090.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.03",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Users see changes instantly without refreshing"
+   ],
+   "latency_s": 0.564,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.002,
+   "flags": [],
+   "price": 3020.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3150.0,
+    4240.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.00",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with batteries-included Python web apps"
+   ],
+   "latency_s": 0.536,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-122",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.667,
+   "risk": 0.082,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 1540.0,
+   "price_type": "fixed",
+   "fair_band": [
+    1560.0,
+    2090.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.08",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Push a button and it's live",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 5.977,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-036",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.052,
+   "flags": [],
+   "price": 5580.0,
+   "price_type": "fixed",
+   "fair_band": [
+    4640.0,
+    6250.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.05",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with batteries-included Python web apps"
+   ],
+   "latency_s": 0.601,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-001",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.003,
+   "flags": [],
+   "price": 3190.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2380.0,
+    3200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.00",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 0.559,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-169",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.016,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    1790.0,
+    2410.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.02",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Users see changes instantly without refreshing"
+   ],
+   "latency_s": 3.409,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-132",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "too_good_to_be_true",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3330.0,
+    4480.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, too_good_to_be_true, unverified_payment)"
+   ],
+   "latency_s": 4.41,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-120",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.333,
+   "risk": 0.085,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    510.0,
+    690.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: A reliable database for orders and customers; Push a button and it's live",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 8.053,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-188",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.675,
+   "risk": 0.066,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 690.0,
+   "price_type": "fixed",
+   "fair_band": [
+    710.0,
+    960.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.07",
+    "2/4 requirements have direct portfolio evidence",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.544,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-146",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.01,
+   "flags": [],
+   "price": 3990.0,
+   "price_type": "fixed",
+   "fair_band": [
+    4790.0,
+    6440.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.01",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with batteries-included Python web apps"
+   ],
+   "latency_s": 3.326,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-107",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.022,
+   "flags": [],
+   "price": 5590.0,
+   "price_type": "fixed",
+   "fair_band": [
+    5850.0,
+    7880.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.02",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: Make the slow pages fast"
+   ],
+   "latency_s": 0.68,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-067",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.016,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1920.0,
+    2580.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.02",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Redis"
+   ],
+   "latency_s": 0.515,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.167,
+   "risk": 0.022,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    470.0,
+    630.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.17",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Need help with our customer portal  Our real-estate team is ; Code that won't break when we change things.; It should run the same on every server."
+   ],
+   "latency_s": 17.882,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-192",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.167,
+   "risk": 0.154,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    5130.0,
+    6910.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.17",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Make the slow pages fast.; A reliable database for orders and customers.; It should run the same on every server."
+   ],
+   "latency_s": 5.99,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.588,
+   "risk": 0.015,
+   "flags": [],
+   "price": 420.0,
+   "price_type": "fixed",
+   "fair_band": [
+    330.0,
+    440.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.59, risk 0.01",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: A backend that handles our users and data"
+   ],
+   "latency_s": 0.383,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-009",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.5,
+   "risk": 0.102,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    500.0,
+    670.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.10",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server; A reliable database for orders and customers",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.32,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-093",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.007,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    610.0,
+    820.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $50 is below your minimum project $250"
+   ],
+   "latency_s": 8.437,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-050",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    610.0,
+    790.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Solidity smart contracts; Experience with SEO copywriting"
+   ],
+   "latency_s": 6.369,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-059",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unverified_payment",
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2660.0,
+    3580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unverified_payment, upfront_fee)"
+   ],
+   "latency_s": 5.156,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-182",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.028,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    3660.0,
+    4930.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: We don't want to manage servers"
+   ],
+   "latency_s": 0.582,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-175",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.783,
+   "risk": 0.027,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    2620.0,
+    3520.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.78, risk 0.03",
+    "2/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 4.678,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2620.0,
+    3610.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Clean up and measure things in camera images; Experience with OCR of scanned documents; Experience with managed vector database for similarity searc"
+   ],
+   "latency_s": 8.366,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.011,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    590.0,
+    820.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Make the slow pages fast; Experience with classical ML pipelines with cross-validation; Experience with LLM application orchestration"
+   ],
+   "latency_s": 10.687,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-076",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.667,
+   "risk": 0.082,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    2590.0,
+    3480.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.08",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Make the slow pages fast",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.375,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-167",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.019,
+   "flags": [],
+   "price": 800.0,
+   "price_type": "fixed",
+   "fair_band": [
+    690.0,
+    930.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.02",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with document databases"
+   ],
+   "latency_s": 1.983,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-172",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.008,
+   "flags": [],
+   "price": 5670.0,
+   "price_type": "fixed",
+   "fair_band": [
+    5450.0,
+    7330.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.01",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.41,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-082",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.002,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    390.0,
+    540.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with LLM evaluation; Hands-on experience with XGBoost; Hands-on experience with LangChain"
+   ],
+   "latency_s": 9.936,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-012",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.024,
+   "flags": [],
+   "price": 35.0,
+   "price_type": "hourly",
+   "fair_band": [
+    5350.0,
+    7200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.02",
+    "2/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.4,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-099",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.032,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    420.0,
+    570.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $70 is below your minimum project $250"
+   ],
+   "latency_s": 0.356,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.006,
+   "flags": [],
+   "price": 1200.0,
+   "price_type": "fixed",
+   "fair_band": [
+    890.0,
+    1200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.01",
+    "1/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.392,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-197",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.023,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1750.0,
+    2430.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Users see changes instantly without refreshing; Hands-on experience with Power BI; Hands-on experience with Metabase"
+   ],
+   "latency_s": 10.117,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.5,
+   "risk": 0.061,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1530.0,
+    2130.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.06",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: What really drives our sales",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 6.679,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.169,
+   "flags": [
+    "unverified_payment"
+   ],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    420.0,
+    580.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.17",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 6.82,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-115",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.4,
+   "risk": 0.036,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3330.0,
+    4640.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.40 / risk 0.04",
+    "2/5 requirements have direct portfolio evidence",
+    "No evidence for: What really drives our sales; A spreadsheet the finance team can use; Answers from our database"
+   ],
+   "latency_s": 14.034,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-066",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.02,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1620.0,
+    2080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Salesforce Apex; Experience with TikTok content creation; Experience with PHP Laravel"
+   ],
+   "latency_s": 8.52,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-089",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.003,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4600.0,
+    6410.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Ongoing help for a growing retail company  I run a small ret; Plan inventory for next season.; Someone comfortable writing clean scripts."
+   ],
+   "latency_s": 31.345,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-074",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.087,
+   "risk": 0.078,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    270.0,
+    370.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.09",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Analyse our google data at scale; Understand where our website visitors drop off; Answers from our database",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 24.343,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-110",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.027,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    990.0,
+    1380.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.03",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data; Hands-on experience with SQL"
+   ],
+   "latency_s": 23.098,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-028",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.024,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    390.0,
+    540.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $40 is below your minimum project $150"
+   ],
+   "latency_s": 13.767,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-052",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1440.0,
+    2000.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.01",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL"
+   ],
+   "latency_s": 4.841,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-168",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.85,
+   "flags": [
+    "unverified_payment",
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    730.0,
+    1010.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (unverified_payment, upfront_fee)"
+   ],
+   "latency_s": 10.837,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-079",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.026,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    280.0,
+    370.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Solidity smart contracts; Experience with Illustrator vector art; Experience with iOS Swift"
+   ],
+   "latency_s": 24.667,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-061",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "too_good_to_be_true",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1020.0,
+    1420.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, too_good_to_be_true, unverified_payment)"
+   ],
+   "latency_s": 13.543,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-080",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.098,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    410.0,
+    580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Need help with our analytics setup  Our legal team is lookin; Clean up messy spreadsheets.; Plan inventory for next season."
+   ],
+   "latency_s": 34.818,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-000",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unverified_payment",
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2930.0,
+    4080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unverified_payment, upfront_fee)"
+   ],
+   "latency_s": 13.085,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-177",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.27,
+   "flags": [
+    "low_hire_rate",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    550.0,
+    760.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.27",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Answers from our database"
+   ],
+   "latency_s": 8.947,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-148",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.01,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    320.0,
+    420.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with SEO copywriting; Experience with Logo design"
+   ],
+   "latency_s": 17.145,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-180",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.028,
+   "flags": [],
+   "price": 2230.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2220.0,
+    3100.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.03",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data"
+   ],
+   "latency_s": 8.893,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-133",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.032,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    790.0,
+    1090.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with RAG; Experience with classical image processing; Find similar items instantly"
+   ],
+   "latency_s": 19.899,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-144",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.117,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    690.0,
+    970.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.12",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: Group our customers so marketing can target them; A model that predicts which customers will do x"
+   ],
+   "latency_s": 10.453,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-024",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.47,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1630.0,
+    2280.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 22.77,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.024,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    370.0,
+    500.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Charts our board will understand; Experience with minimal Node REST APIs; Hands-on experience with Playwright"
+   ],
+   "latency_s": 18.265,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.032,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    380.0,
+    540.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/5 requirements have direct portfolio evidence",
+    "No evidence for: Understand where our website visitors drop off; Hands-on experience with SQL; Charts our board will understand"
+   ],
+   "latency_s": 5.864,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-101",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.027,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1940.0,
+    2710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Looking for someone smart to improve our metrics layer  We a; Understand where our website visitors drop off.; Answers from our database."
+   ],
+   "latency_s": 26.178,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-075",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "off_platform_payment",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    660.0,
+    910.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, off_platform_payment, unverified_payment)"
+   ],
+   "latency_s": 5.159,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2290.0,
+    3160.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data; Make an open model speak in our brand voice cheaply; Hands-on experience with XGBoost"
+   ],
+   "latency_s": 25.713,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-183",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.017,
+   "flags": [],
+   "price": 670.0,
+   "price_type": "fixed",
+   "fair_band": [
+    580.0,
+    810.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.02",
+    "1/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 4.748,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-100",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.003,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    390.0,
+    530.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with vector search inside Postgres; Hands-on experience with RAG; Hands-on experience with Prompt engineering"
+   ],
+   "latency_s": 13.68,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-073",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.005,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    590.0,
+    760.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Embedded C firmware; Experience with Logo design"
+   ],
+   "latency_s": 8.756,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2170.0,
+    2790.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with Unity 3D; Experience with TikTok content creation"
+   ],
+   "latency_s": 6.446,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-179",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.023,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    230.0,
+    320.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $60 is below your minimum project $150"
+   ],
+   "latency_s": 0.356,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.027,
+   "flags": [],
+   "price": 3610.0,
+   "price_type": "fixed",
+   "fair_band": [
+    3530.0,
+    4920.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.03",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Interactive charts we can share"
+   ],
+   "latency_s": 27.499,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-108",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.017,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1510.0,
+    2110.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Ongoing help for a growing retail company  Our retail team i; Answers from our database.; Analyse our google data at scale."
+   ],
+   "latency_s": 26.014,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-034",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unverified_payment",
+    "upfront_fee"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1360.0,
+    1900.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unverified_payment, upfront_fee)"
+   ],
+   "latency_s": 20.781,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-098",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.588,
+   "risk": 0.008,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    4750.0,
+    6610.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.59, risk 0.01",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: A free live report from google sheets"
+   ],
+   "latency_s": 10.502,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-117",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.588,
+   "risk": 0.035,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    1580.0,
+    2200.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.59, risk 0.04",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL"
+   ],
+   "latency_s": 4.834,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.009,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    690.0,
+    960.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data; Analyse our google data at scale"
+   ],
+   "latency_s": 5.287,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-145",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.004,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4800.0,
+    6620.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with pandas; Run the model in our aws account; Hands-on experience with Prophet"
+   ],
+   "latency_s": 28.42,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-198",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    270.0,
+    370.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 4.661,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-193",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.017,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1580.0,
+    2200.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $80 is below your minimum project $150"
+   ],
+   "latency_s": 0.442,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-004",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.6,
+   "risk": 0.019,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    400.0,
+    560.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.60, risk 0.02",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python; Reports that refresh every morning automatically"
+   ],
+   "latency_s": 8.59,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-006",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.6,
+   "risk": 0.007,
+   "flags": [],
+   "price": 4610.0,
+   "price_type": "fixed",
+   "fair_band": [
+    4940.0,
+    6890.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.60, risk 0.01",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data; Trustworthy, documented metrics everyone agrees on"
+   ],
+   "latency_s": 9.012,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-045",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.95,
+   "flags": [
+    "credential_request",
+    "new_client",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3020.0,
+    4210.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (credential_request, new_client, unverified_payment)"
+   ],
+   "latency_s": 4.995,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.022,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    510.0,
+    710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/3 requirements have direct portfolio evidence",
+    "No evidence for: A spreadsheet the finance team can use; What really drives our sales; Plan inventory for next season"
+   ],
+   "latency_s": 5.611,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.167,
+   "risk": 0.036,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2480.0,
+    3450.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.17",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Quick question project \u2014 logistics metrics layer  We are a l; Interactive charts we can share.; Answers from our database."
+   ],
+   "latency_s": 31.676,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-173",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.588,
+   "risk": 0.1,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    2150.0,
+    3000.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.59, risk 0.10",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL"
+   ],
+   "latency_s": 0.725,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-160",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.029,
+   "flags": [],
+   "price": 990.0,
+   "price_type": "fixed",
+   "fair_band": [
+    920.0,
+    1290.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.03",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: A central place for all our company data"
+   ],
+   "latency_s": 0.487,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.034,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4380.0,
+    6100.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Plan inventory for next season; A central place for all our company data"
+   ],
+   "latency_s": 15.922,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-174",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.087,
+   "risk": 0.028,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    470.0,
+    630.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.09",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Stripe; Hands-on experience with Tailwind CSS; Experience with type-safe JavaScript codebases"
+   ],
+   "latency_s": 21.78,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-040",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.006,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2630.0,
+    3670.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Quick question project \u2014 marketing forecast model  Our marke; Answers from our database.; Know whether the new design actually helped."
+   ],
+   "latency_s": 19.228,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.007,
+   "flags": [],
+   "price": 670.0,
+   "price_type": "fixed",
+   "fair_band": [
+    640.0,
+    880.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.01",
+    "2/4 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 8.099,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.019,
+   "flags": [],
+   "price": 670.0,
+   "price_type": "fixed",
+   "fair_band": [
+    570.0,
+    790.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.02",
+    "4/4 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.429,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-122",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.5,
+   "risk": 0.081,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4350.0,
+    6060.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.08",
+    "1/2 requirements have direct portfolio evidence",
+    "No evidence for: Analyse our google data at scale",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.401,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-036",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.022,
+   "flags": [],
+   "price": 2260.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2050.0,
+    2850.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.02",
+    "4/4 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.461,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-001",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.67,
+   "risk": 0.017,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    4620.0,
+    6440.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.02",
+    "3/5 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts"
+   ],
+   "latency_s": 9.8,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-169",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.675,
+   "risk": 0.058,
+   "flags": [],
+   "price": 4390.0,
+   "price_type": "fixed",
+   "fair_band": [
+    4180.0,
+    5820.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.68, risk 0.06",
+    "1/2 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.485,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-132",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "too_good_to_be_true",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1050.0,
+    1460.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, too_good_to_be_true, unverified_payment)"
+   ],
+   "latency_s": 0.403,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-120",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.333,
+   "risk": 0.065,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    400.0,
+    560.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Docker; Answers from our database",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 4.864,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-188",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.75,
+   "risk": 0.052,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": 2410.0,
+   "price_type": "fixed",
+   "fair_band": [
+    2140.0,
+    2990.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.05",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: Reports that refresh every morning automatically",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 5.069,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-146",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.033,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3160.0,
+    4400.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: A spreadsheet the finance team can use; Reports that refresh every morning automatically"
+   ],
+   "latency_s": 0.412,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-107",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.087,
+   "risk": 0.029,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2160.0,
+    3000.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.09",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: A spreadsheet the finance team can use; Answers from our database; Hands-on experience with pandas"
+   ],
+   "latency_s": 0.386,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-067",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 1.0,
+   "risk": 0.032,
+   "flags": [],
+   "price": 570.0,
+   "price_type": "fixed",
+   "fair_band": [
+    410.0,
+    570.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 1.00, risk 0.03",
+    "3/3 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 0.424,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.225,
+   "risk": 0.015,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1660.0,
+    2310.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.23",
+    "1/6 requirements have direct portfolio evidence",
+    "No evidence for: Charts our board will understand.; Why customers stop coming back.; Not sure exactly what tools are best \u2014 open to suggestions."
+   ],
+   "latency_s": 14.347,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-192",
+   "kind": "vague",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.058,
+   "risk": 0.02,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4100.0,
+    5710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.06",
+    "0/6 requirements have direct portfolio evidence",
+    "No evidence for: Understand where our website visitors drop off.; Charts our board will understand.; Analyse our google data at scale."
+   ],
+   "latency_s": 10.472,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.838,
+   "risk": 0.005,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    1680.0,
+    2330.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.84, risk 0.01",
+    "3/4 requirements have direct portfolio evidence"
+   ],
+   "latency_s": 5.231,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-009",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.4,
+   "risk": 0.161,
+   "flags": [
+    "low_hire_rate",
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1880.0,
+    2620.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.40 / risk 0.16",
+    "2/5 requirements have direct portfolio evidence",
+    "No evidence for: Charts our board will understand; Hands-on experience with SQL; Group our customers so marketing can target them",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.421,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-093",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.5,
+   "risk": 0.123,
+   "flags": [
+    "low_hire_rate"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    3990.0,
+    5550.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $40 is below your minimum project $150"
+   ],
+   "latency_s": 0.413,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-050",
+   "kind": "ood",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.02,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    450.0,
+    580.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/2 requirements have direct portfolio evidence",
+    "No evidence for: Experience with 3D modelling in Blender; Experience with Unity 3D"
+   ],
+   "latency_s": 10.285,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-059",
+   "kind": "scam",
+   "gold_bid": false,
+   "gold_scam": true,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": true,
+   "pred_injection": false,
+   "fit": 0.45,
+   "risk": 0.95,
+   "flags": [
+    "new_client",
+    "unpaid_work",
+    "unverified_payment"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1550.0,
+    2160.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Risk: likely scam (new_client, unpaid_work, unverified_payment)"
+   ],
+   "latency_s": 0.44,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-182",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.01,
+   "flags": [],
+   "price": 390.0,
+   "price_type": "fixed",
+   "fair_band": [
+    350.0,
+    490.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.67, risk 0.01",
+    "2/3 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL"
+   ],
+   "latency_s": 0.472,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-175",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.333,
+   "risk": 0.018,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    900.0,
+    1250.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.33",
+    "1/3 requirements have direct portfolio evidence",
+    "No evidence for: Someone comfortable writing clean scripts; A free live report from google sheets"
+   ],
+   "latency_s": 0.414,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.009,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    2230.0,
+    3080.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Experience with serving models behind a typed REST API; Hands-on experience with Tesseract OCR; The most accurate model possible on our tabular data"
+   ],
+   "latency_s": 26.465,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.25,
+   "risk": 0.021,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1180.0,
+    1590.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.25",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Tailwind CSS; Experience with cross-platform mobile apps; Experience with GraphQL schemas and resolvers"
+   ],
+   "latency_s": 16.289,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-076",
+   "kind": "injection",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": true,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": true,
+   "fit": 0.5,
+   "risk": 0.084,
+   "flags": [
+    "prompt_injection"
+   ],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    970.0,
+    1360.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.50 / risk 0.08",
+    "2/4 requirements have direct portfolio evidence",
+    "No evidence for: A spreadsheet the finance team can use; What really drives our sales",
+    "Job post contains instruction-like text aimed at AI tools (ignored)."
+   ],
+   "latency_s": 0.53,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-167",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "watch",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.47,
+   "risk": 0.016,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    1410.0,
+    1960.0
+   ],
+   "in_band": null,
+   "status": "watch",
+   "reasons": [
+    "Borderline fit 0.47 / risk 0.02",
+    "2/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL; A free live report from google sheets"
+   ],
+   "latency_s": 0.588,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-172",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.8,
+   "risk": 0.057,
+   "flags": [],
+   "price": 400.0,
+   "price_type": "fixed",
+   "fair_band": [
+    450.0,
+    630.0
+   ],
+   "in_band": false,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.80, risk 0.06",
+    "4/5 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with SQL"
+   ],
+   "latency_s": 5.681,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-082",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.032,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    810.0,
+    1120.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: A reliable database for orders and customers; Hands-on experience with Tesseract OCR; Keep track of which model version is in production"
+   ],
+   "latency_s": 24.016,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-012",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.338,
+   "risk": 0.008,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    4330.0,
+    6030.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.34",
+    "1/4 requirements have direct portfolio evidence",
+    "No evidence for: Hands-on experience with Python; Clean up messy spreadsheets"
+   ],
+   "latency_s": 4.917,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-099",
+   "kind": "lowball",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.667,
+   "risk": 0.046,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    530.0,
+    740.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Budget $60 is below your minimum project $150"
+   ],
+   "latency_s": 0.491,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "bid",
+   "pred_bid": true,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.75,
+   "risk": 0.052,
+   "flags": [],
+   "price": 30.0,
+   "price_type": "hourly",
+   "fair_band": [
+    550.0,
+    760.0
+   ],
+   "in_band": true,
+   "status": "drafting",
+   "reasons": [
+    "Fit 0.75, risk 0.05",
+    "3/4 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server"
+   ],
+   "latency_s": 4.28,
+   "tokens": 0,
+   "usd": 0
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-197",
+   "kind": "partial",
+   "gold_bid": false,
+   "gold_scam": false,
+   "gold_injection": false,
+   "pred_action": "skip",
+   "pred_bid": false,
+   "pred_scam": false,
+   "pred_injection": false,
+   "fit": 0.0,
+   "risk": 0.025,
+   "flags": [],
+   "price": null,
+   "price_type": null,
+   "fair_band": [
+    530.0,
+    710.0
+   ],
+   "in_band": null,
+   "status": "skipped",
+   "reasons": [
+    "Low fit 0.00",
+    "0/4 requirements have direct portfolio evidence",
+    "No evidence for: It should run the same on every server; Hands-on experience with WebSockets; Hands-on experience with Django"
+   ],
+   "latency_s": 19.428,
+   "tokens": 0,
+   "usd": 0
+  }
+ ]
+}

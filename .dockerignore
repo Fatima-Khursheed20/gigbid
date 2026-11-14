@@ -1,0 +1,10 @@
+.venv
+**/node_modules
+apps/web/dist
+.cache
+data/processed
+data/heldout
+data/raw
+.env
+.git
+**/__pycache__

@@ -1,0 +1,36 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_thread(load_thread)
+	classify(classify)
+	find_slots(find_slots)
+	draft_reply(draft_reply)
+	msg_compliance(msg_compliance)
+	msg_approval(msg_approval)
+	msg_apply_edit(msg_apply_edit)
+	msg_send(msg_send)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_thread;
+	classify -.-> __end__;
+	classify -.-> draft_reply;
+	classify -.-> find_slots;
+	draft_reply -.-> __end__;
+	draft_reply -.-> msg_compliance;
+	find_slots -.-> __end__;
+	find_slots -.-> draft_reply;
+	load_thread -.-> __end__;
+	load_thread -.-> classify;
+	msg_apply_edit --> msg_compliance;
+	msg_approval -.-> __end__;
+	msg_approval -.-> msg_apply_edit;
+	msg_approval -.-> msg_send;
+	msg_compliance -.-> __end__;
+	msg_compliance -.-> msg_approval;
+	msg_send --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
