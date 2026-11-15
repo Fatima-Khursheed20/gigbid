@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import os
+
 from arq import cron
 from arq.connections import RedisSettings
 
@@ -24,7 +26,8 @@ async def shutdown(ctx) -> None:
 class WorkerSettings:
     functions = [tasks.analyse_job, tasks.resume_bid, tasks.replay_bid, tasks.draft_reply, tasks.resume_conv, tasks.scout]
     cron_jobs = [
-        cron(tasks.scout_due, minute=set(range(0, 60, 10)), run_at_startup=True),
+        cron(tasks.scout_due, minute=set(range(0, 60, 10)),
+             run_at_startup=os.environ.get("SCOUT_ON_STARTUP", "1") == "1"),
         cron(tasks.poll_events, minute=set(range(0, 60, 2))),
     ]
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url or "redis://localhost:6379/0")

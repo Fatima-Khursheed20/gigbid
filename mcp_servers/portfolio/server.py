@@ -13,6 +13,7 @@ import argparse
 import os
 from typing import Annotated
 
+import anyio
 from mcp.server.fastmcp import Context, FastMCP
 from mcp.types import ToolAnnotations
 from pydantic import Field
@@ -36,7 +37,7 @@ def _tenant(ctx: Context | None) -> str:
 
 
 @mcp.tool(annotations=RO, title="Search portfolio evidence")
-def search_evidence(
+async def search_evidence(
     requirement: Annotated[str, Field(min_length=3, max_length=2000,
                                       description="One job requirement or question, e.g. 'background workers with retries'")],
     k: Annotated[int, Field(ge=1, le=20, description="How many evidence items to return")] = 5,
@@ -46,33 +47,37 @@ def search_evidence(
     """Find portfolio evidence (case studies, README/code, reviews, past proposals, CV) that proves a requirement.
     Returns items ranked by relevance with type, source, date and (for proposals) outcome."""
     trace_from(ctx)
-    return T.search_evidence(_tenant(ctx), requirement, k, filters)
+    tenant = _tenant(ctx)
+    return await anyio.to_thread.run_sync(lambda: T.search_evidence(tenant, requirement, k, filters))
 
 
 @mcp.tool(annotations=RO, title="Requirement-to-evidence matrix")
-def requirement_matrix(
+async def requirement_matrix(
     requirements: Annotated[list[str], Field(min_length=1, max_length=12, description="Extracted job requirements")],
     ctx: Context | None = None,
 ) -> T.RequirementMatrix:
     """For each requirement, return supporting evidence and a status (supported / weak / none) using a corrective
     retrieve-grade-requery loop. 'none' means the portfolio cannot support a claim about that requirement."""
     trace_from(ctx)
-    return T.requirement_matrix(_tenant(ctx), requirements)
+    tenant = _tenant(ctx)
+    return await anyio.to_thread.run_sync(lambda: T.requirement_matrix(tenant, requirements))
 
 
 @mcp.tool(annotations=RO, title="Get a case study")
-def get_case_study(case_id: Annotated[str, Field(min_length=1, max_length=64, description="Project / case id")],
+async def get_case_study(case_id: Annotated[str, Field(min_length=1, max_length=64, description="Project / case id")],
                    ctx: Context | None = None) -> T.CaseStudy:
     """Return the full text and metadata of one case study."""
     trace_from(ctx)
-    return T.get_case_study(_tenant(ctx), case_id)
+    tenant = _tenant(ctx)
+    return await anyio.to_thread.run_sync(lambda: T.get_case_study(tenant, case_id))
 
 
 @mcp.tool(annotations=RO, title="List skills")
-def list_skills(ctx: Context | None = None) -> T.SkillList:
+async def list_skills(ctx: Context | None = None) -> T.SkillList:
     """List skills evidenced anywhere in the portfolio (including ones only visible in code), with project ids."""
     trace_from(ctx)
-    return T.list_skills(_tenant(ctx))
+    tenant = _tenant(ctx)
+    return await anyio.to_thread.run_sync(lambda: T.list_skills(tenant))
 
 
 # resources and prompts live in their own modules (registered on this server instance)
