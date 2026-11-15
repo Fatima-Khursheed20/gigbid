@@ -1,8 +1,8 @@
 # AI usage disclosure
 
 **Tool:** Claude Code (Anthropic, model Claude Opus 5.5), used as a pair-programming agent in the Claude desktop
-app throughout the project. Commits it co-authored carry a `Co-Authored-By: Claude` trailer, so the git history
-shows exactly which work it touched. I remain responsible for every line and for every number in the report.
+app throughout the project; it drafted most of the code in every commit of this repository under my direction
+(the table below lists the areas). I remain responsible for every line and for every number in the report.
 
 ## What it was used for
 | Area | Files | How |
