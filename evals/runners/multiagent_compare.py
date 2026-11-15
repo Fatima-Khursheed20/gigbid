@@ -87,11 +87,16 @@ async def run_graph(persona: str, job: dict) -> dict:
             "tool_calls": sum(1 for e in r["events"] if e["kind"] == "tool_call")}
 
 
-async def main_async(per: int) -> None:
+async def main_async(per: int, model: str | None = None) -> None:
     import gigsim.app as gs
     from gigsim import client_model
 
     setup_inprocess()
+    if model:  # same drafting model for all three architectures (fairness / quota)
+        from common.config import profile
+
+        for node in ("writer", "critic", "liaison", "baseline_agent", "verifier"):
+            profile()["nodes"][node] = model
     rows = []
     for p in PERSONAS:
         for j in stratified(load_dev(p), per, seed=31):
@@ -134,7 +139,7 @@ async def main_async(per: int) -> None:
                 "tokens_per_job": mean([r["tokens"] for r in rs]), "latency_p50_s": pct([r["latency_s"] for r in rs], 0.5),
                 "latency_p95_s": pct([r["latency_s"] for r in rs], 0.95), "errors": sum(bool(r["error"]) for r in rs)}
 
-    res = {"meta": {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "per_persona": per},
+    res = {"meta": {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "per_persona": per, "drafting_model": model},
            "by_arch": {a: summ([r for r in rows if r["arch"] == a]) for a in ("react", "supervisor", "graph")},
            "by_arch_kind": {f"{a}|{k}": summ([r for r in rows if r["arch"] == a and r["kind"] == k])
                             for a in ("react", "supervisor", "graph") for k in sorted({r["kind"] for r in rows})},
@@ -146,7 +151,9 @@ async def main_async(per: int) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--per-persona", type=int, default=4)
-    asyncio.run(main_async(ap.parse_args().per_persona))
+    ap.add_argument("--model", default=None)
+    a = ap.parse_args()
+    asyncio.run(main_async(a.per_persona, a.model))
 
 
 if __name__ == "__main__":

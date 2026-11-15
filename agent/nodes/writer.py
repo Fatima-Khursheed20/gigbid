@@ -77,7 +77,12 @@ async def write(job: dict, spec: dict, fit: dict, price: dict, rules: list[str],
     ]
     if critique and previous:
         parts.append(f"PREVIOUS DRAFT:\n{previous}\n\nCRITIC FEEDBACK (fix all of it): {critique.get('revision_instructions')}")
-    out = await llm.structured("writer", prompt("writer"), "\n\n".join(parts), _WriterOut, max_tokens=1400)
+    try:
+        out = await llm.structured("writer", prompt("writer"), "\n\n".join(parts), _WriterOut, max_tokens=1400)
+    except llm.LLMUnavailable:
+        # provider down / daily quota exhausted (seen in the change-request run): degrade to the evidence-only
+        # template instead of dead-lettering the job; the human still reviews it
+        return template_draft(job, ev, none, price), ev
     return out, ev
 
 

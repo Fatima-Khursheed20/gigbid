@@ -1,0 +1,58 @@
+{
+ "P00": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P01": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P02": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P03": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P04": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P05": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P06": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P07": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P08": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P09": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P10": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ },
+ "P11": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P12": {
+  "A": "v4_outcome",
+  "B": "v0_naive"
+ },
+ "P13": {
+  "A": "v0_naive",
+  "B": "v4_outcome"
+ }
+}

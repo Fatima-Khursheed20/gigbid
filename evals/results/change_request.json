@@ -1,0 +1,92 @@
+{
+ "meta": {
+  "generated_at": "2026-11-15 15:18:31",
+  "code_lines_changed_to_absorb_v2": 0,
+  "config_change": "GIGSIM_POLICY_VERSION=v2 on the simulator only; GigBid reads submission_checks and Connects prices from get_policy/get_job",
+  "caveat": "the change request was authored by me (instructor CR unavailable) before the Compliance Guard was written, so this run checks the config-driven design works; it is not a blind test"
+ },
+ "summary": {
+  "v1": {
+   "n_approved": 1,
+   "accepted_by_platform": 1,
+   "preview_cost_correct": 1,
+   "with_disclosure": 0
+  },
+  "v2": {
+   "n_approved": 1,
+   "accepted_by_platform": 1,
+   "preview_cost_correct": 1,
+   "with_disclosure": 1
+  }
+ },
+ "rows": [
+  {
+   "policy": "v1",
+   "job_id": "job-dev-ai-186",
+   "featured": false,
+   "preview_connects": null,
+   "expected_connects": 12,
+   "final_status": "dead_letter",
+   "has_disclosure": false,
+   "has_url": false,
+   "violations_fixed": []
+  },
+  {
+   "policy": "v1",
+   "job_id": "job-dev-fu-186",
+   "featured": false,
+   "preview_connects": 8,
+   "expected_connects": 8,
+   "final_status": "submitted",
+   "has_disclosure": false,
+   "has_url": false,
+   "violations_fixed": []
+  },
+  {
+   "policy": "v1",
+   "job_id": "job-dev-da-186",
+   "featured": false,
+   "preview_connects": null,
+   "expected_connects": 4,
+   "final_status": "dead_letter",
+   "has_disclosure": false,
+   "has_url": false,
+   "violations_fixed": []
+  },
+  {
+   "policy": "v2",
+   "job_id": "job-dev-ai-186",
+   "featured": false,
+   "preview_connects": null,
+   "expected_connects": 12,
+   "final_status": "dead_letter",
+   "has_disclosure": false,
+   "has_url": false,
+   "violations_fixed": []
+  },
+  {
+   "policy": "v2",
+   "job_id": "job-dev-fu-186",
+   "featured": false,
+   "preview_connects": 8,
+   "expected_connects": 8,
+   "final_status": "submitted",
+   "has_disclosure": true,
+   "has_url": false,
+   "violations_fixed": [
+    "required_line"
+   ]
+  },
+  {
+   "policy": "v2",
+   "job_id": "job-dev-da-186",
+   "featured": false,
+   "preview_connects": null,
+   "expected_connects": 4,
+   "final_status": "dead_letter",
+   "has_disclosure": false,
+   "has_url": false,
+   "violations_fixed": []
+  }
+ ]
+}

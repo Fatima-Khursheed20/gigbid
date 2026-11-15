@@ -1,0 +1,392 @@
+{
+ "J00": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-da-071",
+  "judge": {
+   "relevance": 4,
+   "evidence": 4,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 4,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the Looker Studio and BigQuery forecasting needs and asks for the client\u2019s schema, showing relevance. It provides concrete past work with measurable outcomes, though not in real\u2011estate, giving solid evidence. The opening ties to the client\u2019s problem and includes a personalized question, meeting personalisation. The text is concise (~130 words), well\u2011structured, and proposes a clear next step, satisfying clarity. The tone is professional, avoids guarantees or off\u2011platform contact, fulfilling professionalism. Scores average to 4."
+  }
+ },
+ "J01": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-ai-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's needs (Python, LLM evaluation, entity extraction, REST API) and provides concrete evidence with specific metrics from past projects. It opens by focusing on the client's problem and asks for a sample set, showing personalization. The text is concise (~130 words), well\u2011structured, and includes a clear next step. The tone is professional, avoids guarantees, and stays on\u2011platform."
+  }
+ },
+ "J02": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-da-163",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the client\u2019s need for a metrics layer, cites concrete past projects with measurable outcomes, opens with a focus on the client\u2019s problem and asks a relevant follow\u2011up question, stays within the word limit, is well\u2011structured and proposes clear first\u2011two\u2011week steps, and maintains a professional tone without guarantees."
+  }
+ },
+ "J03": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-ai-199",
+  "judge": {
+   "relevance": 4,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly mentions MLflow, AWS, and clean scripting, matching most requirements, though it does not explicitly address spotting objects in video feeds, lowering relevance slightly. It provides concrete past projects with measurable outcomes, showing strong evidence. The opening ties to the client\u2019s need for a document assistant and asks a specific follow\u2011up, demonstrating good personalisation. The text is concise (~150 words), well\u2011structured, and includes a clear next step. The tone is professional, avoids guarantees, and stays on\u2011platform. Overall the proposal scores highly across the rubric."
+  }
+ },
+ "J04": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-ai-105",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's requirements (OCR, image cleanup, transformer fine\u2011tuning, RAG) and mentions the specific risk of image quality, showing strong relevance. It cites a concrete prior project with measurable outcomes (96% accuracy, 70% time reduction), providing solid evidence, though the placeholders reduce confidence slightly. The opening ties to the client's logistics image problem, demonstrating good personalisation. The text is concise, well\u2011structured, and suggests an audit step, but it lacks an explicit next\u2011step call (e.g., request a meeting), so clarity is good but not perfect. Professionalism is high: no guarantees, appropriate tone, no off\u2011platform contact. The average yields an overall score of 5 after rounding."
+  }
+ },
+ "J05": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-ai-163",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the client\u2019s need for a searchable chatbot and data extraction, showing strong relevance. It cites concrete past projects with specific performance metrics, providing solid evidence. It personalises by proposing an audit of the client\u2019s documents and a prototype, though the opening could more explicitly reference the client\u2019s problem, hence a slightly lower personalisation score. The response is concise, well\u2011structured, and outlines next steps, but could include a clearer call to action, resulting in a modest clarity deduction. Professionalism is high with no guarantees or off\u2011platform requests."
+  }
+ },
+ "J06": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-ai-071",
+  "judge": {
+   "relevance": 4,
+   "evidence": 4,
+   "personalisation": 3,
+   "clarity": 3,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the job's needs (MLflow version tracking, clean scripts, LangChain) and shows relevant experience, earning high relevance and evidence scores. It personalises by mentioning the real\u2011estate context but relies on examples from other domains, lowering personalisation. The text is concise and within the word limit, but the next step is vague, reducing clarity. Professionalism is strong with no guarantees or off\u2011platform requests. The average yields an overall rating of 4."
+  }
+ },
+ "J07": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-ai-199",
+  "judge": {
+   "relevance": 4,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses most job requirements (MLflow, clean scripts, AWS hosting) and outlines a concrete first step, showing strong relevance though it omits explicit experience with spotting objects in video feeds. It provides concrete project examples with metrics, demonstrating solid evidence. The opening ties to the client\u2019s need and offers a tailored audit, showing good personalisation. The text is concise (~150 words), well\u2011structured, and includes a clear next step, meeting clarity criteria. Tone is professional, with no guarantees or off\u2011platform contact, satisfying professionalism."
+  }
+ },
+ "J08": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-da-105",
+  "judge": {
+   "relevance": 4,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the job's needs (R, Streamlit, sales drivers) and shows relevant experience, earning a solid relevance score. It cites a specific past project with measurable impact (14 analysts, 9 static reports replaced), providing concrete evidence. The opening ties to the client\u2019s problem and asks a tailored question, showing strong personalisation. The text is concise, well\u2011structured, and within the word limit, though a bit brief on SQL experience, so clarity gets a good but not perfect score. The tone is professional, with no guarantees or off\u2011platform requests, meriting a high professionalism rating. The average rounds to an overall score of 4."
+  }
+ },
+ "J09": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-ai-105",
+  "judge": {
+   "relevance": 4,
+   "evidence": 3,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 4,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the job's needs (OCR, transformer fine\u2011tuning, clean scripts) and asks for relevant next steps, showing good relevance and clarity. It provides concrete past projects with some metrics, but the examples are not tightly tied to logistics or the specific pipeline, so evidence is moderate. The opening is tailored to the client\u2019s problem and includes a personalized request for sample images, earning a solid personalisation score. The text is concise, well\u2011structured, and proposes a clear next action without making guarantees, meeting professionalism standards."
+  }
+ },
+ "J10": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-da-071",
+  "judge": {
+   "relevance": 4,
+   "evidence": 3,
+   "personalisation": 3,
+   "clarity": 4,
+   "professionalism": 4,
+   "overall": 4,
+   "rationale": "The proposal addresses the core requirements (Looker Studio, BigQuery, testing, deployment) and asks a relevant next-step question, showing good relevance and clarity. Evidence is provided through specific past projects, though not in real estate, making it moderately convincing. Personalisation is present but limited to a brief mention of the real-estate market without deeper tailoring. The response is concise, well-structured, and includes a clear call to action, meeting professionalism standards with no guarantees or off\u2011platform requests."
+  }
+ },
+ "J11": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-105",
+  "judge": {
+   "relevance": 3,
+   "evidence": 4,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal is fairly relevant, mentioning Next.js, Prisma, and zero\u2011downtime migrations, but it lacks direct experience with Shopify which is a requirement, lowering relevance. It provides concrete evidence with a specific past project and measurable results, earning a strong evidence score. The opening ties to the client\u2019s logistics needs and suggests a clear first step, showing good personalisation and clarity. The tone is professional, with no guarantees or off\u2011platform contact. Overall the proposal meets most criteria well, resulting in an average score of 4."
+  }
+ },
+ "J12": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-fu-105",
+  "judge": {
+   "relevance": 4,
+   "evidence": 3,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal is relevant to the job, mentioning Next.js, Prisma, zero\u2011downtime migrations, Stripe and Shopify experience. It provides some evidence of past work but lacks concrete metrics or detailed outcomes, so the evidence score is moderate. The opening ties directly to the client\u2019s logistics API need, showing good personalisation. The text is concise, well\u2011structured, and ends with a clear next step, earning a solid clarity rating. The tone is professional, with no guarantees or off\u2011platform requests, meriting a high professionalism score. The average yields an overall rating of 4."
+  }
+ },
+ "J13": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-da-105",
+  "judge": {
+   "relevance": 3,
+   "evidence": 5,
+   "personalisation": 4,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal addresses the core needs (SQL, Streamlit, sales drivers) but omits the required R expertise, lowering relevance. It provides concrete project examples with measurable outcomes, earning high evidence. The opening ties to the client\u2019s problem, showing good personalisation. The text is concise (~130 words), well\u2011structured, and includes a clear next step, so clarity is strong. Tone is professional, no guarantees or off\u2011platform contact, meeting professionalism criteria. The average score rounds to 4."
+  }
+ },
+ "J14": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's core needs (CI/CD, end\u2011to\u2011end testing, Redis) and identifies the riskiest part as Redis integration, showing relevance. It provides concrete evidence by citing a past GraphQL API project with specific performance improvements, though the example isn\u2019t healthcare\u2011specific, earning a solid but not perfect evidence score. The opening ties the solution to the client\u2019s healthcare API, demonstrating strong personalisation. The text is concise (~150 words), well\u2011structured, and proposes a clear next step, meeting clarity criteria. The tone is professional, with no guarantees or off\u2011platform requests, satisfying professionalism. Overall the proposal scores highly across all dimensions."
+  }
+ },
+ "J15": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-da-199",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job\u2019s needs (SQL, daily refresh, central data, forecasting) with specific past projects and measurable outcomes, opening with a focus on the client\u2019s logistics reporting problem, stays concise (~130 words) and ends with a clear next step, and maintains a professional tone without guarantees or off\u2011platform requests."
+  }
+ },
+ "J16": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-ai-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 4,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job\u2019s needs (Python, LLM evaluation, extraction, REST API) and therefore scores high on relevance. It cites several past projects that are relevant, though the evidence is vague (e.g., placeholder references) so it gets a solid but not perfect evidence score. The opening ties to the client\u2019s problem and asks a specific follow\u2011up question, showing good personalisation. The text is concise (~150 words), well\u2011structured and includes a clear next step, earning a top clarity rating. The tone is professional, avoids guarantees and off\u2011platform contact, meriting the highest professionalism score. The average rounds to 5."
+  }
+ },
+ "J17": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-199",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's need for a flexible endpoint, caching, and pub/sub, showing strong relevance. It provides concrete examples of past projects with specific technologies, though it lacks explicit fintech experience, so evidence gets a slightly lower score. The opening ties to the client's problem and asks a clear next-step question, demonstrating good personalisation and clarity within the word limit. The tone is professional with no guarantees or off\u2011platform requests."
+  }
+ },
+ "J18": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-105",
+  "judge": {
+   "relevance": 3,
+   "evidence": 2,
+   "personalisation": 3,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 3,
+   "rationale": "The proposal is relevant and mentions a plan that matches the job, but it lacks specific evidence of past work with Stripe or Shopify. It personalises the opening by referencing the client\u2019s need for zero\u2011downtime migrations, though the tone is fairly generic. The response is concise and includes a clear next step, and it remains professional without over\u2011promising."
+  }
+ },
+ "J19": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-071",
+  "judge": {
+   "relevance": 3,
+   "evidence": 3,
+   "personalisation": 3,
+   "clarity": 2,
+   "professionalism": 4,
+   "overall": 3,
+   "rationale": "The proposal mentions caching and pub/sub, which are relevant, but omits explicit WebSockets and React Native experience, lowering relevance. It provides concrete project examples with some metrics, giving moderate evidence. The opening ties to the client\u2019s need but is somewhat generic, so personalization is average. The response is very brief, missing a clear structure, word count, and a next step, reducing clarity. Tone is professional with no guarantees, earning a good professionalism score. The averaged score rounds to 3."
+  }
+ },
+ "J20": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-fu-199",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's need for a flexible endpoint, caching, and pub/sub, showing strong relevance. It provides concrete evidence from a similar real-time dashboard project with performance metrics, though it lacks fintech-specific examples, resulting in a slightly lower evidence score. The opening ties to the client's problem and asks a tailored question, demonstrating excellent personalisation. The response is concise (~130 words), well\u2011structured, and includes a clear next step, earning a high clarity rating. It maintains a professional tone, avoids guarantees, and stays on\u2011platform, meeting professionalism criteria."
+  }
+ },
+ "J21": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-da-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job\u2019s needs (drop\u2011off analysis, SQL, board\u2011ready charts, web tool) and shows clear relevance. It provides concrete evidence with specific past projects, metrics, and outcomes, demonstrating the freelancer\u2019s capability. The opening ties to the client\u2019s problem rather than using a generic greeting, showing personalisation. The response is concise (~130 words), well\u2011structured, and ends with a clear next step to review the current analytics setup. The tone is professional, avoids guarantees or off\u2011platform contact, and maintains appropriate language. All rubric criteria are met at the highest level."
+  }
+ },
+ "J22": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-ai-071",
+  "judge": {
+   "relevance": 4,
+   "evidence": 3,
+   "personalisation": 4,
+   "clarity": 3,
+   "professionalism": 4,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the job's needs (model version tracking, clean scripts, LangChain) and outlines a solution, earning a high relevance score. It cites a past fintech project with some detail, but lacks concrete metrics or direct real-estate examples, so evidence is moderate. The opening ties to the client's problem, showing good personalisation. The text is concise and within the word limit, but it does not include a clear next step or call to action, reducing clarity. The tone is professional, with no guarantees or off\u2011platform requests, resulting in a solid professionalism rating. The average rounds to 4."
+  }
+ },
+ "J23": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-fu-071",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's required skills (caching, pub/sub, WebSockets, React Native) and ties them to the client\u2019s retail store context, showing strong relevance. It provides a concrete example of a similar project with measurable outcomes (halving lead response time, adoption by 35 agents), offering solid evidence though it could include more retail\u2011specific metrics. The opening sentence is tailored to the client\u2019s problem, demonstrating good personalisation. The text is concise, well\u2011structured, and ends with a clear next step (review inventory schema), meeting clarity criteria. The tone is professional, with no guarantees or off\u2011platform requests, satisfying professionalism."
+  }
+ },
+ "J24": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-fu-163",
+  "judge": {
+   "relevance": 3,
+   "evidence": 4,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal addresses the core need for a reliable mobile app with background tasks, but the examples given are from unrelated industries, lowering relevance. It provides concrete metrics (ratings, export failure reduction) which strengthens evidence. The opening directly references the client\u2019s problem and asks follow\u2011up questions, showing good personalisation. The text is concise (~130 words), well\u2011structured, and includes a clear next step, meeting clarity criteria. The tone is professional, with no guarantees or off\u2011platform requests, satisfying professionalism. Overall the proposal is solid but could improve relevance by citing legal\u2011specific experience."
+  }
+ },
+ "J25": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-fu-071",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's core needs (caching, pub/sub, WebSockets, React Native) and shows clear relevance. It provides concrete evidence from a similar high\u2011load event\u2011ticketing app with measurable performance improvements, though not exactly a retail store, earning a strong but not perfect evidence score. The opening is tailored to the client\u2019s problem, demonstrating good personalisation. The text is concise (~130 words), well\u2011structured, and includes a clear next step (weekly progress update), meeting clarity criteria. It maintains a professional tone, avoids guarantees or off\u2011platform contact, satisfying professionalism. The average yields an overall rating of 5."
+  }
+ },
+ "J26": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-da-199",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses all listed requirements (SQL, daily refresh, central data, forecasting) and mentions relevant experience. It provides concrete project examples with outcomes, showing specific evidence. The opening sentence references the client's problem, demonstrating personalization. The text is concise (~130 words), well\u2011structured, and ends with a clear next step (quick review call). The tone is professional, avoids guarantees, and stays on\u2011platform."
+  }
+ },
+ "J27": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-da-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 4,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses all listed requirements (drop\u2011off analysis, SQL, board\u2011ready charts, web tool) and outlines a clear weekly update process, showing strong relevance. It cites a specific recent project and years of experience, providing concrete evidence, though the placeholder links reduce the strength slightly. The opening ties to the client\u2019s problem rather than a generic greeting, demonstrating good personalisation. The text is concise (~130 words), well\u2011structured, and includes a clear next step (discovery call), meeting clarity criteria. The tone is professional, avoids guarantees and off\u2011platform contact, satisfying professionalism. Overall the proposal scores highly across the rubric."
+  }
+ },
+ "J28": {
+  "variant": "v4_outcome",
+  "job_id": "job-dev-ai-163",
+  "judge": {
+   "relevance": 4,
+   "evidence": 4,
+   "personalisation": 4,
+   "clarity": 4,
+   "professionalism": 5,
+   "overall": 4,
+   "rationale": "The proposal directly addresses the client\u2019s need for a reliable search/chatbot and identifies the biggest risk (accurate data extraction). It cites a concrete prior project with metrics and GitHub stars, showing specific evidence. The opening references the client\u2019s education business and asks for sample documents, demonstrating personalization and a clear next step. The response is concise, well\u2011structured, and stays professional without guarantees or off\u2011platform requests."
+  }
+ },
+ "J29": {
+  "variant": "v0_naive",
+  "job_id": "job-dev-fu-186",
+  "judge": {
+   "relevance": 5,
+   "evidence": 5,
+   "personalisation": 5,
+   "clarity": 5,
+   "professionalism": 5,
+   "overall": 5,
+   "rationale": "The proposal directly addresses the job's requirements (CI/CD, end\u2011to\u2011end testing, Redis) and identifies security of patient data as the riskiest part, showing relevance. It provides concrete evidence with specific past projects, numbers, and outcomes, satisfying the evidence criterion. The opening references the client\u2019s need for a secure API backend, personalising the response. The text is concise (~150 words), well\u2011structured, and ends with a clear next step question, meeting clarity. The tone is professional, avoids guarantees or off\u2011platform contact, fulfilling professionalism. All criteria merit the highest score, resulting in an overall rating of 5."
+  }
+ }
+}
