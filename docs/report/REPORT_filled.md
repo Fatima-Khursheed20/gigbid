@@ -176,7 +176,7 @@ It is not a blind test of adaptability. A blind test needs the real change reque
 ## 7. Signature extension — X1 Agency mode
 
 Route each job to the team member whose portfolio proves the most requirements (calibrated corrective retrieval per
-member), then draft in that member's voice (`profile.voice` → Writer). R `agency_routing.json`: routing evaluation not completed before the deadline (CPU contention with the other evaluations); the router and voice hand-off are implemented and unit-exercised.
+member), then draft in that member's voice (`profile.voice` → Writer). R `agency_routing.json`: routing accuracy 0.93 vs category baseline 1.00 on 30 bid-worthy dev jobs; 87% of routings were confident, with accuracy 0.96.
 Caveat: the category baseline is near-perfect on synthetic jobs by construction; the routing matters most when a
 job's category is wrong or when two members could do it.
 
