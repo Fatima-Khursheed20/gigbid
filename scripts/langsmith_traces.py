@@ -25,10 +25,9 @@ async def main() -> None:
 
     from agent import runtime
     from agent.nodes._base import UserProfile
-    from evals.harness import load_dev, setup_inprocess
+    from evals.harness import setup_inprocess
 
     setup_inprocess()
-    rows = {r["job_id"]: r for r in load_dev("ai_ml")}
     prof = UserProfile(user_id="trace-demo", tenant="ai_ml", hourly_rate=45, floor_rate=30, min_project=300,
                        voice="direct, technical, numbers-first")
 
