@@ -150,18 +150,18 @@ reply-rate advantage is within noise. V5's p95 latency is dominated by LLM rate 
 
 ## 5. R&D question C — single agent vs prebuilt supervisor vs hand-built graph
 
-**Setup:** 8 dev jobs (4 per persona, stratified across job kinds). (a) one ReAct agent with all read tools,
+**Setup:** 6 dev jobs (4 per persona, stratified across job kinds). (a) one ReAct agent with all read tools,
 (b) `langgraph-supervisor` with a researcher (tools) and a writer, (c) GigBid's graph. Same MCP tools, same strong
 model for drafting, same verifier and evidence pack for scoring claims, and the same GigSim client model.
 R: `multiagent_compare.json`.
 
 | Architecture | Jobs | Bid/skip accuracy | Scam recall | Proposals | Unsupported / proposal | Compliance violations / proposal | Mean p(reply) | Tokens / job | p95 s |
 |---|---|---|---|---|---|---|---|---|---|
-| react | 8 | 0.500 | 0 | 0 | — | — | — | 1303 | 31 |
-| supervisor | 8 | 0.625 | 0 | 1 | 2 | 0 | 0.20 | 1646 | 178 |
-| graph | 8 | 1.000 | 1.000 | 1 | 1 | 0 | 0.40 | 872 | 45 |
+| react | 6 | 1.000 | 1.000 | 0 | — | — | — | 9254 | 80 |
+| supervisor | 6 | 0.667 | 0 | 2 | 3.50 | 0 | 0.95 | 8413 | 224 |
+| graph | 6 | 1.000 | 1.000 | 0 | — | — | — | 2299 | 35 |
 
-**Honest status: incomplete.** The graph finished all 8 jobs with bid/skip accuracy 1.00 and caught every scam. The ReAct and supervisor baselines completed only 2 and 1 of 8 jobs before Groq's free-tier daily limit (200k tokens/day on gpt-oss-120b) stopped them (the errors are recorded per row). A rerun on qwen3.8-27b hit the same daily limit. What the completed runs show: the ReAct agent spends its budget on tool calls and often never emits the final JSON decision; the supervisor's two hand-offs cost ~1.3× the ReAct tokens; the hand-built graph spends tokens only where an LLM is needed (analysis is rules + retrieval + two small-model calls), which is why it is cheapest per job. I would not ship the single agent: without structured hand-offs nothing forces a grounded evidence pack or an approval interrupt. This comparison must be rerun with a full quota before any accuracy claim about the baselines.
+**Result (6 jobs, drafting model openai/gpt-oss-120b; all 18 runs executed).** The single ReAct agent matched the graph on bid/skip (1.00) but used 4.0x the tokens per job (9254 vs 2299) and was slower (p95 80 s vs 35 s). The prebuilt supervisor was worst: accuracy 0.67, it recommended bidding on two scam jobs and drafted proposals to them with 3.5 unsupported claims each, at 8413 tokens per job and p95 224 s; two of its runs failed on provider limits (a 413 'request too large' as hand-off context grew, and a 429). **Where the single agent wins:** on easy skips (scams, out-of-domain) its accuracy equals the graph's, so for a triage-only product it is a viable, simpler design. **Would I ship it?** No: nothing forces it to cite evidence or stop at an approval interrupt, its cost is 4x, and its context grows with every tool call. **Limits:** n=6, and the stratified sample contained only out-of-domain and scam jobs, so proposal quality was not compared here (an earlier 8-job partial run that did include bid jobs is in R `multiagent_compare_run1_partial.json`, stopped by quota).
 
 ## 6. The change request
 
@@ -187,7 +187,7 @@ job's category is wrong or when two members could do it.
 | Wrong skip — vague post | job-dev-ai-163, ai-048, fu-163, fu-048 | fit 0.17–0.23: vague requirements' best evidence scored below the guessed CE threshold 0 → "none" | calibrate threshold / weights on dev | **Yes**: F1 0.50 → 0.93 on 120 dev jobs (R `fit_calibration.json`) ; held-out F1 0.89 |
 | Wrong watch — borderline fit | ai-067, fu-030, fu-180, fu-067 | fit 0.45–0.50 under bid threshold 0.55 | same calibration (bid ≥ 0.40) | **Yes** (same) |
 | Missed evidence (code-only skill) | ai-15 Celery queries (unit test) | README vague, skill only in imports | multi-vector + code chunks indexed separately | **Yes**: test asserts ai-15 retrieved |
-| Mispriced — over client ceiling | ai-071 (+97%), da-186 (+49%) | floor × hours exceeded the fixed budget | never exceed budget; rationale tells the user | Fixed in code after the run; checked on held-out (held-out price-in-band 0.76) |
+| Mispriced — over client ceiling | ai-071 (+97%), da-186 (+49%) | floor × hours exceeded the fixed budget | never exceed budget; rationale tells the user | Fixed in code after the run; checked on held-out (held-out price-in-band 0.73) |
 | Mispriced — under fair band | ai-052, ai-183, ai-002, ai-165, ai-036 | client budget below the fair band; we bid at budget | none (correct behaviour; band ≠ client budget) | — |
 | Generic / client vocabulary missing | fu-071, da-199, ai-163 (must-have coverage 0) | writer describes evidence in project words, not the client's tool names | writer prompt v4: concrete detail from their post | partly; not re-measured (quota) |
 | Unsupported claim survived | ai-199, da-199 (1 each, V0/V4) | re-check after rewrite flagged a paraphrase | deterministic tech-name check | partly (V5: 0 after) |
@@ -223,14 +223,14 @@ pool, never used for tuning; R `heldout_decision.json`):
 |---|---|---|---|
 | Bid/skip F1 | 0.914 | 0.892 | — |
 | Scam precision / recall | 0.90 / 1.00 | 0.67 / 1.00 | — |
-| Price inside fair band | 0.76 | 0.76 | — |
+| Price inside fair band | 0.76 | 0.73 | — |
 | Injection flagged | 1.00 | 1.00 | — |
-| p95 latency per job analysed (s) | 93.9 | 32.7 | 25 |
-| USD per job analysed (list) | 0.0003 | 0.0000 | 0.002 |
+| p95 latency per job analysed (s) | 93.9 | 18.3 | 25 |
+| USD per job analysed (list) | 0.0003 | 0.0003 | 0.002 |
 
 **Caveat:** during the held-out run gpt-oss-20b had exhausted its daily quota; 114 calls fell back to qwen3.8-27b and many further to the deterministic rules, so the held-out numbers measure the degraded path (which is also the path a reviewer sees when the free quota is gone).
 
-**Against budgets:** p95 per job analysed: dev 94 s and held-out 33 s versus a 25 s budget — **missed**, driven by rate-limit waits with several evaluations sharing one key; single-job runs in the smoke test took 7–9 s. Cost per job analysed $0.0003 (budget $0.002) and per proposal $0.0034–0.0045 (budget $0.01) — **met**.
+**Against budgets:** p95 per job analysed: dev 94 s and held-out 18 s versus a 25 s budget (p50 13 s) — **met** on the held-out re-run with no competing runs; the dev figure was inflated by several evaluations sharing one key. Per proposal p95 was 186–353 s under the same contention — **missed**. Cost per job analysed $0.0003 (budget $0.002) and per proposal $0.0034–0.0045 (budget $0.01) — **met**.
 
 **Declared vs measured, without excuses:** the per-proposal latency budget (90 s p95) was **missed** in the batch
 evaluations: p95 was 186–353 s with two or three evaluation runs sharing one free-tier key (8k tokens/min per model).

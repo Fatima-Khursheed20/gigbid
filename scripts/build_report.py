@@ -33,16 +33,19 @@ def main() -> None:
     multi = j("multiagent_compare.json")
     if multi and "by_arch" in multi:
         a = multi["by_arch"]
-        multi_disc = (f"**Honest status: incomplete.** The graph finished all {a['graph']['n']} jobs with bid/skip accuracy "
-                      f"{a['graph']['bid_skip_accuracy']:.2f} and caught every scam. The ReAct and supervisor baselines completed only "
-                      f"{a['react']['n'] - a['react']['errors']} and {a['supervisor']['n'] - a['supervisor']['errors']} of "
-                      f"{a['react']['n']} jobs before Groq's free-tier daily limit (200k tokens/day on gpt-oss-120b) stopped them "
-                      f"(the errors are recorded per row). A rerun on qwen3.8-27b hit the same daily limit. What the completed runs show: "
-                      f"the ReAct agent spends its budget on tool calls and often never emits the final JSON decision; the supervisor's "
-                      f"two hand-offs cost ~1.3× the ReAct tokens; the hand-built graph spends tokens only where an LLM is needed "
-                      f"(analysis is rules + retrieval + two small-model calls), which is why it is cheapest per job. I would not "
-                      f"ship the single agent: without structured hand-offs nothing forces a grounded evidence pack or an approval "
-                      f"interrupt. This comparison must be rerun with a full quota before any accuracy claim about the baselines.")
+        multi_disc = (f"**Result (6 jobs, drafting model {multi['meta'].get('drafting_model')}; all 18 runs executed).** The single ReAct "
+                      f"agent matched the graph on bid/skip ({a['react']['bid_skip_accuracy']:.2f}) but used "
+                      f"{a['react']['tokens_per_job'] / a['graph']['tokens_per_job']:.1f}x the tokens per job "
+                      f"({a['react']['tokens_per_job']:.0f} vs {a['graph']['tokens_per_job']:.0f}) and was slower (p95 {a['react']['latency_p95_s']:.0f} s vs "
+                      f"{a['graph']['latency_p95_s']:.0f} s). The prebuilt supervisor was worst: accuracy {a['supervisor']['bid_skip_accuracy']:.2f}, it "
+                      f"recommended bidding on two scam jobs and drafted proposals to them with {a['supervisor']['unsupported_per_proposal']:.1f} unsupported claims "
+                      f"each, at {a['supervisor']['tokens_per_job']:.0f} tokens per job and p95 {a['supervisor']['latency_p95_s']:.0f} s; two of its runs failed "
+                      f"on provider limits (a 413 'request too large' as hand-off context grew, and a 429). **Where the single agent wins:** "
+                      f"on easy skips (scams, out-of-domain) its accuracy equals the graph's, so for a triage-only product it is a viable, "
+                      f"simpler design. **Would I ship it?** No: nothing forces it to cite evidence or stop at an approval interrupt, its cost "
+                      f"is 4x, and its context grows with every tool call. **Limits:** n=6, and the stratified sample contained only out-of-domain "
+                      f"and scam jobs, so proposal quality was not compared here (an earlier 8-job partial run that did include bid jobs is in "
+                      f"R `multiagent_compare_run1_partial.json`, stopped by quota).")
     else:
         multi_disc = "Pending."
     cr = j("change_request.json")
@@ -55,7 +58,7 @@ def main() -> None:
     ag_txt = (f"routing accuracy {ag['routing_accuracy']:.2f} vs category baseline {ag['category_baseline_accuracy']:.2f} on {ag['n']} "
               f"bid-worthy dev jobs; {ag['confident_share']:.0%} of routings were confident, with accuracy {ag['accuracy_when_confident']:.2f}") if ag else \
         "routing evaluation not completed before the deadline (CPU contention with the other evaluations); the router and voice hand-off are implemented and unit-exercised"
-    held = j("heldout_decision.json")
+    held = j("heldout_decision_v2.json") or j("heldout_decision.json")
     ho = held["overall"]
     held_tbl = ("| Metric | Dev (calibrated, 72 jobs) | Held-out (57 jobs, new clients) | Declared budget |\n|---|---|---|---|\n")
     dv = j("decision_v2.json")["overall"]
@@ -68,8 +71,9 @@ def main() -> None:
     held_tbl += ("\n\n**Caveat:** during the held-out run gpt-oss-20b had exhausted its daily quota; 114 calls fell back to "
                  "qwen3.8-27b and many further to the deterministic rules, so the held-out numbers measure the degraded path "
                  "(which is also the path a reviewer sees when the free quota is gone).")
-    budgets = ("p95 per job analysed: dev 94 s and held-out 33 s versus a 25 s budget — **missed**, driven by rate-limit waits "
-               "with several evaluations sharing one key; single-job runs in the smoke test took 7–9 s. Cost per job analysed "
+    budgets = (f"p95 per job analysed: dev 94 s and held-out {ho['latency_p95_s']:.0f} s versus a 25 s budget (p50 {ho['latency_p50_s']:.0f} s) — "
+               f"{'**met** on the held-out re-run with no competing runs' if ho['latency_p95_s'] <= 25 else '**missed**'}; the dev figure was "
+               "inflated by several evaluations sharing one key. Per proposal p95 was 186–353 s under the same contention — **missed**. Cost per job analysed "
                "$0.0003 (budget $0.002) and per proposal $0.0034–0.0045 (budget $0.01) — **met**.")
     judge = j("judge_calibration.json")
     judge_txt = (f"Cohen's kappa {judge['cohen_kappa']}, quadratic-weighted {judge['quadratic_weighted_kappa']} on {judge['n']} items"

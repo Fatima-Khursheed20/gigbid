@@ -57,7 +57,7 @@ def decision_table() -> str:
     out = ["| Mode | Jobs | Bid/skip F1 | Precision | Recall | Scam precision | Scam recall | Price in fair band | Injection flagged | p95 s / job | USD / job |",
            "|---|---|---|---|---|---|---|---|---|---|---|"]
     for name, label in [("decision_offline.json", "rules only, pre-calibration"), ("decision.json", "LLM + rules, pre-calibration"),
-                        ("decision_v2.json", "LLM + rules, calibrated (shipped)"), ("heldout_decision.json", "held-out test, shipped")]:
+                        ("decision_v2.json", "LLM + rules, calibrated (shipped)"), ("heldout_decision.json", "held-out, quota-degraded run"), ("heldout_decision_v2.json", "held-out, full models (re-run)")]:
         d = load(name)
         if not d:
             continue

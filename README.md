@@ -72,7 +72,8 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 | rules only, pre-calibration | 240 | 0.699 | 1.000 | 0.537 | 0.968 | 1.000 | 0.747 | 1.000 | 33.6 | 0 |
 | LLM + rules, pre-calibration | 72 | 0.708 | 1.000 | 0.548 | 0.900 | 1.000 | 0.783 | 1.000 | 53.0 | 0.00030 |
 | LLM + rules, calibrated (shipped) | 72 | 0.914 | 0.949 | 0.881 | 0.900 | 1.000 | 0.757 | 1.000 | 93.9 | 0.00030 |
-| held-out test, shipped | 57 | 0.892 | 0.943 | 0.846 | 0.667 | 1.000 | 0.758 | 1.000 | 32.7 | 0.00000 |
+| held-out, quota-degraded run | 57 | 0.892 | 0.943 | 0.846 | 0.667 | 1.000 | 0.758 | 1.000 | 32.7 | 0.00000 |
+| held-out, full models (re-run) | 57 | 0.892 | 0.943 | 0.846 | 0.667 | 1.000 | 0.727 | 1.000 | 18.3 | 0.00030 |
 <!-- /results -->
 
 ### R&D A — tool granularity
@@ -90,11 +91,11 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 <!-- results:evals/results/multiagent_compare.json -->
 | Architecture | Jobs | Bid/skip accuracy | Scam recall | Proposals | Unsupported / proposal | Compliance violations / proposal | Mean p(reply) | Tokens / job | p95 s |
 |---|---|---|---|---|---|---|---|---|---|
-| react | 8 | 0.500 | 0 | 0 | — | — | — | 1303 | 31 |
-| supervisor | 8 | 0.625 | 0 | 1 | 2 | 0 | 0.20 | 1646 | 178 |
-| graph | 8 | 1.000 | 1.000 | 1 | 1 | 0 | 0.40 | 872 | 45 |
+| react | 6 | 1.000 | 1.000 | 0 | — | — | — | 9254 | 80 |
+| supervisor | 6 | 0.667 | 0 | 2 | 3.50 | 0 | 0.95 | 8413 | 224 |
+| graph | 6 | 1.000 | 1.000 | 0 | — | — | — | 2299 | 35 |
 <!-- /results -->
-*Incomplete: 8 jobs were saved before the free tier's daily token quota stopped the baselines (most baseline rows are quota errors, recorded per row). Not a fair accuracy comparison yet — see report §5.*
+*6 jobs, all three on gpt-oss-120b; the sample contained only out-of-domain and scam jobs, so it compares triage, cost and latency, not proposal quality — see report §5.*
 
 **Traces:** [docs/TRACES.md](docs/TRACES.md) — a skipped scam, an approved proposal, a Critic loop and a live
 crash-and-resume on the deployed app. **Playwright:** 7/7 passing ([report](docs/playwright-report/index.html)).
