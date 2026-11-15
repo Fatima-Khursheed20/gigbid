@@ -51,3 +51,8 @@ Prompts: *Answer a screening question from my portfolio*, *Will I fit this job?*
 PORTFOLIO_DIR=$(pwd)/data/personas/ai_ml uv run gigbid-portfolio-mcp     # from a clone of the repo
 npx @modelcontextprotocol/inspector uv run gigbid-portfolio-mcp            # MCP Inspector
 ```
+
+## Session capture
+`python -m scripts.mcp_session_capture http://127.0.0.1:8101/mcp docs/images/mcp_session.html` records initialize,
+tools/resources/prompts listing and one `search_evidence` call with the official MCP Python SDK client
+([screenshot](../../docs/images/mcp_session.png)). It is not a screenshot of the MCP Inspector UI.

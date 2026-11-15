@@ -99,8 +99,9 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 
 **Traces:** [docs/TRACES.md](docs/TRACES.md) — a skipped scam, an approved proposal, a Critic loop and a live
 crash-and-resume on the deployed app. **Playwright:** 7/7 passing ([report](docs/playwright-report/index.html)).
-**R&D report:** [docs/report/GigBid_RnD_Report.pdf](docs/report/GigBid_RnD_Report.pdf) · **Write-up:**
-[docs/WRITEUP.md](docs/WRITEUP.md).
+**R&D report:** [docs/report/GigBid_RnD_Report.pdf](docs/report/GigBid_RnD_Report.pdf) · **Write-up (published):**
+[fatima-khursheed20.github.io/gigbid](https://fatima-khursheed20.github.io/gigbid/) (source [docs/WRITEUP.md](docs/WRITEUP.md)).
+**MCP evidence:** a live MCP client session against the Portfolio server ([docs/images/mcp_session.png](docs/images/mcp_session.png); SDK client, not the Inspector UI).
 
 More: prompt-injection attack success rate before/after defences (`evals/results/injection.json`), fit-threshold
 calibration (`fit_calibration.json`), ablation (`rag_ablation.json`), agency routing for the signature extension

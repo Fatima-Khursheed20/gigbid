@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Portfolio MCP session</title><style>
+body{font:14px system-ui,sans-serif;margin:24px;background:#fff;color:#111;max-width:1100px}
+pre{background:#f4f4f4;padding:10px;white-space:pre-wrap;font-size:12px}h2{font-size:15px;margin:18px 0 4px}
+.n{color:#a33;font-weight:600}</style></head><body><h1>gigbid-portfolio MCP server: live client session</h1>
+<p class="n">Captured 2026-11-15 22:17 with the official MCP Python SDK client over streamable HTTP (http://127.0.0.1:8101/mcp).
+This is not the MCP Inspector UI.</p><h2>initialize</h2><pre>{
+ &quot;server&quot;: {
+  &quot;name&quot;: &quot;gigbid-portfolio&quot;,
+  &quot;title&quot;: null,
+  &quot;version&quot;: &quot;1.30.0&quot;,
+  &quot;websiteUrl&quot;: null,
+  &quot;icons&quot;: null
+ },
+ &quot;protocol&quot;: &quot;2025-11-25&quot;
+}</pre><h2>tools/list</h2><pre>[
+ {
+  &quot;name&quot;: &quot;search_evidence&quot;,
+  &quot;annotations&quot;: {
+   &quot;readOnlyHint&quot;: true,
+   &quot;destructiveHint&quot;: false,
+   &quot;idempotentHint&quot;: true,
+   &quot;openWorldHint&quot;: false
+  }
+ },
+ {
+  &quot;name&quot;: &quot;requirement_matrix&quot;,
+  &quot;annotations&quot;: {
+   &quot;readOnlyHint&quot;: true,
+   &quot;destructiveHint&quot;: false,
+   &quot;idempotentHint&quot;: true,
+   &quot;openWorldHint&quot;: false
+  }
+ },
+ {
+  &quot;name&quot;: &quot;get_case_study&quot;,
+  &quot;annotations&quot;: {
+   &quot;readOnlyHint&quot;: true,
+   &quot;destructiveHint&quot;: false,
+   &quot;idempotentHint&quot;: true,
+   &quot;openWorldHint&quot;: false
+  }
+ },
+ {
+  &quot;name&quot;: &quot;list_skills&quot;,
+  &quot;annotations&quot;: {
+   &quot;readOnlyHint&quot;: true,
+   &quot;destructiveHint&quot;: false,
+   &quot;idempotentHint&quot;: true,
+   &quot;openWorldHint&quot;: false
+  }
+ }
+]</pre><h2>resources/list</h2><pre>[
+ &quot;portfolio://profile&quot;
+]</pre><h2>prompts/list</h2><pre>[
+ &quot;answer_screening_question&quot;,
+ &quot;fit_check&quot;,
+ &quot;case_study_from_repo&quot;
+]</pre><h2>tools/call search_evidence (4.4s)</h2><pre>{
+ &quot;arguments&quot;: {
+  &quot;requirement&quot;: &quot;LangGraph agent with a human approval step&quot;,
+  &quot;k&quot;: 3
+ },
+ &quot;result&quot;: [
+  {
+   &quot;type&quot;: &quot;text&quot;,
+   &quot;text&quot;: &quot;{\n  \&quot;tenant\&quot;: \&quot;me\&quot;,\n  \&quot;variant\&quot;: \&quot;v5_multivector\&quot;,\n  \&quot;items\&quot;: [\n    {\n      \&quot;evidence_id\&quot;: \&quot;me:proposal:prop-ai-034#s0\&quot;,\n      \&quot;project_id\&quot;: \&quot;ai-02\&quot;,\n      \&quot;project\&quot;: \&quot;Multi-step support agent with tool calls\&quot;,\n      \&quot;type\&quot;: \&quot;proposal\&quot;,\n      \&quot;source\&quot;: \&quot;me:proposal:prop-ai-034\&quot;,\n      \&quot;date\&quot;: \&quot;2025-01\&quot;,\n      \&quot;outcome\&quot;: \&quot;ignored\&quot;,\n      \&quot;client_industry\&quot;: \&quot;saas\&quot;,\n      \&quot;skills\&quot;: [\n        \&quot;XGBoost\&quot;,\n        \&quot;LangGraph\&quot;,\n        \&quot;Forecasting\&quot;\n      ],\n      \&quot;score\&quot;: 1.5271,\n      \&quot;text\&quot;: \&quot;Your langgraph ml pipeline post caught my eye because I shipped something very close to it. In &#x27;Multi-step support agent with tool calls&#x27; for Tickety, designed a stateful agent that classifies tickets, looks up orders and drafts replies for human approval. Result: Auto-drafted 61% of tickets; agents accepted 78% of drafts with minor edits. In &#x27;Retail demand forecasting&#x27; for Bazaar Mart, combined a seasonal forecaster with a gradient-boosted residual model, refreshed nightly. Result: MAPE dropped from 31% to 14% across 120 SKUs; waste fell ~18% in the pilot stores. I can start this week.\&quot;\n    },\n    {\n      \&quot;evidence_id\&quot;: \&quot;me:proposal:prop-ai-056#s0\&quot;,\n      \&quot;project_id\&quot;: \&quot;ai-01\&quot;,\n      \&quot;project\&quot;: \&quot;Contract Q&amp;A assistant for a legal-tech startup\&quot;,\n      \&quot;type\&quot;: \&quot;proposal\&quot;,\n      \&quot;source\&quot;: \&quot;me:proposal:prop-ai-056\&quot;,\n      \&quot;date\&quot;: \&quot;2023-07\&quot;,\n      \&quot;outcome\&quot;: \&quot;won\&quot;,\n      \&quot;client_industry\&quot;: \&quot;legal\&quot;,\n      \&quot;skills\&quot;: [\n        \&quot;RAG\&quot;\n      ],\n      \&quot;score\&quot;: 0.5875,\n      \&quot;text\&quot;: \&quot;Hi! I am a passionate and hardworking professional with many years of experience. In &#x27;Contract Q&amp;A assistant for a legal-tech startup&#x27; for Clausewise Ltd, built a retrieval pipeline with clause-aware chunking, hybrid search and citations, served behind an API. Result: Cut clause lookup from ~25 minutes to under 1 minute; 92% of answers cited the correct clause in a 200-question audit. In &#x27;Multi-step support agent with tool calls&#x27; for Tickety, designed a stateful agent that classifies tickets, looks up orders and drafts replies for human approval. Result: Auto-drafted 61% of tickets; agents accepted 78% of drafts with minor edits. Happy to share a short plan on a call.\&quot;\n    },\n    {\n      \&quot;evidence_id\&quot;: \&quot;me:proposal:prop-ai-038#s0\</pre></body></html>
