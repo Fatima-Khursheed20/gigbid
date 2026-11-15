@@ -85,13 +85,14 @@ models:
   reranker: Xenova/ms-marco-MiniLM-L-6-v2  # open cross-encoder, CPU via ONNX
 
 rag:
-  variant: v3_rerank       # set by evaluation (R6) — see evals/results/rag_results.json and docs/adr/0003
+  variant: v5_multivector  # shipped: best Recall@5/MRR/nDCG@10 on 180 dev jobs (evals/results/rag_retrieval.json)
   k: 5
   candidates: 30
   chunk_chars: 700
   naive_chunk_chars: 400
   outcome_boost: {won: 0.25, replied: 0.12, ignored: -0.05}
-  crag_min_score: 0.0      # cross-encoder logit below which evidence is "weak"
+  crag_min_score: -4.0     # calibrated on dev (evals/results/fit_calibration.json): F1 0.50 -> 0.93
+  weak_weight: 0.5
 
 budgets:                   # per thread (C4) and declared SLOs (R8 / E5)
   max_graph_steps: 40
@@ -104,8 +105,8 @@ budgets:                   # per thread (C4) and declared SLOs (R8 / E5)
     usd_per_proposal: 0.01
 
 thresholds:
-  bid_min_fit: 0.55
-  watch_min_fit: 0.35
+  bid_min_fit: 0.40        # calibrated on dev, see evals/results/fit_calibration.json
+  watch_min_fit: 0.25
   max_risk_to_bid: 0.6
   scam_risk: 0.7
   proposal_max_words: 220

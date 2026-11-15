@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 UV_SYSTEM_PYTHON=1 FASTEMBED_CACHE_PAT
 RUN pip install uv==0.9.5
 WORKDIR /app
 COPY pyproject.toml uv.lock README.md ./
-RUN uv export --frozen --no-dev --no-hashes -o /tmp/req.txt && uv pip install --system -r /tmp/req.txt
+RUN uv export --frozen --no-dev --no-hashes --no-emit-project -o /tmp/req.txt && uv pip install --system -r /tmp/req.txt
 COPY common common
 COPY agent agent
 COPY rag rag

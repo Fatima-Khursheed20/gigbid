@@ -22,7 +22,10 @@ def fit_from_matrix(rows: list[dict], job_text: str) -> FitReport:
                           type=e.get("type"), snippet=(e.get("text") or "")[:400], score=e.get("score", 0.0))
               for e in r.get("evidence", [])]
         matrix.append(RequirementEvidence(requirement=r["requirement"], status=r["status"], evidence=ev))
-    score = sum(WEIGHT[m.status] for m in matrix) / max(1, len(matrix))
+    from common.config import cfg
+
+    weights = {**WEIGHT, "weak": float(cfg("rag", "weak_weight", default=WEIGHT["weak"]))}
+    score = sum(weights[m.status] for m in matrix) / max(1, len(matrix))
     job_sk = set(extract_skills(job_text))
     have = {s for m in matrix if m.status == "supported" for e in m.evidence for s in extract_skills(e.snippet)}
     reasons = [f"{sum(m.status == 'supported' for m in matrix)}/{len(matrix)} requirements have direct portfolio evidence"]

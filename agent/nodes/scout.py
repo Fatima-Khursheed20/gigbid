@@ -19,7 +19,7 @@ def fingerprint(job: dict) -> str:
 async def scout_saved_search(port, search: dict, seen_fingerprints: set[str]) -> list[dict]:
     """Called by the worker on each saved search's schedule. Returns NEW, de-duplicated jobs only."""
     res = await port.search_jobs("scout", query=search.get("query", ""), category=search.get("category", ""),
-                                 limit=search.get("limit", 20), pool=search.get("pool", ""))
+                                 limit=search.get("limit", 8), pool=search.get("pool", ""))
     new = []
     for j in res.get("jobs", []):
         fp = fingerprint(j)

@@ -41,7 +41,7 @@ class BearerAuth(BaseHTTPMiddleware):
         self.token = os.environ.get(token_env, default or "")
 
     async def dispatch(self, request, call_next):
-        if request.url.path in ("/health", "/healthz"):
+        if request.url.path.endswith(("/health", "/healthz")):
             return await call_next(request)
         if self.token:
             got = request.headers.get("authorization", "").removeprefix("Bearer ").strip()

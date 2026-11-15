@@ -1,0 +1,1538 @@
+{
+ "meta": {
+  "generated_at": "2026-11-15 01:58:00",
+  "variant": "v4_outcome",
+  "per_persona": 40,
+  "kinds": [
+   "fit",
+   "vague",
+   "partial",
+   "ood",
+   "injection"
+  ],
+  "split": "dev"
+ },
+ "best": {
+  "crag_min_score": -4,
+  "bid_min_fit": 0.4,
+  "weak_weight": 0.5,
+  "precision": 0.964,
+  "recall": 0.9,
+  "f1": 0.931
+ },
+ "top10": [
+  {
+   "crag_min_score": -4,
+   "bid_min_fit": 0.4,
+   "weak_weight": 0.5,
+   "precision": 0.964,
+   "recall": 0.9,
+   "f1": 0.931
+  },
+  {
+   "crag_min_score": -4,
+   "bid_min_fit": 0.35,
+   "weak_weight": 0.35,
+   "precision": 0.964,
+   "recall": 0.889,
+   "f1": 0.925
+  },
+  {
+   "crag_min_score": -5,
+   "bid_min_fit": 0.35,
+   "weak_weight": 0.35,
+   "precision": 0.903,
+   "recall": 0.933,
+   "f1": 0.918
+  },
+  {
+   "crag_min_score": -5,
+   "bid_min_fit": 0.4,
+   "weak_weight": 0.5,
+   "precision": 0.903,
+   "recall": 0.933,
+   "f1": 0.918
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.35,
+   "weak_weight": 0.35,
+   "precision": 0.87,
+   "recall": 0.967,
+   "f1": 0.916
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.4,
+   "weak_weight": 0.5,
+   "precision": 0.87,
+   "recall": 0.967,
+   "f1": 0.916
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.45,
+   "weak_weight": 0.5,
+   "precision": 0.87,
+   "recall": 0.967,
+   "f1": 0.916
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.5,
+   "weak_weight": 0.5,
+   "precision": 0.87,
+   "recall": 0.967,
+   "f1": 0.916
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.45,
+   "weak_weight": 0.35,
+   "precision": 0.878,
+   "recall": 0.956,
+   "f1": 0.915
+  },
+  {
+   "crag_min_score": -6,
+   "bid_min_fit": 0.4,
+   "weak_weight": 0.35,
+   "precision": 0.869,
+   "recall": 0.956,
+   "f1": 0.91
+  }
+ ],
+ "current": {
+  "crag_min_score": 0,
+  "bid_min_fit": 0.55,
+  "weak_weight": 0.35,
+  "precision": 1.0,
+  "recall": 0.333,
+  "f1": 0.5
+ },
+ "rows": [
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-064",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.0178723335266113,
+    -1.4603381156921387,
+    -11.324950218200684
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-049",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -7.084616661071777,
+    3.524028778076172
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.1391851902008057,
+    -11.2824068069458,
+    -11.136869430541992
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    3.524028778076172,
+    -9.271376609802246,
+    -10.55136489868164,
+    -4.2094621658325195
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-152",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    4.520652770996094,
+    -5.640147686004639,
+    -10.323067665100098,
+    -11.198301315307617
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-190",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -6.487428665161133,
+    -8.161918640136719,
+    -10.109651565551758
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -3.839207649230957,
+    -10.28316879272461,
+    0.4647257626056671,
+    -10.141928672790527
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    4.520652770996094,
+    -4.737362384796143,
+    2.1793956756591797
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    4.850127696990967,
+    3.8353378772735596,
+    -4.51138973236084,
+    -4.737362384796143,
+    -11.16551399230957
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -9.956396102905273,
+    3.0178723335266113,
+    -4.39674186706543,
+    -3.3537309169769287,
+    0.34108269214630127
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-151",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -6.254060745239258,
+    -5.958911895751953,
+    -8.161918640136719
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -10.224761009216309,
+    -5.418882369995117
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-063",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.1793956756591797,
+    -2.2840256690979004,
+    -2.144880533218384
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-127",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    3.0178723335266113,
+    -2.708327293395996,
+    -2.848156690597534,
+    -2.8408992290496826
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -4.10364294052124,
+    -4.737362384796143,
+    0.8209253549575806
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-062",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -11.2824068069458,
+    -2.144880533218384,
+    -3.839207649230957
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -2.66654634475708,
+    -10.10046100616455,
+    1.4849870204925537,
+    -1.2211395502090454
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -5.93804407119751,
+    3.0178723335266113,
+    6.3571577072143555
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-140",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.01508150901645422,
+    -9.720793724060059,
+    -4.39674186706543,
+    -11.2824068069458,
+    2.0455470085144043
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -7.481392860412598,
+    2.1391851902008057,
+    -6.1872429847717285,
+    -4.51138973236084
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.101271629333496,
+    6.461616516113281,
+    4.520652770996094,
+    -3.839207649230957,
+    -2.848156690597534
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -4.737362384796143,
+    4.850127696990967,
+    -4.51138973236084,
+    6.3571577072143555
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    4.290446758270264,
+    -0.3111848831176758,
+    -4.39674186706543,
+    4.460592269897461
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -1.5974349975585938,
+    -7.879368782043457,
+    -11.173895835876465,
+    -4.072051048278809,
+    -10.767151832580566,
+    -4.418737888336182
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-035",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.7279191017150879,
+    2.1391851902008057,
+    -1.1966071128845215
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -0.01354459673166275,
+    -11.082910537719727,
+    -11.173895835876465,
+    -7.964472770690918,
+    1.0306529998779297,
+    -4.418737888336182
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-136",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -5.018697738647461,
+    -5.445416450500488,
+    -11.173895835876465,
+    -9.448019027709961,
+    -8.202648162841797,
+    -4.418737888336182
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-199",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -1.9072704315185547,
+    -11.2824068069458,
+    -2.065720796585083,
+    -11.16551399230957
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-015",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    4.520652770996094,
+    3.0178723335266113,
+    2.101271629333496,
+    -0.3111848831176758
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-181",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -6.146549224853516,
+    -0.3111848831176758,
+    -4.132288455963135
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    5.042199611663818,
+    -9.192441940307617,
+    -10.872049331665039,
+    -7.346378326416016
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-084",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -11.08936882019043,
+    3.0178723335266113
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-058",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -1.0741353034973145,
+    -11.2824068069458,
+    -3.296889066696167,
+    -11.16551399230957
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-116",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -7.257430076599121,
+    -11.173895835876465,
+    -9.448019027709961,
+    -4.418737888336182,
+    -10.192854881286621,
+    -7.692160606384277
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-005",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.101271629333496,
+    4.520652770996094,
+    0.01508150901645422
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -4.10364294052124,
+    -11.324950218200684,
+    -2.1402101516723633
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-196",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.4002200663089752,
+    5.042199611663818,
+    2.101271629333496,
+    -2.8408992290496826
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-112",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    6.461616516113281,
+    -10.883411407470703,
+    -8.408323287963867,
+    -10.31311321258545
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-048",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    0.8500832915306091,
+    -5.53061056137085,
+    -11.082910537719727,
+    -11.173895835876465,
+    -4.418737888336182,
+    -10.312042236328125
+   ]
+  },
+  {
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-113",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    0.6009390354156494,
+    -7.167714595794678,
+    -9.52756118774414
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-064",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    1.0310924053192139,
+    1.5767900943756104,
+    1.6647732257843018,
+    -2.031744956970215
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-049",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.0715322494506836,
+    0.2093936800956726,
+    -3.7098710536956787
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.0318026542663574,
+    1.5767900943756104
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    2.8750593662261963,
+    -11.196510314941406,
+    -7.02763032913208,
+    -10.890835762023926
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-152",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    1.8755357265472412,
+    -2.503355026245117,
+    -11.436367988586426,
+    -10.330282211303711
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-190",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -4.5516252517700195,
+    -10.641647338867188
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    2.530071496963501,
+    -10.524591445922852,
+    -4.231529235839844,
+    -10.861194610595703
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    6.0730390548706055,
+    0.2093936800956726,
+    1.628952145576477,
+    -9.990622520446777
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.3209264278411865,
+    -4.153987884521484
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.210731267929077,
+    -2.6329233646392822,
+    -0.2224651724100113,
+    -1.7611958980560303
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-151",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.063197135925293,
+    -8.061015129089355
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -8.849095344543457,
+    -9.702619552612305
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-063",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.83730149269104,
+    -1.1304631233215332,
+    -3.8507213592529297,
+    -1.1959445476531982
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-127",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    1.8755357265472412,
+    -0.35526710748672485,
+    0.006061813794076443,
+    -1.7611958980560303
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -1.1304631233215332,
+    1.3538399934768677,
+    1.8755357265472412,
+    2.8750593662261963,
+    -5.7821455001831055
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-062",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    1.8755357265472412,
+    -11.400832176208496,
+    6.0730390548706055
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -10.625914573669434,
+    -8.08807373046875,
+    -10.330282211303711,
+    -7.242523193359375
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -0.4885653257369995,
+    2.3293395042419434,
+    2.0318026542663574,
+    -3.8507213592529297,
+    3.653805732727051
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-140",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -7.387627601623535,
+    2.3293395042419434,
+    -3.0609259605407715
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -0.9695164561271667,
+    -2.031744956970215,
+    -1.6486730575561523,
+    -3.210731267929077,
+    2.83730149269104
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    1.5767900943756104,
+    4.314177513122559,
+    -9.692593574523926,
+    -2.2908823490142822
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.2093936800956726,
+    -2.594517469406128,
+    -5.7821455001831055
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.653805732727051,
+    -0.9695164561271667,
+    -11.363080978393555
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -2.352717399597168,
+    -3.3417325019836426,
+    -6.765529632568359,
+    -11.198188781738281,
+    -11.335559844970703,
+    -8.457673072814941
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-035",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -10.359606742858887,
+    -9.32569694519043,
+    -3.7098710536956787,
+    -0.9695164561271667,
+    0.9646263122558594
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -5.5524702072143555,
+    -8.79603385925293,
+    -8.895942687988281,
+    3.996757984161377,
+    -8.457673072814941,
+    -9.47719955444336
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-136",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -5.859938144683838,
+    -3.3417325019836426,
+    -6.765529632568359,
+    -7.886922836303711,
+    -6.205534934997559,
+    -8.457673072814941
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-199",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -10.662450790405273,
+    0.9646263122558594
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-015",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.0715322494506836,
+    0.2093936800956726,
+    3.3209264278411865
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-181",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.2093936800956726,
+    -0.4885653257369995
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    2.49053955078125,
+    -11.40517807006836,
+    -5.714241027832031,
+    -7.397688865661621
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-084",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.8750593662261963,
+    -9.32569694519043,
+    1.3538399934768677,
+    1.5767900943756104
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-058",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    2.530071496963501,
+    -9.692593574523926,
+    -9.340112686157227,
+    3.023571491241455
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-116",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -3.5196056365966797,
+    -6.205534934997559,
+    -9.724684715270996,
+    -10.067508697509766,
+    3.996757984161377,
+    -8.457673072814941
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-005",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.530071496963501,
+    -9.32569694519043,
+    -1.1304631233215332,
+    -4.153987884521484
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -0.9695164561271667,
+    -1.7611958980560303,
+    -3.1371045112609863,
+    -2.6329233646392822
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-196",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.213424950838089,
+    -11.37801742553711,
+    -0.2224651724100113
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-112",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -9.340112686157227,
+    -7.8690643310546875,
+    -7.397688865661621,
+    -7.910201072692871
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-048",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -6.912777900695801,
+    -8.79603385925293,
+    -6.765529632568359,
+    3.2771830558776855,
+    -8.457673072814941,
+    -9.47719955444336
+   ]
+  },
+  {
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-113",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.932474136352539,
+    -10.641647338867188,
+    -10.413808822631836
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-064",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -7.849095821380615,
+    3.5336313247680664,
+    -0.6031098365783691
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-049",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -4.35882568359375,
+    -3.161776542663574,
+    -4.208207607269287,
+    4.360687732696533
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-065",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    4.970959186553955,
+    -1.3650425672531128,
+    -0.6031098365783691,
+    4.4768524169921875
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-126",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -11.012377738952637,
+    -11.393830299377441,
+    -10.518989562988281,
+    -11.250006675720215
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-152",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -2.9712581634521484,
+    -9.972163200378418,
+    -10.84328842163086,
+    -10.287506103515625
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-190",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.18864631652832,
+    -9.459142684936523
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-184",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    1.9879168272018433,
+    -6.28779411315918,
+    -10.84328842163086,
+    -8.688453674316406
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-165",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    1.8679289817810059,
+    -0.6031098365783691,
+    1.9879168272018433,
+    3.428921699523926
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-077",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    2.114152669906616,
+    -11.190155029296875,
+    1.6745821237564087,
+    4.526559829711914
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-131",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.241642475128174,
+    -1.5277401208877563,
+    -11.012377738952637,
+    4.9924726486206055
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-151",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.18864631652832,
+    -7.27603816986084
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-111",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.29270076751709,
+    -10.124213218688965
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-063",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.161776542663574,
+    2.3310904502868652,
+    -9.557897567749023,
+    -9.943925857543945
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-127",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -8.335103988647461,
+    -3.161776542663574,
+    -2.007037401199341,
+    1.6745821237564087,
+    3.760164260864258
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-087",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    1.8679289817810059,
+    -3.5842702388763428,
+    -11.012377738952637,
+    -2.438148260116577
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-062",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -1.5277401208877563,
+    4.360687732696533,
+    -2.9712581634521484,
+    4.9556732177734375
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-139",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    1.7508249282836914,
+    -10.674234390258789,
+    -9.944694519042969,
+    -6.176555633544922
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-194",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -9.270350456237793,
+    -1.1440014839172363,
+    -3.241642475128174
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-140",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    0.00946724135428667,
+    -9.270350456237793,
+    1.6168720722198486
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-104",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -1.1440014839172363,
+    4.360687732696533
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-030",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.5336313247680664,
+    -2.007037401199341,
+    5.576853275299072
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-186",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -10.337320327758789,
+    -3.161776542663574,
+    -8.335103988647461,
+    -9.962623596191406,
+    -1.1440014839172363
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-002",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -2.102102518081665,
+    -1.5277401208877563,
+    3.760164260864258,
+    -3.5842702388763428
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-046",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -3.691514492034912,
+    0.5731483697891235,
+    -1.7479920387268066,
+    -8.97933292388916,
+    -1.654883861541748,
+    -11.002889633178711
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-035",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.161776542663574,
+    -8.335103988647461,
+    3.5336313247680664,
+    4.526559829711914
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-090",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -2.8916211128234863,
+    -7.794629096984863,
+    -1.654883861541748,
+    0.5731483697891235,
+    -8.766223907470703,
+    -10.348699569702148
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-136",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -4.635642051696777,
+    -1.3284313678741455,
+    -2.914989471435547,
+    -8.703269958496094,
+    -9.615678787231445,
+    0.5731483697891235
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-199",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.161776542663574,
+    -2.355802536010742,
+    -11.012377738952637,
+    2.3330564498901367
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-015",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.8204171657562256,
+    -6.166274070739746
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-181",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    3.428921699523926,
+    -8.287837028503418,
+    -9.270350456237793,
+    -4.783327579498291,
+    -2.007037401199341
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-187",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -8.335103988647461,
+    -11.017963409423828,
+    -11.000325202941895,
+    -11.356155395507812
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-084",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    1.0735617876052856,
+    -0.3966803550720215,
+    -3.161776542663574,
+    -2.102102518081665,
+    -2.007037401199341
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-058",
+   "kind": "injection",
+   "gold_bid": true,
+   "best": [
+    -2.102102518081665,
+    -9.70631217956543,
+    -6.166274070739746,
+    -3.812248706817627
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-116",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -6.162647247314453,
+    -9.115402221679688,
+    -7.794629096984863,
+    -9.615678787231445,
+    -11.002889633178711,
+    -10.644441604614258
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-005",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -2.9712581634521484,
+    -1.1440014839172363,
+    3.8204171657562256,
+    0.5928347706794739
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-017",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -3.5842702388763428,
+    0.00946724135428667,
+    3.428921699523926,
+    -2.9712581634521484
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-196",
+   "kind": "fit",
+   "gold_bid": true,
+   "best": [
+    -6.166274070739746,
+    1.8679289817810059,
+    -1.5277401208877563
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-112",
+   "kind": "partial",
+   "gold_bid": false,
+   "best": [
+    -2.455364227294922,
+    -6.28779411315918,
+    -8.747086524963379,
+    -7.899003028869629
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-048",
+   "kind": "vague",
+   "gold_bid": true,
+   "best": [
+    -3.6454174518585205,
+    -2.914989471435547,
+    -8.703269958496094,
+    -7.794629096984863,
+    -8.766223907470703,
+    -10.3908109664917
+   ]
+  },
+  {
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-113",
+   "kind": "ood",
+   "gold_bid": false,
+   "best": [
+    -9.18864631652832,
+    -9.939456939697266
+   ]
+  }
+ ]
+}
