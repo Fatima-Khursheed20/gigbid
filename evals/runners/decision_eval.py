@@ -39,13 +39,13 @@ def metrics(rows: list[dict]) -> dict:
             "tokens_per_job": mean([r["tokens"] for r in rows]), "usd_per_job": mean([r["usd"] for r in rows])}
 
 
-async def main_async(per: int, offline: bool, out: str) -> None:
+async def main_async(per: int, offline: bool, out: str, split: str = "dev") -> None:
     if offline:
         os.environ["LLM_OFFLINE"] = "1"
-    setup_inprocess()
+    setup_inprocess(include_heldout=split == "heldout")
     rows = []
     for persona in PERSONAS:
-        jobs = stratified(load_dev(persona), per, seed=3)
+        jobs = stratified(load_dev(persona, split), per, seed=3)
         for i, j in enumerate(jobs):
             g = j["gold"]
             try:
@@ -74,7 +74,7 @@ async def main_async(per: int, offline: bool, out: str) -> None:
             print(f"{persona} {i + 1}/{len(jobs)} {j['job_id']} gold={g['bid']} pred={rows[-1]['pred_action']} "
                   f"lat={r['latency_s']}s", flush=True)
     res = {"meta": {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "per_persona": per,
-                    "mode": "rules+heuristics (offline)" if offline else "llm+rules (open profile)"},
+                    "mode": "rules+heuristics (offline)" if offline else "llm+rules (open profile)", "split": split},
            "overall": metrics(rows), "by_persona": {p: metrics([r for r in rows if r["persona"] == p]) for p in PERSONAS},
            "by_kind": {k: metrics([r for r in rows if r["kind"] == k]) for k in sorted({r["kind"] for r in rows})},
            "rows": rows}
@@ -87,8 +87,9 @@ def main() -> None:
     ap.add_argument("--per-persona", type=int, default=30)
     ap.add_argument("--offline", action="store_true")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--split", default="dev", choices=["dev", "heldout"])
     a = ap.parse_args()
-    asyncio.run(main_async(a.per_persona, a.offline, a.out or ("decision_offline" if a.offline else "decision")))
+    asyncio.run(main_async(a.per_persona, a.offline, a.out or ("decision_offline" if a.offline else "decision"), a.split))
 
 
 if __name__ == "__main__":

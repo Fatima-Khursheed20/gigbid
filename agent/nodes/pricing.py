@@ -34,7 +34,14 @@ def quote(job: dict, spec: dict, stats: dict | None, profile, fit: float, balanc
             notes.append(f"Client budget ${budget:,.0f}; fair band ${lo:,.0f}-${hi_band:,.0f} for ~{hours:.0f}h.")
         else:
             notes.append(f"No fixed budget; fair band ${lo:,.0f}-${hi_band:,.0f} for ~{hours:.0f}h.")
-        target = max(target, profile.min_project, hours * profile.floor_rate * 0.8)
+        floor_total = max(profile.min_project, hours * profile.floor_rate * 0.8)
+        target = max(target, floor_total)
+        if budget and target > budget:
+            # never bid above the client's own budget (failure analysis: job-dev-ai-071 bid 97% over the ceiling);
+            # say plainly that the budget is below the user's floor for this scope instead
+            notes.append(f"Budget is below your floor for ~{hours:.0f}h (${floor_total:,.0f}); bidding at the budget — "
+                         "propose a reduced first milestone.")
+            target = budget
         amount, bid_type = round(target, -1), "fixed"
     p_win = 0.04 + 0.22 * fit
     value = p_win * (amount * (hours if bid_type == "hourly" else 1)) * 0.15

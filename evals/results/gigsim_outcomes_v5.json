@@ -1,0 +1,822 @@
+{
+ "meta": {
+  "generated_at": "2026-11-15 14:56:32",
+  "per_persona": 5,
+  "variants": [
+   "v5_multivector"
+  ],
+  "client_model": "gigsim/client_model.py (rule-based, seeded)"
+ },
+ "by_variant": {
+  "v5_multivector": {
+   "n": 15,
+   "submitted": 14,
+   "reply_rate": 0.5,
+   "hire_rate": 0,
+   "mean_p_reply": 0.4579,
+   "unsupported_per_proposal_before": 0.1429,
+   "unsupported_per_proposal_after": 0,
+   "claims_per_proposal": 2.5714,
+   "judge_overall": 4.3571,
+   "evidence_recall": 0.4385,
+   "latency_p50_s": 186.124,
+   "latency_p95_s": 353.254,
+   "tokens_per_proposal": 12176.6,
+   "usd_per_proposal": 0.0034
+  }
+ },
+ "by_variant_persona": {
+  "v5_multivector|ai_ml": {
+   "n": 5,
+   "submitted": 5,
+   "reply_rate": 0.6,
+   "hire_rate": 0,
+   "mean_p_reply": 0.4978,
+   "unsupported_per_proposal_before": 0,
+   "unsupported_per_proposal_after": 0,
+   "claims_per_proposal": 2.2,
+   "judge_overall": 4.4,
+   "evidence_recall": 0.3489,
+   "latency_p50_s": 148.588,
+   "latency_p95_s": 371.655,
+   "tokens_per_proposal": 13126.2,
+   "usd_per_proposal": 0.0037
+  },
+  "v5_multivector|fullstack": {
+   "n": 5,
+   "submitted": 4,
+   "reply_rate": 0.5,
+   "hire_rate": 0,
+   "mean_p_reply": 0.4823,
+   "unsupported_per_proposal_before": 0.25,
+   "unsupported_per_proposal_after": 0,
+   "claims_per_proposal": 3.25,
+   "judge_overall": 4.75,
+   "evidence_recall": 0.5333,
+   "latency_p50_s": 283.843,
+   "latency_p95_s": 353.254,
+   "tokens_per_proposal": 12951,
+   "usd_per_proposal": 0.0036
+  },
+  "v5_multivector|data_analyst": {
+   "n": 5,
+   "submitted": 5,
+   "reply_rate": 0.4,
+   "hire_rate": 0,
+   "mean_p_reply": 0.3984,
+   "unsupported_per_proposal_before": 0.2,
+   "unsupported_per_proposal_after": 0,
+   "claims_per_proposal": 2.4,
+   "judge_overall": 4,
+   "evidence_recall": 0.4333,
+   "latency_p50_s": 186.124,
+   "latency_p95_s": 317.375,
+   "tokens_per_proposal": 10452.6,
+   "usd_per_proposal": 0.0028
+  }
+ },
+ "rows": [
+  {
+   "variant": "v5_multivector",
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-071",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.267,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 1.0,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 76,
+    "over_budget_ratio": 0.97,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 1,
+   "partly_before": 0,
+   "critic_rounds": 2,
+   "words": 98,
+   "judge": {
+    "relevance": 4,
+    "evidence": 5,
+    "personalisation": 3,
+    "clarity": 3,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly addresses the job's needs (MLflow tracking, clean scripts, LangChain) and shows relevant experience, earning high relevance and evidence scores. It lacks a personalized greeting or specific reference to the client\u2019s real\u2011estate context, lowering personalisation. The text is concise but omits a clear next step or call to action, reducing clarity. The tone is professional with no guarantees or off\u2011platform requests, giving a top professionalism rating. The average yields an overall score of 4."
+   },
+   "latency_s": 71.178,
+   "tokens": 7894,
+   "usd": 0.00185,
+   "wall_s": 85.4,
+   "text": "You need a document assistant built with Python that integrates MLflow to track model versions and runs clean, testable code. I recently delivered a LangChain\u2011based RAG system for research papers on arXiv, using section\u2011aware chunking, reranking and answer\u2011faithfulness checks, which earned 340 GitHub stars and achieved 0.89 faithfulness on a 150\u2011question benchmark [E1]. I will apply that same LangChain expertise to create a modular pipeline, add MLflow version\u2011metadata logging, and write unit tests covering all critical paths.",
+   "evidence_projects": [
+    "ai-11"
+   ],
+   "gold_projects": [
+    "ai-01",
+    "ai-08",
+    "ai-10",
+    "ai-11",
+    "ai-13"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-105",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.79,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 1.0,
+    "specific_results": 2,
+    "personalised": true,
+    "words": 124,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 5,
+   "partly_before": 2,
+   "critic_rounds": 3,
+   "words": 127,
+   "judge": {
+    "relevance": 4,
+    "evidence": 3,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly addresses the job requirements (OCR, clean scripts, fine\u2011tuning, RAG) and outlines a concrete approach, earning a solid relevance score. It cites two past projects with some metrics, but the evidence is limited to brief percentages and lacks detailed results, so the evidence rating is moderate. The opening ties to the client\u2019s logistics focus and ends with a specific question about their camera setup, showing good personalisation. The text is concise (~130 words), well\u2011structured and includes a clear next step, meeting the clarity criterion. The tone is professional, with no guarantees or off\u2011platform requests, thus a high professionalism score. The average yields an overall rating of 4."
+   },
+   "latency_s": 371.655,
+   "tokens": 19301,
+   "usd": 0.005923,
+   "wall_s": 373.2,
+   "text": "You need a logistics\u2011focused ML pipeline that reliably turns camera\u2011captured documents into structured data. I built an invoice\u2011data extraction pipeline that deskews images, runs Tesseract OCR and uses spaCy to pull vendor, totals, dates and tax IDs, then wrapped it in clean, testable Python scripts [E1]. For a related ticket\u2011automation project I created a stateful agent that auto\u2011drafted 61% of tickets and saw 78% of drafts accepted with minor edits, demonstrating measurable OCR\u2011driven productivity gains [E2]. As a first step I\u2019ll audit your image capture flow, define script standards, and prototype the OCR\u2011to\u2011metadata stage while setting up unit tests for the critical path; we can then fine\u2011tune a transformer model for downstream classification [E3]. Does your current camera setup include any preprocessing that could impact OCR accuracy?",
+   "evidence_projects": [
+    "ai-02",
+    "ai-04",
+    "ai-06",
+    "ai-07"
+   ],
+   "gold_projects": [
+    "ai-04",
+    "ai-01",
+    "ai-07",
+    "ai-09",
+    "ai-11"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-163",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": true,
+   "hired": false,
+   "p_reply": 0.485,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 135,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 1,
+   "partly_before": 0,
+   "critic_rounds": 2,
+   "words": 136,
+   "judge": {
+    "relevance": 5,
+    "evidence": 5,
+    "personalisation": 5,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 5,
+    "rationale": "The proposal directly tackles the client\u2019s need for a functional education search chatbot, mentions relevant experience with a similar RAG system, provides concrete metrics (0.89 faithfulness, 340 GitHub stars) and specific technical approaches, opens with a statement about the client\u2019s problem, stays within the word limit, proposes a clear next step (share sample documents), and maintains a professional tone without guarantees or off\u2011platform requests."
+   },
+   "latency_s": 148.588,
+   "tokens": 9934,
+   "usd": 0.002442,
+   "wall_s": 150.4,
+   "text": "You need an education search feature that actually works, a chatbot that can answer directly from your course materials. I recently delivered a research\u2011paper RAG system over arXiv that uses section\u2011aware chunking, reranking and faithfulness checks, achieving 0.89 faithfulness on a 150\u2011question benchmark and earning 340 GitHub stars [E2]. That same architecture can be adapted to your heterogeneous education documents, and I will pair it with clean Python scripts for extracting names, dates and amounts. The riskiest part is ensuring accurate retrieval across varied document formats and terminology, because mismatched chunking or indexing can lead to irrelevant answers; I mitigate this by custom preprocessing and domain\u2011specific reranking. As a first step, could you share a sample set of your documents so I can prototype the retrieval pipeline and confirm the chunking strategy works for your material?",
+   "evidence_projects": [
+    "ai-08",
+    "ai-11",
+    "ai-16"
+   ],
+   "gold_projects": [
+    "ai-01",
+    "ai-04",
+    "ai-09",
+    "ai-11",
+    "ai-13"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-199",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.48,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 71,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 2,
+   "partly_before": 2,
+   "critic_rounds": 3,
+   "words": 102,
+   "judge": {
+    "relevance": 4,
+    "evidence": 3,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly mentions MLflow, clean scripting, AWS hosting, and a pipeline for media files, matching most job requirements, though it does not explicitly address the 'spot objects in video feeds' task, lowering relevance slightly. It cites a prior model\u2011monitoring and retraining service on SageMaker, providing some concrete evidence but lacking detailed metrics, so evidence is moderate. The opening addresses the client's need, showing good personalisation. The response is concise and well\u2011structured within the word limit, offering clear next steps, earning a solid clarity score. Tone is professional with no guarantees or off\u2011platform contact, resulting in a high professionalism rating."
+   },
+   "latency_s": 327.098,
+   "tokens": 15232,
+   "usd": 0.004533,
+   "wall_s": 328.7,
+   "text": "You need an MLflow\u2011driven pipeline that can ingest unstructured media files and serve a document assistant on AWS. I also delivered a model\u2011monitoring and retraining service on SageMaker using MLflow and Docker\u202f[E2]. I will start by mapping your media ingestion format to an MLflow experiment, set up a clean script architecture, and create a CI test suite for the critical paths, then provide weekly progress updates to keep the team aligned.",
+   "evidence_projects": [
+    "ai-10",
+    "ai-14"
+   ],
+   "gold_projects": [
+    "ai-10",
+    "ai-08"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "ai_ml",
+   "job_id": "job-dev-ai-186",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.467,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 1.0,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 98,
+    "over_budget_ratio": 0.07,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 2,
+   "partly_before": 0,
+   "critic_rounds": 3,
+   "words": 119,
+   "judge": {
+    "relevance": 5,
+    "evidence": 4,
+    "personalisation": 5,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 5,
+    "rationale": "The proposal directly tackles the job's Python, LLM evaluation, extraction, and API requirements, showing strong relevance. It cites concrete past work (open\u2011source RAG tool, legal\u2011tech assistant) providing evidence, though the placeholders (E1, E2, E4) are vague, lowering the score slightly. The opening is tailored to the client\u2019s problem and ends with a specific question about deployment preferences, demonstrating personalisation. The text is concise (~130 words), well\u2011structured, and proposes a clear next step. The tone is professional, avoids guarantees, and stays on\u2011platform, meeting professionalism criteria."
+   },
+   "latency_s": 117.632,
+   "tokens": 13270,
+   "usd": 0.003511,
+   "wall_s": 119.7,
+   "text": "I built an open\u2011source RAG tool with section\u2011aware chunking, reranking and answer\u2011faithfulness checks, which required strong Python engineering and systematic LLM evaluation (E1, E2). I also delivered a legal\u2011tech contract Q&A assistant that serves models behind a typed REST API and uses robust prompting and structured outputs (E4). For the first phase I would prototype a Python pipeline that parses PDFs, runs a fine\u2011tuned extraction model, validates results with the evaluation framework I created, and expose the service via a typed FastAPI endpoint ready for your cloud deployment. Does your environment prefer Docker\u2011based services or a serverless approach?",
+   "evidence_projects": [
+    "ai-01",
+    "ai-11",
+    "ai-13",
+    "ai-16"
+   ],
+   "gold_projects": [
+    "ai-02",
+    "ai-04",
+    "ai-09",
+    "ai-01",
+    "ai-07",
+    "ai-11",
+    "ai-13",
+    "ai-15",
+    "ai-16"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-071",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.521,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 1.0,
+    "specific_results": 1,
+    "personalised": true,
+    "words": 107,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 1,
+   "unsupported_after": 0,
+   "claims": 5,
+   "partly_before": 2,
+   "critic_rounds": 3,
+   "words": 107,
+   "judge": {
+    "relevance": 3,
+    "evidence": 4,
+    "personalisation": 4,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal addresses Redis, caching, and WebSockets, showing decent relevance but lacks explicit React Native experience, lowering relevance. It provides concrete project details and measurable outcomes, earning a strong evidence score. The opening directly references the client\u2019s need and asks a specific follow\u2011up question, demonstrating good personalisation. The text is concise, well\u2011structured, and includes a clear next step, meeting clarity criteria. The tone is professional with no guarantees or off\u2011platform requests, satisfying professionalism."
+   },
+   "latency_s": 313.496,
+   "tokens": 19705,
+   "usd": 0.00601,
+   "wall_s": 315.2,
+   "text": "You need a Redis\u2011backed online store that can handle real\u2011time updates and stay fast under load. I delivered a subscription-billing platform for PulseGym that used webhooks and an admin dashboard, migrating 1,400 paying members in two weeks and achieving a 38% failed-payment recovery rate. The evidence supports building a GraphQL API with caching/pub/sub, a Django CRM with caching/pub/sub, and a fitness app (iOS/Android), but does not explicitly mention designing a Redis layer, wiring up WebSockets, or integrating a React Native front-end for inventory/order updates. As a first step, could we review your product catalog schema so I can sketch the cache keys and WebSocket channels you\u2019ll need?",
+   "evidence_projects": [
+    "fs-01",
+    "fs-04",
+    "fs-09",
+    "fs-13",
+    "fs-14"
+   ],
+   "gold_projects": [
+    "fs-02"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-105",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": true,
+   "hired": false,
+   "p_reply": 0.505,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 1.0,
+    "specific_results": 1,
+    "personalised": true,
+    "words": 127,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 3,
+   "partly_before": 0,
+   "critic_rounds": 3,
+   "words": 159,
+   "judge": {
+    "relevance": 5,
+    "evidence": 5,
+    "personalisation": 5,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 5,
+    "rationale": "The proposal directly addresses all listed requirements (Next.js, Prisma migrations, Stripe, Shopify) and tailors the opening to the client\u2019s logistics business. It provides concrete, quantified examples of past work, demonstrating relevant experience. The text is concise (~130 words), well\u2011structured, and ends with a clear next step. The tone is professional, avoids guarantees or off\u2011platform contact, and maintains appropriate language throughout."
+   },
+   "latency_s": 283.843,
+   "tokens": 17623,
+   "usd": 0.004736,
+   "wall_s": 285.7,
+   "text": "To give your logistics business a reliable Next.js API backend with Prisma, I\u2019ll start by mapping your current data model and designing a zero\u2011downtime migration plan that runs behind feature flags. I also created a custom Shopify inventory\u2011sync app that reduced overselling incidents from ~40 to 2 per month, showing I can integrate Shopify and handle complex data flows safely [E6]. For Stripe, I delivered a subscription billing system for PulseGym that migrated 1,400 members in two weeks and recovered 38% of failed payments, so I can add robust payment handling to your API [E2]. My first concrete step is a review of your schema and a staged Prisma migration strategy, ensuring no downtime while we add Stripe and Shopify webhooks. Does that sound like a good starting point?",
+   "evidence_projects": [
+    "fs-01",
+    "fs-03",
+    "fs-05",
+    "fs-12",
+    "fs-14"
+   ],
+   "gold_projects": [
+    "fs-01",
+    "fs-11",
+    "fs-03"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-163",
+   "status": "watch",
+   "submitted": false,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": null,
+   "client_features": null,
+   "unsupported_before": null,
+   "unsupported_after": null,
+   "claims": null,
+   "partly_before": null,
+   "critic_rounds": 0,
+   "words": null,
+   "judge": null,
+   "latency_s": 150.529,
+   "tokens": 2206,
+   "usd": 0.000277,
+   "wall_s": 150.5,
+   "text": "",
+   "evidence_projects": [],
+   "gold_projects": [
+    "fs-05",
+    "fs-15"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-199",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.34,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 105,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 2,
+   "partly_before": 0,
+   "critic_rounds": 3,
+   "words": 127,
+   "judge": {
+    "relevance": 5,
+    "evidence": 4,
+    "personalisation": 5,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 5,
+    "rationale": "The proposal directly addresses the job's need for a flexible endpoint, caching, and pub/sub, showing strong relevance. It provides concrete examples of past projects with specific technologies, though it lacks explicit fintech experience, so evidence gets a slightly lower score. The opening ties to the client's problem and asks a clear next-step question, demonstrating good personalisation and clarity within the word limit. The tone is professional with no guarantees or off\u2011platform requests."
+   },
+   "latency_s": 25.288,
+   "tokens": 11967,
+   "usd": 0.003292,
+   "wall_s": 26.7,
+   "text": "I built a GraphQL API for a news app with a unified schema, dataloaders, per\u2011field caching and pub/sub, all containerised for reliable deployment, which shows I can create the kind of high\u2011performance, flexible endpoint you need [E1]. I also delivered an internal CRM on Django that used the same caching and pub/sub patterns to keep data fresh and secure across role\u2011based admin views, proving I can ship robust back\u2011ends quickly [E2]. I\u2019ll begin by mapping your dashboard\u2019s data model to a single GraphQL endpoint, configure per\u2011field caching for financial data consistency, and set up the pub/sub flow and documentation in your repository\u2014does that fit your one\u2011week timeline?",
+   "evidence_projects": [
+    "fs-04",
+    "fs-09"
+   ],
+   "gold_projects": [
+    "fs-04"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "fullstack",
+   "job_id": "job-dev-fu-186",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.563,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 4,
+    "personalised": true,
+    "words": 162,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 3,
+   "partly_before": 2,
+   "critic_rounds": 2,
+   "words": 163,
+   "judge": {
+    "relevance": 5,
+    "evidence": 4,
+    "personalisation": 5,
+    "clarity": 5,
+    "professionalism": 5,
+    "overall": 5,
+    "rationale": "The proposal directly addresses the job\u2019s needs (API backend, CI/CD, E2E testing, Redis) and identifies the authentication/Redis security as the riskiest area, showing relevance. It cites specific past projects with measurable outcomes, providing concrete evidence, though it could include more detail on CI/CD and Redis experience, hence a slightly lower evidence score. The opening references the client\u2019s healthcare context and asks a tailored question, demonstrating strong personalisation. The text is concise (~150 words), well\u2011structured, and ends with a clear next step, meeting clarity criteria. The tone is professional, avoids guarantees or off\u2011platform contact, satisfying professionalism. The average score rounds to 5."
+   },
+   "latency_s": 353.254,
+   "tokens": 13254,
+   "usd": 0.003895,
+   "wall_s": 355.5,
+   "text": "You need a secure API backend for a healthcare business where authentication and Redis data safety are critical. In my recent Marketplace MVP for Craftly I built seller onboarding, listings, cart, split payouts and Google sign-in that shipped a full product in 5.5 weeks, onboarding 120 sellers and generating $18k GMV in month one [E1]. I also delivered a GraphQL API for Daily Ledger that used dataloaders and per-field caching to cut home\u2011screen load from 3.2 s to 0.9 s and cut backend costs 30%\nThe riskiest part is securing authentication and authorization while ensuring Redis data is protected, because any breach could expose patient data and break compliance. I would start by reviewing your current auth flow and designing token\u2011based access with Redis\u2011backed session storage, then integrate it into a CI pipeline that runs the E2E suite on every PR.\nCould you share your existing repository layout and any preferred auth standards so I can draft a concrete CI/CD and testing plan?",
+   "evidence_projects": [
+    "fs-03",
+    "fs-04",
+    "fs-07"
+   ],
+   "gold_projects": [
+    "fs-07"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-071",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.43,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 166,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 2,
+   "partly_before": 1,
+   "critic_rounds": 3,
+   "words": 168,
+   "judge": {
+    "relevance": 4,
+    "evidence": 3,
+    "personalisation": 3,
+    "clarity": 4,
+    "professionalism": 4,
+    "overall": 4,
+    "rationale": "The proposal addresses the core requirements (Looker Studio, BigQuery, testing, deployment) and asks a relevant next-step question, showing good relevance and clarity. Evidence is provided through specific past projects, though not in real estate, making it moderately convincing. Personalisation is present but limited to a brief mention of the real-estate market without deeper tailoring. The response is concise, well-structured, and includes a clear call to action, meeting professionalism standards with no guarantees or off\u2011platform requests."
+   },
+   "latency_s": 186.124,
+   "tokens": 17257,
+   "usd": 0.005233,
+   "wall_s": 195.6,
+   "text": "You need a reliable forecast model in Looker Studio that can ingest and analyze your Google data at scale for the real\u2011estate market. While I haven\u2019t built a forecast specifically for real\u2011estate, I have delivered Looker Studio solutions that turn raw GA4 data into actionable insights and designed test\u2011driven pipelines for large datasets.\n\nIn a recent GA4 audit I fixed event tracking, built a Looker Studio funnel report and identified a broken mobile checkout step, demonstrating my ability to work hands\u2011on with Looker Studio and surface critical insights at scale [E1]. I also migrated PayLedger\u2019s reporting to a modern data stack, creating 48 dbt models with 160 tests that dropped \u201cwhich number is right\u201d tickets to near zero, proving I can build robust, tested data pipelines and deploy them to cloud environments [E3].\n\nAs a first step, could you share a sample of the Google data you plan to forecast so I can outline the schema, define critical\u2011path tests, and propose a deployment plan for your cloud account?",
+   "evidence_projects": [
+    "da-03",
+    "da-04",
+    "da-11"
+   ],
+   "gold_projects": [
+    "da-04"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-105",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.475,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 104,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 3,
+   "partly_before": 0,
+   "critic_rounds": 2,
+   "words": 140,
+   "judge": {
+    "relevance": 3,
+    "evidence": 3,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal touches on key requirements and offers a relevant next step, showing good personalisation and clear structure. However, it omits explicit mention of R experience, reducing relevance, and the evidence is somewhat vague without concrete numbers, limiting the evidence score. Professionalism is strong with no guarantees or off\u2011platform requests."
+   },
+   "latency_s": 317.375,
+   "tokens": 13884,
+   "usd": 0.003962,
+   "wall_s": 319.3,
+   "text": "You need a customer analysis that pinpoints the true drivers of sales for your real\u2011estate business and presents the insights in board\u2011ready charts. I also delivered an internal Streamlit KPI explorer for LendFast that now serves 14 analysts daily and replaced nine static reports, showing I can create usable internal data apps [E3]. My work on a pricing A/B test required complex analytical SQL with window functions and CTEs, confirming my expertise in the required SQL techniques [E6]. As a first step, could we review a sample of your sales and marketing data to define the key joins and design the board\u2011friendly visual layout you need?",
+   "evidence_projects": [
+    "da-03",
+    "da-04",
+    "da-05",
+    "da-07",
+    "da-13"
+   ],
+   "gold_projects": [
+    "da-11",
+    "da-13",
+    "da-02",
+    "da-05",
+    "da-07"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-163",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.508,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 2,
+    "personalised": true,
+    "words": 118,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 2,
+   "partly_before": 1,
+   "critic_rounds": 2,
+   "words": 120,
+   "judge": {
+    "relevance": 4,
+    "evidence": 5,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly addresses the client\u2019s need for a metrics layer integrating CRM and shop data and outlines a concrete first\u2011step discovery sprint, showing good relevance. It cites two specific past projects with clear outcomes and numbers, providing strong evidence. The opening ties to the client\u2019s problem rather than using a generic greeting, demonstrating personalization. The text is concise (~130 words), well\u2011structured, and includes a clear next step, meeting clarity criteria. The tone is professional, avoids guarantees or off\u2011platform contact, satisfying professionalism. The average score rounds to 4."
+   },
+   "latency_s": 216.976,
+   "tokens": 12117,
+   "usd": 0.003479,
+   "wall_s": 219.4,
+   "text": "You need a metrics layer that pulls student and course\u2011sale data from both your CRM and shop, then lets teachers and marketers build their own interactive charts. I recently delivered a data-cleaning and ETL pipeline for Skyline Realtors that de-duplicated 60k records and standardized fields. [E1]. I also built an automated reporting pipeline for Rapid Couriers that scheduled loads, ran quality checks and refreshed self\u2011serve dashboards, saving the client ~6\u202fhours per week and eliminating missed reports for six months [E2]. As a first step I would run a discovery sprint to map your CRM and shop schemas, define key education metrics, and prototype a lightweight Streamlit dashboard so the team can validate the model and start exploring data immediately.",
+   "evidence_projects": [
+    "da-10",
+    "da-13",
+    "da-15"
+   ],
+   "gold_projects": [
+    "da-09",
+    "da-01",
+    "da-10",
+    "da-12",
+    "da-15"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-199",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": true,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.381,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 1,
+    "personalised": true,
+    "words": 123,
+    "over_budget_ratio": 0.0,
+    "policy_violation": false
+   },
+   "unsupported_before": 1,
+   "unsupported_after": 0,
+   "claims": 4,
+   "partly_before": 0,
+   "critic_rounds": 2,
+   "words": 126,
+   "judge": {
+    "relevance": 4,
+    "evidence": 3,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly addresses the job's core needs (SQL, daily refresh, central data, forecasting) showing good relevance. It cites past projects but lacks concrete metrics or detailed outcomes, so evidence is moderate. The opening tailors to the client\u2019s problem and asks a specific follow\u2011up, demonstrating personalization. The text is concise (~150 words), well\u2011structured, and includes a clear next step, meeting clarity criteria. Tone is professional, with no guarantees or off\u2011platform requests, earning a high professionalism score. The averaged score rounds to 4."
+   },
+   "latency_s": 80.699,
+   "tokens": 5835,
+   "usd": 0.001055,
+   "wall_s": 82.3,
+   "text": "You need a logistics reporting automation that refreshes each morning and consolidates data for your team. I built a position\u2011based attribution pipeline in BigQuery using raw GA4 exports and ad\u2011platform costs, handling complex SQL transformations end\u2011to\u2011end [E1]. I also delivered an executive sales dashboard that refreshed daily, cutting weekly reporting time from two hours to thirty minutes, and implemented row\u2011level security and DAX measures for accurate insights [E2]. For demand and revenue forecasting, I created a Python\u2011based model with regression and hypothesis testing that reliably projected marketplace revenue trends [E4].\n\n Does your team have a preferred BI tool for the final visual layer?\n\nI can dedicate 20\u202fhours per week to this three\u2011week effort and will provide a handover call plus a detailed runbook as outlined.",
+   "evidence_projects": [
+    "da-01",
+    "da-06",
+    "da-07",
+    "da-13",
+    "da-14"
+   ],
+   "gold_projects": [
+    "da-03",
+    "da-10"
+   ]
+  },
+  {
+   "variant": "v5_multivector",
+   "persona": "data_analyst",
+   "job_id": "job-dev-da-186",
+   "status": "awaiting_approval",
+   "submitted": true,
+   "replied": false,
+   "interview": false,
+   "hired": false,
+   "p_reply": 0.198,
+   "client_features": {
+    "generic_opening": false,
+    "must_have_coverage": 0.5,
+    "specific_results": 0,
+    "personalised": true,
+    "words": 106,
+    "over_budget_ratio": 0.49,
+    "policy_violation": false
+   },
+   "unsupported_before": 0,
+   "unsupported_after": 0,
+   "claims": 1,
+   "partly_before": 0,
+   "critic_rounds": 1,
+   "words": 107,
+   "judge": {
+    "relevance": 4,
+    "evidence": 3,
+    "personalisation": 4,
+    "clarity": 4,
+    "professionalism": 5,
+    "overall": 4,
+    "rationale": "The proposal directly addresses the job's requirements (drop\u2011off analysis, SQL, charts, web tool) and includes a clear next step, making it relevant and clear. It provides concrete evidence of a similar past project but lacks quantitative results, so the evidence score is moderate. The opening references the client\u2019s legal website, showing personalization. The text is concise, well\u2011structured, and stays professional without guarantees or off\u2011platform requests. The average yields an overall rating of 4."
+   },
+   "latency_s": 55.82,
+   "tokens": 3170,
+   "usd": 0.000512,
+   "wall_s": 57.3,
+   "text": "You need a quick, reliable analysis that shows exactly which parts of your legal website are converting and why sales happen. I recently built a position\u2011based attribution model in BigQuery, turning raw GA4 data and ad\u2011spend into clear, channel\u2011level revenue insights using pure SQL, which let the agency finally tell clients what drives sales [E1][E2]. I can apply the same SQL\u2011first approach to map your visitor journey, create board\u2011ready charts, and wrap the results in a lightweight web interface for easy exploration. To start, could you share a sample export of your site\u2019s analytics so I can prototype the drop\u2011off funnel and identify the key conversion points?",
+   "evidence_projects": [
+    "da-07"
+   ],
+   "gold_projects": [
+    "da-07",
+    "da-13",
+    "da-02",
+    "da-04",
+    "da-05",
+    "da-11"
+   ]
+  }
+ ]
+}

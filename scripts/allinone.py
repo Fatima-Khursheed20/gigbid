@@ -71,7 +71,7 @@ def build_app():
                 from worker.main import WorkerSettings as WS
 
                 w = Worker(functions=WS.functions, cron_jobs=WS.cron_jobs, redis_settings=WS.redis_settings,
-                           max_jobs=2, job_timeout=WS.job_timeout, keep_result=WS.keep_result, handle_signals=False)
+                           max_jobs=1, job_timeout=WS.job_timeout, keep_result=WS.keep_result, handle_signals=False)
                 worker_task = asyncio.create_task(w.async_run())
             try:
                 yield

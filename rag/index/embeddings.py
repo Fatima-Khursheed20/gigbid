@@ -46,7 +46,7 @@ class Embedder:
             if kind == "query" and hasattr(self.model, "query_embed"):
                 vecs = list(self.model.query_embed(src))
             else:
-                vecs = list(self.model.embed(src, batch_size=32))
+                vecs = list(self.model.embed(src, batch_size=16))
             with self.lock:
                 for i, v in zip(missing, vecs, strict=True):
                     v = np.asarray(v, dtype=np.float32)
@@ -69,7 +69,7 @@ class Reranker:
         keys = [hashlib.sha1(f"{query}|{d}".encode()).hexdigest() for d in docs]
         todo = [i for i, k in enumerate(keys) if k not in self._cache]
         if todo:
-            scores = list(self.model.rerank(query, [docs[i] for i in todo], batch_size=32))
+            scores = list(self.model.rerank(query, [docs[i] for i in todo], batch_size=8))
             for i, s in zip(todo, scores, strict=True):
                 self._cache[keys[i]] = float(s)
         return [self._cache[k] for k in keys]

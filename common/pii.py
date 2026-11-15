@@ -10,7 +10,7 @@ PATTERNS = [
     ("EMAIL", re.compile(r"\b[\w.+-]+@[\w-]+(\.[\w-]+)*\.[a-zA-Z]{2,}\b")),
     ("CARD", re.compile(r"\b(?:\d[ -]?){13,19}\b")),
     ("IBAN", re.compile(r"\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b")),
-    ("PHONE", re.compile(r"(?<!\w)\+?\d[\d\s().-]{7,}\d(?!\w)")),
+    ("PHONE", re.compile(r"(?<![\w-])(?:\+\d[\d\s().-]{7,}\d|\(?\d{3}\)?[\s.]\d{3}[\s.-]\d{4})(?![\w-])")),
     ("TOKEN", re.compile(r"\b(gs-[\w-]{3,}|gsk_[\w]{10,}|gho_[\w]{10,}|ghp_[\w]{10,}|sk-[\w-]{10,}|lsv2_[\w]{10,})\b")),
 ]
 

@@ -96,6 +96,9 @@ async def execute(kind: str, user_id: str, thread_id: str, *, inp: dict | None =
         await db.execute("update runs set status='failed', ended_at=now(), error=%s where id=%s", str(e)[:500], run_id)
         await _end(run_id, {"status": "failed", "error": str(e)[:300]})
         raise
+    import gc
+
+    gc.collect()  # small hosts: release per-run allocations before the next job
     st = res["state"]
     status = "awaiting_approval" if res["interrupt"] else st.get("status", "done")
     await db.execute("update runs set status=%s, ended_at=now(), latency_s=%s, tokens=%s, usd=%s, by_node=%s, trace_id=%s "
