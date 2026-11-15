@@ -1,0 +1,38 @@
+[
+ {
+  "scenario": "skipped scam",
+  "job_id": "job-dev-ai-000",
+  "trace_id": "96e1eab5dc7b4c9c960183c8ed3a15f0",
+  "status": "skipped",
+  "critic_rounds": 0,
+  "run_id": "01a1dfd5-1fc5-7636-a674-33b93fc9bc31",
+  "public_url": "https://smith.langchain.com/public/3bcfdde6-1b05-4912-8e55-acb22b20096e/r"
+ },
+ {
+  "scenario": "proposal drafted (waits for approval)",
+  "job_id": "job-dev-ai-105",
+  "trace_id": "f9ee0fb524eb4578af9f311ab4916b58",
+  "status": "awaiting_approval",
+  "critic_rounds": 3,
+  "run_id": "01a1dfd5-4daf-7718-87db-7d864a03b5c0",
+  "public_url": "https://smith.langchain.com/public/f458a6dd-fc5b-4b2c-a665-96ce5b7a4831/r"
+ },
+ {
+  "scenario": "approved after resume (crash-and-resume)",
+  "job_id": "job-dev-ai-105",
+  "trace_id": "301d90175de641149f9038ff1da685d6",
+  "status": "submitted",
+  "critic_rounds": 3,
+  "run_id": "01a1dfd5-6fed-7102-8ee9-58337f0ed4da",
+  "public_url": "https://smith.langchain.com/public/21a3e104-beff-4e13-8455-50e799b1597b/r"
+ },
+ {
+  "scenario": "critic loop",
+  "job_id": "job-dev-ai-186",
+  "trace_id": "34cebc1684a14b3aa7db90f7a0dd3f34",
+  "status": "awaiting_approval",
+  "critic_rounds": 1,
+  "run_id": "01a1dfd5-7068-77b2-9eb5-f0ab40b96b44",
+  "public_url": "https://smith.langchain.com/public/7eb46e96-62c3-4d7e-8de4-8e94c3d297dd/r"
+ }
+]

@@ -16,7 +16,7 @@ No real client data, no live-mode data and no tokens are committed.
 | Client reviews | `data/personas/*/reviews.jsonl` | 46 | Synthetic | one per project |
 | Past proposals with outcomes | `data/personas/*/proposals.jsonl` | 150 per persona | Synthetic | generated from historical jobs; outcome (won / replied / ignored) from a scoring rule that rewards specific openings and relevant evidence and penalises generic, long text |
 | Clients with histories and hidden preferences | `gigsim/seed/clients.json` | 400 (15% scam) | Synthetic | `scripts/gen/jobs.py::make_clients` |
-| Historical jobs (pricing statistics) | `gigsim/seed/historical_jobs.json` | 1,500 | Synthetic (Kaggle path implemented, not used — no Kaggle credentials were available) | `make_historical`; `scripts/gen/jobs.py` takes titles/budgets/hourly ranges from `data/processed/kaggle_jobs.json` when present |
+| Historical jobs (pricing statistics) | `gigsim/seed/historical_jobs.json` | 1,500 | Synthetic (validated against 53k real Kaggle postings, see below) | `make_historical`; `scripts/gen/jobs.py` takes titles/budgets/hourly ranges from `data/processed/kaggle_jobs.json` when present |
 | Market statistics | `gigsim/seed/market_stats.json` | 4 categories | Derived from the historical jobs | percentiles of hourly rate and fixed price by complexity |
 | Dev evaluation set (gold labels) | `evals/datasets/dev_<persona>.jsonl` | 200 per persona | Synthetic | `make_set("dev", …)` |
 | Live job stream | `gigsim/seed/stream_jobs.json` | 324 (300 + 24 reposted duplicates) | Synthetic | released one job per 10 simulated minutes |
@@ -43,11 +43,20 @@ Gold labels are **correct by construction** from the generator's hidden variable
 - requirements phrased three ways in job posts: exact tool name, capability description, vague client-speak;
 - past proposals whose outcome depends on specificity, not wording overlap.
 
+## Validation against real data (Kaggle)
+I compared GigSim's synthetic market statistics with **53,058 real Upwork postings** from February 2024 (Kaggle
+`asaniczka/upwork-job-postings-dataset-2024-50k-records`; raw CSV kept out of the repo, aggregates in
+`evals/results/kaggle_market_comparison.json`). Median hourly rate, synthetic vs real: AI/ML $46.5 vs
+$26.5 (x1.75), web $37.0 vs $22.5
+(x1.64), data $30.0 vs $22.5 (x1.33). **My synthetic market is
+1.3-1.75x more expensive than the real one**, so fair-price bands, the Pricing Strategist's bids and the
+"price inside fair band" metric are calibrated to an optimistic market. GigSim's seed was not regenerated from the
+real data because it is frozen and every dev label depends on it; the categoriser is a title-keyword heuristic
+(it over-assigns "data"), so treat the comparison as indicative.
+
 ## Licensing and attribution
 - All synthetic content: authored for this coursework, released with the repository (MIT).
-- Kaggle Upwork datasets (asaniczka, ODC-By where stated on Kaggle): **not used in the committed results**
-  because no Kaggle credentials were available; the loader exists so the historical-jobs file can be rebuilt from
-  them, with attribution, by anyone who has access.
+- Kaggle Upwork datasets (asaniczka, ODC-By where stated on Kaggle): used only for the aggregate comparison below (attribution: asaniczka on Kaggle); the raw data is not redistributed.
 
 ## Limitations (read before trusting any number)
 1. Gold labels and the simulated client both come from my own generator — the evaluation measures how well
