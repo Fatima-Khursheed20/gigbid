@@ -22,7 +22,8 @@ test('GigBid demo walkthrough', async ({ page }) => {
   const jobs = await (await page.request.get('/api/jobs')).json()
   const scam = jobs.find((j: { scam: boolean }) => j.scam)
   const inj = jobs.find((j: { injection: boolean; scam: boolean }) => j.injection && !j.scam) ?? jobs.find((j: { injection: boolean }) => j.injection)
-  const bid = jobs.find((j: { status: string }) => j.status === 'awaiting_approval')
+  const bid = jobs.find((j: { job_id: string; status: string }) => j.job_id === process.env.DEMO_JOB && j.status === 'awaiting_approval')
+    ?? jobs.find((j: { status: string }) => j.status === 'awaiting_approval')
   if (scam) { await page.goto(`/jobs/${scam.job_id}`); await shot(page, 2, 'scam-caught') }
   if (inj) {
     await page.goto(`/jobs/${inj.job_id}`)
@@ -35,7 +36,7 @@ test('GigBid demo walkthrough', async ({ page }) => {
   await page.getByText('Requirement → evidence matrix').scrollIntoViewIfNeeded()
   await shot(page, 5, 'evidence-matrix')
   await page.goto(`/studio/${bid.job_id}`)
-  await expect(page.getByTestId('evidence-draft')).toBeVisible()
+  await expect(page.getByTestId('evidence-draft').first()).toBeVisible()
   const claim = page.locator('[data-testid="evidence-draft"] [tabindex="0"]').first()
   await claim.hover()
   await shot(page, 6, 'studio-evidence-hover')
@@ -45,8 +46,11 @@ test('GigBid demo walkthrough', async ({ page }) => {
   await page.goto('/pipeline')
   await shot(page, 8, 'pipeline')
 
+  await expect.poll(async () => (await (await page.request.get('/api/messages/threads')).json()).length,
+    { timeout: 6 * 60_000, intervals: [10_000] }).toBeGreaterThan(0)
   await page.goto('/messages')
   const thread = page.getByRole('list', { name: 'Threads' }).getByRole('button').first()
+  await thread.waitFor({ timeout: 30_000 }).catch(() => {})
   if (await thread.isVisible().catch(() => false)) {
     await thread.click()
     const suggest = page.getByRole('button', { name: 'Suggest a reply' })

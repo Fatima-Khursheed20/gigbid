@@ -36,6 +36,14 @@ shows exactly which work it touched. I remain responsible for every line and for
    removing violating content and blocking when the draft cannot be fixed. Caught when a clean-looking draft was
    blocked during the outcome evaluation.
 
+6. **Quota planning.** It ran several LLM-heavy evaluations in parallel on one free-tier key and exhausted the
+   daily token limits of all three models (200k tokens/day each), which left the R&D C baselines incomplete and
+   pushed the held-out run onto the fallback path. Caught from 429 "tokens per day" errors in the results files;
+   both limitations are reported in the R&D report instead of being re-run with cherry-picked samples.
+7. **Free-tier deployment.** The single-process build first ran out of memory (512 MB) and then froze the
+   event loop on a 0.1-vCPU instance, because FastMCP runs synchronous tools on the event loop. Fixed by disabling
+   ONNX's memory arena, smaller batches, one worker job at a time, and running retrieval in worker threads.
+
 ## What was not delegated
 Choice of datasets and their honest labelling as synthetic, the decision to report negative results, the human
 labels for judge calibration and the blind pairwise panel (these must be produced by people, not the AI — see

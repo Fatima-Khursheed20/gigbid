@@ -8,7 +8,7 @@ Connects spend before anything leaves the system. It runs LangGraph agents over 
 (hybrid + rerank + multi-vector, with claim verification), against **GigSim**, a marketplace simulator. The same
 port also connects to Upwork's official MCP server.
 
-**Live app:** see *Deployment* below · **Course:** AI-4016 Assignment II (individual) · **All data is synthetic** ([data card](docs/DATA_CARD.md))
+**Live app:** https://gigbid-p090.onrender.com (reviewer login shared privately; free instance, first load after idle ~1 min) · **Course:** AI-4016 Assignment II (individual) · **All data is synthetic** ([data card](docs/DATA_CARD.md))
 
 ## What it does in 30 seconds
 1. Scheduled **Scout** pulls jobs from saved searches, removes reposts.
@@ -59,6 +59,8 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 | Variant | Evidence Recall@5 | nDCG@10 | Unsupported claims / proposal (before → after verification) | Judge score (1-5) | GigSim reply rate | p95 latency (s) | Cost / proposal (USD, list price) |
 |---|---|---|---|---|---|---|---|
 | v0_naive | 0.448 | 0.389 | 0 → 0.13 | 4.67 | 0.33 (n=15) | 186 | 0.0045 |
+| v4_outcome | 0.690 | 0.656 | 0 → 0.07 | 4.50 | 0.57 (n=14) | 353 | 0.0036 |
+| v5_multivector (shipped) | 0.703 | 0.701 | 0.14 → 0 | 4.36 | 0.50 (n=14) | 353 | 0.0034 |
 
 *Retrieval columns: `rag_retrieval.json`; proposal columns: `gigsim_outcomes*.json` (5 bid-worthy jobs per persona, same jobs for every variant).*
 <!-- /results -->
@@ -69,6 +71,8 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 |---|---|---|---|---|---|---|---|---|---|---|
 | rules only, pre-calibration | 240 | 0.699 | 1.000 | 0.537 | 0.968 | 1.000 | 0.747 | 1.000 | 33.6 | 0 |
 | LLM + rules, pre-calibration | 72 | 0.708 | 1.000 | 0.548 | 0.900 | 1.000 | 0.783 | 1.000 | 53.0 | 0.00030 |
+| LLM + rules, calibrated (shipped) | 72 | 0.914 | 0.949 | 0.881 | 0.900 | 1.000 | 0.757 | 1.000 | 93.9 | 0.00030 |
+| held-out test, shipped | 57 | 0.892 | 0.943 | 0.846 | 0.667 | 1.000 | 0.758 | 1.000 | 32.7 | 0.00000 |
 <!-- /results -->
 
 ### R&D A — tool granularity
@@ -84,8 +88,18 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 
 ### R&D C — single ReAct agent vs prebuilt supervisor vs hand-built graph
 <!-- results:evals/results/multiagent_compare.json -->
-*pending*
+| Architecture | Jobs | Bid/skip accuracy | Scam recall | Proposals | Unsupported / proposal | Compliance violations / proposal | Mean p(reply) | Tokens / job | p95 s |
+|---|---|---|---|---|---|---|---|---|---|
+| react | 8 | 0.500 | 0 | 0 | — | — | — | 1303 | 31 |
+| supervisor | 8 | 0.625 | 0 | 1 | 2 | 0 | 0.20 | 1646 | 178 |
+| graph | 8 | 1.000 | 1.000 | 1 | 1 | 0 | 0.40 | 872 | 45 |
 <!-- /results -->
+*Incomplete: 8 jobs were saved before the free tier's daily token quota stopped the baselines (most baseline rows are quota errors, recorded per row). Not a fair accuracy comparison yet — see report §5.*
+
+**Traces:** [docs/TRACES.md](docs/TRACES.md) — a skipped scam, an approved proposal, a Critic loop and a live
+crash-and-resume on the deployed app. **Playwright:** 7/7 passing ([report](docs/playwright-report/index.html)).
+**R&D report:** [docs/report/GigBid_RnD_Report.pdf](docs/report/GigBid_RnD_Report.pdf) · **Write-up:**
+[docs/WRITEUP.md](docs/WRITEUP.md).
 
 More: prompt-injection attack success rate before/after defences (`evals/results/injection.json`), fit-threshold
 calibration (`fit_calibration.json`), ablation (`rag_ablation.json`), agency routing for the signature extension

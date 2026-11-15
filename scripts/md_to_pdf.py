@@ -35,11 +35,21 @@ H = {1: ParagraphStyle("h1", parent=ss["Title"], fontSize=16, spaceAfter=6),
 
 
 def inline(t: str) -> str:
+    for a, b in {"→": "->", "←": "<-", "−": "-", "≈": "~", "‖": "||", "↺": "(loop)", "…": "...", "≥": ">=", "≤": "<=",
+                 "×": "x", "✓": "OK", "◆": "", "·": "-", "‑": "-", "’": "'"}.items():
+        t = t.replace(a, b)
     t = t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    t = re.sub(r"`([^`]+)`", r"<font face='Courier' size='8'>\1</font>", t)
+    codes: list[str] = []
+
+    def keep(m):  # protect code spans so emphasis markers inside them are not interpreted
+        codes.append(m.group(1))
+        return f"\x00{len(codes) - 1}\x00"
+
+    t = re.sub(r"`([^`]+)`", keep, t)
     t = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", t)
-    t = re.sub(r"(?<![*\w])\*([^*]+)\*(?!\w)", r"<i>\1</i>", t)
+    t = re.sub(r"(?<![*\w])\*([^*\x00]+)\*(?!\w)", r"<i>\1</i>", t)
     t = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"<link href='\2' color='blue'>\1</link>", t)
+    t = re.sub(r"\x00(\d+)\x00", lambda m: f"<font face='Courier' size='8'>{codes[int(m.group(1))]}</font>", t)
     return t
 
 

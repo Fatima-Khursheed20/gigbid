@@ -480,5 +480,54 @@
    "error": null,
    "proposal": ""
   }
- ]
+ ],
+ "meta": {
+  "note": "first run (drafting on gpt-oss-120b); stopped by the daily token quota; summary recomputed from the saved rows",
+  "per_persona": 4,
+  "rows_saved": 24
+ },
+ "by_arch": {
+  "react": {
+   "n": 8,
+   "bid_skip_accuracy": 0.5,
+   "scam_recall": 0,
+   "proposals": 0,
+   "unsupported_per_proposal": null,
+   "compliance_violations_per_proposal": null,
+   "mean_p_reply": null,
+   "reply_rate": null,
+   "tokens_per_job": 1303.125,
+   "latency_p50_s": 8.96,
+   "latency_p95_s": 31.42,
+   "errors": 6
+  },
+  "supervisor": {
+   "n": 8,
+   "bid_skip_accuracy": 0.625,
+   "scam_recall": 0,
+   "proposals": 1,
+   "unsupported_per_proposal": 2,
+   "compliance_violations_per_proposal": 0,
+   "mean_p_reply": 0.197,
+   "reply_rate": 0.0,
+   "tokens_per_job": 1645.75,
+   "latency_p50_s": 178.22,
+   "latency_p95_s": 178.22,
+   "errors": 7
+  },
+  "graph": {
+   "n": 8,
+   "bid_skip_accuracy": 1.0,
+   "scam_recall": 1.0,
+   "proposals": 1,
+   "unsupported_per_proposal": 1,
+   "compliance_violations_per_proposal": 0,
+   "mean_p_reply": 0.399,
+   "reply_rate": 1.0,
+   "tokens_per_job": 872.25,
+   "latency_p50_s": 1.967,
+   "latency_p95_s": 44.727,
+   "errors": 0
+  }
+ }
 }

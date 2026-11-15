@@ -38,3 +38,5 @@ models_cache/
 Thumbs.db
 .idea/
 .vscode/
+
+docs/demo/video/
