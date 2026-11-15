@@ -8,7 +8,7 @@ GigBid — AI-4016 Assignment II
 Deployed app:        https://gigbid-p090.onrender.com   (free tier: first load after idle takes ~1 minute)
 GitHub repository:   https://github.com/Fatima-Khursheed20/gigbid
 R&D report (PDF):    https://github.com/Fatima-Khursheed20/gigbid/blob/main/docs/report/GigBid_RnD_Report.pdf
-Demo video (3 min):  <VIDEO LINK>
+Demo video (3 min):  https://drive.google.com/file/d/16aNXt1YMBR8YSwu9rCypicuoHGp0EzE5/view?usp=sharing
 Portfolio MCP server (published, installable):
                      uvx --from git+https://github.com/Fatima-Khursheed20/gigbid gigbid-portfolio-mcp
                      https://github.com/Fatima-Khursheed20/gigbid/tree/main/mcp_servers/portfolio

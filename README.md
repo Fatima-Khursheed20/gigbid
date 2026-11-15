@@ -99,7 +99,7 @@ Details: [ARCHITECTURE.md](docs/ARCHITECTURE.md) · graphs rendered from code: [
 
 **Traces:** [docs/TRACES.md](docs/TRACES.md) — a skipped scam, an approved proposal, a Critic loop and a live
 crash-and-resume on the deployed app. **Playwright:** 7/7 passing ([report](docs/playwright-report/index.html)).
-**R&D report:** [docs/report/GigBid_RnD_Report.pdf](docs/report/GigBid_RnD_Report.pdf) · **Write-up (published):**
+**R&D report:** [docs/report/GigBid_RnD_Report.pdf](docs/report/GigBid_RnD_Report.pdf) · **Demo video (3 min):** [Google Drive](https://drive.google.com/file/d/16aNXt1YMBR8YSwu9rCypicuoHGp0EzE5/view?usp=sharing) · **Write-up (published):**
 [fatima-khursheed20.github.io/gigbid](https://fatima-khursheed20.github.io/gigbid/) (source [docs/WRITEUP.md](docs/WRITEUP.md)).
 **MCP evidence:** a live MCP client session against the Portfolio server ([docs/images/mcp_session.png](docs/images/mcp_session.png); SDK client, not the Inspector UI).
 
